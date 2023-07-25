@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    window.location.replace('https://eticpro.onrender.com');
+    window.location.replace('https://compliax.onrender.com');
   };
 
 
