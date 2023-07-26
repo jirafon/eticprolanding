@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
       <div>
-        <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Compliax.</h1>
+        <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Eticpro.</h1>
         <p className='py-4'>Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. Nuestro equipo de expertos en cumplimiento ha desarrollado una plataforma intuitiva y segura para ayudarte a abordar los desafíos regulatorios actuales. Nuestra misión es brindarte las herramientas necesarias para mantener el cumplimiento normativo sin complicaciones y minimizar los riesgos asociados.</p>
         <div className='flex justify-between md:w-[75%] my-6'>
             <FaFacebookSquare size={30} />

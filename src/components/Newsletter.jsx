@@ -60,7 +60,7 @@ const Contacto = () => {
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
             Contactenos para comenzar un plan.
           </h1>
-          <p>Mantén tu cumplimiento con Compliax.</p>
+          <p>Mantén tu cumplimiento con Eticpro.</p>
         </div>
         <div className='my-4'>
           <form onSubmit={handleSubmit}>
