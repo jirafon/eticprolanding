@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Styles for larger screens */
 body {
   background-color: #000300;
 }
@@ -15,10 +15,9 @@ body {
 }
 
 .nav-button:hover {
-  background-color: black;
+  background-color: grey;
   color: white;
 }
-
 
 .newsletter-container {
   transition: transform 0.5s ease;
@@ -34,5 +33,18 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 767px) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .nav-button {
+    background-color: grey;
+    color: white;
   }
 }

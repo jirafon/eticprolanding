@@ -28,7 +28,7 @@ const Contacto = () => {
       setEmail('');
     } catch (error) {
       console.error(error);
-      alert('Failed to send email.');
+      alert('FAllo el envio del mail.');
     }
   };
   
@@ -58,37 +58,37 @@ const Contacto = () => {
       <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3'>
         <div className='lg:col-span-2 my-4'>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
-            Contactenos para comenzar un plan.
+            Contáctenos para comenzar dejando su datos aquí.
           </h1>
-          <p>Mantén tu cumplimiento con Eticpro.</p>
+          <p>Le contactaremos a la brevedad.</p>
         </div>
         <div className='my-4'>
-          <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className='flex flex-col w-full'>
   <input
-    className='p-3 rounded-md text-black mb-4'
-    type='text'
+              className={`p-3 rounded-md text-black mb-4 ${name ? 'input-orange-border' : ''}`}
+              type='text'
     placeholder='Nombre'
     value={name}
     onChange={handleNameChange}
   />
   <input
-    className='p-3 rounded-md text-black mb-4'
-    type='text'
+              className={`p-3 rounded-md text-black mb-4 ${phone ? 'input-orange-border' : ''}`}
+              type='text'
     placeholder='Telefono'
     value={phone}
     onChange={handlePhoneChange}
   />
   <input
-    className='p-3 rounded-md text-black mb-4'
-    type='text'
+              className={`p-3 rounded-md text-black mb-4 ${company ? 'input-orange-border' : ''}`}
+              type='text'
     placeholder='Empresa'
     value={company}
     onChange={handleCompanyChange}
   />
   <input
-    className='p-3 rounded-md text-black mb-4'
-    type='email'
+              className={`p-3 rounded-md text-black mb-4 ${email ? 'input-orange-border' : ''}`}
+              type='email'
     placeholder='Email'
     value={email}
     onChange={handleEmailChange}
@@ -96,14 +96,13 @@ const Contacto = () => {
   <button
     type='submit'
     className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'
-  >
+    >
     Contactarme
   </button>
 </div>
           </form>
           <p>
-            Cómo tener una gestión ordenada y segura de compliance en las empresas.{' '}
-            <span className='text-[#00df9a]'>Política de Privacidad.</span>
+         
           </p>
         </div>
       </div>

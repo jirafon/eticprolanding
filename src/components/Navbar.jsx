@@ -49,7 +49,14 @@ const Navbar = () => {
       <div onClick={handleNav} className='block md:hidden'>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
-      <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
+      {/* Use inline style to set the background color based on `nav` state */}
+      <ul
+        style={{
+          backgroundColor: nav ? 'white' : '#000300',
+          left: nav ? '0' : '-100%',
+        }}
+        className='fixed top-0 w-[60%] h-full border-r border-r-gray-900 ease-in-out duration-500'
+      >
         <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>Eticpro</h1>
         <li className='p-4 border-b border-gray-600'>
           <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>
