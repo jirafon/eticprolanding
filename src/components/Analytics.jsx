@@ -13,7 +13,7 @@ const Analytics = () => {
        
 Nuestra plataforma está diseñada para ayudarte a gestionar y supervisar el cumplimiento de las regulaciones y normativas en tu organización. Simplifica tus procesos y mantén un control exhaustivo con nuestras soluciones personalizadas. ¡Comienza hoy mismo y mantén tu negocio en cumplimiento!
           </p>
-          <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>COMENZAR</button>
+    {/*      <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>COMENZAR</button> */}
         </div>
       </div>
     </div>
