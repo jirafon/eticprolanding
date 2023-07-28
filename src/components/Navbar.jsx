@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import LogoImage from '../assets/eticprologo1.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black-800'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Eticpro</h1>
+      <img src={LogoImage} alt='Eticpro' className='w-40 h-25' />
       <ul className='hidden md:flex mx-auto'>
         <li className='p-4'>
           <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>
