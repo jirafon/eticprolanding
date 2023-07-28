@@ -48,3 +48,19 @@ body {
     color: white;
   }
 }
+
+/* Define the orange border for input fields */
+.input-orange-border {
+  border: 2px solid orange;
+}
+
+/* Hide the border on mobile devices */
+@media (max-width: 767px) {
+  .input-orange-border {
+    border: none;
+  }
+}
+
+
+
+
