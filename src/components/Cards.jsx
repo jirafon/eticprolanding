@@ -22,9 +22,9 @@ const Cards = () => {
         {/* Mid Card */}
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           <h2 className='text-2xl font-bold text-center py-8'>Mid</h2>
-          <p className='text-center text-4xl font-bold'>60 UF / Anual</p>
+          <p className='text-center text-4xl font-bold'>70 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>900 Declaraciones</p>
+            <p className='py-2 border-b mx-8 mt-8'>1000 Declaraciones</p>
             <p className='py-2 border-b mx-8'>2 Usuarios</p>
             <p className='py-2 border-b mx-8'>2 Campañas</p>
             <p className='py-2 border-b mx-8'>1 Licencias E-learning </p>
@@ -34,7 +34,7 @@ const Cards = () => {
         {/* Pro Card */}
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           <h2 className='text-2xl font-bold text-center py-8'>Pro</h2>
-          <p className='text-center text-4xl font-bold'>132,5 UF / Anual</p>
+          <p className='text-center text-4xl font-bold'>132 UF / Anual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8 mt-8'>2000 Declaraciones</p>
             <p className='py-2 border-b mx-8'>5 Usuarios</p>
