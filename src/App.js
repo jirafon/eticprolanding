@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Contacto from './components/Newsletter';
 import About from './components/About';
+import Description from './components/Description';
 
 function App() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -26,6 +27,8 @@ function App() {
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
       <Hero />
       <Analytics />
+      <Description />
+
       <Cards />
       <Contacto />
       <About />

@@ -69,6 +69,7 @@ const Footer = () => {
         {/*   <h6 className='font-medium text-gray-400'>Soluciones</h6>
           <ul>
             <li className='py-2 text-sm' >Análisis</li>
+            
             <li className='py-2 text-sm'>E-learning</li>
           </ul>
         </div>

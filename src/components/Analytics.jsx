@@ -11,8 +11,11 @@ const Analytics = () => {
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Maneja tus Datos de compliance centralizado y seguro. </h1>
           <p>
        
-Nuestra plataforma está diseñada para ayudarte a gestionar y supervisar el cumplimiento de las regulaciones y normativas en tu organización. Simplifica tus procesos y mantén un control exhaustivo con nuestras soluciones personalizadas. ¡Comienza hoy mismo y mantén tu negocio en cumplimiento!
-          </p>
+          EticPro es una potente plataforma de software que simplifica el cumplimiento ético y la gestión de conflictos en tu organización. Con una interfaz fácil de usar, EticPro ofrece características clave, como gestión de reuniones PEP, sistema de quejas anónimas, campañas eficientes de conflictos de interés y evaluaciones claras con certificación auditada. Accede a declaraciones históricas, crea formularios personalizados y otorga privilegios de co-administrador para una supervisión efectiva. Asegura una cultura de integridad y transparencia con EticPro. Solicita una demostración ahora y descubre la vanguardia del cumplimiento ético.          </p>
+   
+          
+         
+   
     {/*      <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>COMENZAR</button> */}
         </div>
       </div>

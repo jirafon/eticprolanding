@@ -24,7 +24,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Mid</h2>
           <p className='text-center text-4xl font-bold'>60 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>800 Declaraciones</p>
+            <p className='py-2 border-b mx-8 mt-8'>900 Declaraciones</p>
             <p className='py-2 border-b mx-8'>2 Usuarios</p>
             <p className='py-2 border-b mx-8'>2 Campañas</p>
             <p className='py-2 border-b mx-8'>1 Licencias E-learning </p>
