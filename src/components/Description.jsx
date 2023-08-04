@@ -7,10 +7,10 @@ const Analytics = () => {
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8'>
         <div className='flex flex-col justify-right'>
           <p className="mb-4">
-            <strong>- Gestión Simplificada de Reuniones PEP.</strong> 
+            <strong>- Gestión Simplificada de Registro de Reuniones.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Sistema de Quejas Anónimas.</strong> 
+            <strong>- Sistema de denuncias Anónimas.</strong> 
           </p>
           <p className="mb-4">
             <strong>- Eficientes Campañas de Conflictos de Interés.</strong> 
@@ -25,7 +25,7 @@ const Analytics = () => {
             <strong>- Formularios Personalizados para Recopilación de Datos.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- rivilegios de Co-Administrador para Supervisión.</strong> 
+            <strong>- Privilegios de Co-Administrador para Supervisión.</strong> 
           </p>
           <p className="mb-4">
           </p>
