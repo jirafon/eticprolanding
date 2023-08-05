@@ -28,7 +28,6 @@ function App() {
       <Hero />
       <Analytics />
       <Description />
-
       <Cards />
       <Contacto />
       <About />
