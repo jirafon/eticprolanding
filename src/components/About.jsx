@@ -1,5 +1,5 @@
 import React from 'react';
-import Laptop from '../assets/team1.png';
+import Laptop from '../assets/team2.png';
 
 const About = () => {
   return (
