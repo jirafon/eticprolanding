@@ -14,13 +14,14 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Small</h2>
           <p className='text-center text-4xl font-bold'>30 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>400 Declaraciones</p>
-            <p className='py-2 border-b mx-8'>2 Usuarios</p>
+            <p className='py-2 border-b mx-8 mt-8'>400 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>2 Campañas</p>
+            <p className='py-2 border-b mx-8'>3 Usuarios</p>
+            <p className='py-2 border-b mx-8'>50mb Canal Denuncias</p>
+            <p className='py-2 border-b mx-8'>Gestor de Reuniones Ilimitado</p>
+
             <p className='py-2 border-b mx-8'>Sin Licencias E-learning </p>
 
-            <p className='py-2 border-b mx-8'>Registros de Reuniones Ilimitado</p>
-            <p className='py-2 border-b mx-8'>Gestíon de Denuncias Anónimas Ilimitado</p>
 
 
           </div>
@@ -33,12 +34,13 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Mid</h2>
           <p className='text-center text-4xl font-bold'>70 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>1000 Declaraciones</p>
-            <p className='py-2 border-b mx-8'>2 Usuarios</p>
+            <p className='py-2 border-b mx-8 mt-8'>1000 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>2 Campañas</p>
+            <p className='py-2 border-b mx-8'>5 Usuarios</p>
+            <p className='py-2 border-b mx-8'>200mb Canal Denuncias</p>
+            <p className='py-2 border-b mx-8'>Gestor de Reuniones Ilimitado</p>
             <p className='py-2 border-b mx-8'>1 Licencia E-learning </p>
-            <p className='py-2 border-b mx-8'>Registros de Reuniones Ilimitado</p>
-            <p className='py-2 border-b mx-8'>Gestíon de Denuncias Anónimas Ilimitado</p>
+
           </div>
         </div>
 
@@ -49,12 +51,14 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Pro</h2>
           <p className='text-center text-4xl font-bold'>132 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>2000 Declaraciones</p>
+            <p className='py-2 border-b mx-8 mt-8'>2000 Declaraciones Anuales</p>
+            <p className='py-2 border-b mx-8'>4 Campañas</p>
             <p className='py-2 border-b mx-8'>5 Usuarios</p>
-            <p className='py-2 border-b mx-8'>2 Campañas</p>
+            <p className='py-2 border-b mx-8'>1Gb Canal Denuncias </p>
+            <p className='py-2 border-b mx-8'>Gestor de Reuniones Ilimitado</p>
+
             <p className='py-2 border-b mx-8'>2 Licencias E-learning </p>
-            <p className='py-2 border-b mx-8'>Registros de Reuniones Ilimitado</p>
-            <p className='py-2 border-b mx-8'>Gestíon de Denuncias Anónimas Ilimitado</p>
+
           </div>
         </div>
 
@@ -65,12 +69,13 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Enterprise</h2>
           <p className='text-center text-4xl font-bold'>285 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>5000 Declaraciones</p>
-            <p className='py-2 border-b mx-8'>Usuarios Ilimitado</p>
-            <p className='py-2 border-b mx-8'>8 Campañas</p>
+            <p className='py-2 border-b mx-8 mt-8'>10000 Declaraciones</p>
+            <p className='py-2 border-b mx-8'>Campañas Sin Limite</p>
+            <p className='py-2 border-b mx-8'>10 Usuarios</p>
+            <p className='py-2 border-b mx-8'>2Gb Canal Denuncias </p>
+            <p className='py-2 border-b mx-8'>Gestor de Reuniones Ilimitado</p>
             <p className='py-2 border-b mx-8'>5 Licencias E-learning</p>
-            <p className='py-2 border-b mx-8'>Registros de Reuniones Ilimitado</p>
-            <p className='py-2 border-b mx-8'>Gestíon de Denuncias Anónimas Ilimitado</p>
+
           </div>
         </div>
       </div>
