@@ -13,7 +13,7 @@ const Analytics = () => {
             <strong>- Sistema de denuncias Anónimas.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Eficientes Campañas de Conflictos de Interés.</strong> 
+            <strong>- Gestión eficiente de Campañas de recolección de información.</strong> 
           </p>
           <p className="mb-4">
             <strong>- Evaluación y Certificación de Conflictos sin Esfuerzo.</strong> 
