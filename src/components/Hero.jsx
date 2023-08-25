@@ -26,22 +26,22 @@ const Hero = () => {
           COMPLIANCE MANAGER
         </p>
         <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-          Crecer con Seguridad.
+          Crecer con Sostenibilidad
         </h1>
         <div className='flex justify-center items-center'>
           <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
-            Rapido, flexible, confiable para...
+            Rápido, flexible, confiable para...
           </p>
           <Typed
             className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2'
-            strings={['Conflictos de Interés', 'Due Diligence']}
+            strings={['Conflictos de Interés', 'Reuniones Comunidades / Funcionarios Públicos', 'Denuncias Anónimas']}
             typeSpeed={120}
             backSpeed={140}
             loop
           />
         </div>
-        <p className='md:text-2xl text-xl font-bold text-black'>
-          Monitoree y maneje sus labores de compliance con un gestor muy seguro y moderno.
+        <p className='md:text-2xl text-xl font-bold text-black'>y
+          Monitoree y maneje sus labores de compliance con un gestor seguro y flexible
         </p>
         <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
           <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>

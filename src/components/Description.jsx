@@ -1,34 +1,41 @@
 import React from 'react';
 import Comtop from '../assets/comtop.png';
+import Features from '../assets/features.png';
+import Quees from '../assets/quees.png';
 
 const Analytics = () => {
   return (
     <div className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8'>
+      <img className='w-[1000px] mx-auto my-4' src={Features} alt='/' />
+
         <div className='flex flex-col justify-right mb-2'> {/* Reduce the margin-bottom value */}
           <p className="mb-4">
-            <strong>- Gestión Simplificada de Registro de Reuniones.</strong> 
+            <strong>1. Gestión Simplificada de Registro de Reuniones.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Sistema de denuncias Anónimas.</strong> 
+            <strong>2. Canal de denuncias Anónimas.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Gestión eficiente de Campañas de recolección de información.</strong> 
+            <strong>3. Campañas de recolección de información.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Evaluación y Certificación de Conflictos sin Esfuerzo.</strong> 
+            <strong>4. Evaluación y Certificación de Conflictos.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Historial Centralizado de Declaraciones.</strong> 
+            <strong>5. Historial Centralizado de Declaraciones, reuniones de interés, denuncias..</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Formularios Personalizados para Recopilación de Datos.</strong> 
+            <strong>6. Formularios Personalizados para Recopilación de Datos.</strong> 
           </p>
           <p className="mb-4">
-            <strong>- Privilegios de Co-Administrador para Supervisión.</strong> 
+            <strong>7. Privilegios de Co-Administrador, investigador, comités para acción y Supervisión.</strong> 
           </p>
+
+
+          
         </div>
-        <img className='w-[500px] mx-auto my-4' src={Comtop} alt='/' />
+
       </div>
     </div>
   );
