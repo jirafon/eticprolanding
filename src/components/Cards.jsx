@@ -37,7 +37,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>STARTER</h2>
           <p className='text-center text-4xl font-bold'>70 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>1000 Declaraciones Anuales</p>
+            <p className='py-2 border-b mx-8 mt-8'>1.000 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>2 Campañas</p>
             <p className='py-2 border-b mx-8'>5 Usuarios</p>
             <p className='py-2 border-b mx-8'>200mb Canal Denuncias</p>
@@ -54,7 +54,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
           <p className='text-center text-4xl font-bold'>132 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>2000 Declaraciones Anuales</p>
+            <p className='py-2 border-b mx-8 mt-8'>2.000 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>4 Campañas</p>
             <p className='py-2 border-b mx-8'>5 Usuarios</p>
             <p className='py-2 border-b mx-8'>1Gb Canal Denuncias </p>
@@ -72,7 +72,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>ENTERPRISE</h2>
           <p className='text-center text-4xl font-bold'>285 UF / Anual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>10000 Declaraciones</p>
+            <p className='py-2 border-b mx-8 mt-8'>10.000 Declaraciones</p>
             <p className='py-2 border-b mx-8'>Campañas Sin Limite</p>
             <p className='py-2 border-b mx-8'>10 Usuarios</p>
             <p className='py-2 border-b mx-8'>2Gb Canal Denuncias </p>
@@ -88,7 +88,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>Custom</h2>
           <p className='text-center text-4xl font-bold'>Contactenos</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>+10.0000 Declaraciones Anuales</p>
+            <p className='py-2 border-b mx-8 mt-8'>20.000 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>Campañas</p>
             <p className='py-2 border-b mx-8'>Usuarios</p>
             <p className='py-2 border-b mx-8'>Canal Denuncias</p>
