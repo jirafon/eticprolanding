@@ -13,7 +13,7 @@ const Contacto = () => {
     const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone},${company} \n\nGracias.`;
   
     try {
-      await axios.post('https://unbiax-main-server.onrender.com/email/send4', JSON.stringify({
+      await axios.post('https://compliax.onrender.com/utils/emailcontacto4', JSON.stringify({
       emails: [email],
       emailTemplate,
       }), {
@@ -58,7 +58,7 @@ const Contacto = () => {
         <div className='lg:col-span-2 my-4'>
           {/* Heading and Paragraph */}
           <h1 className='hidden sm:block md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
-            Contáctenos para comenzar dejando su datos aquí.
+            Para comenzar contáctenos  aquí.
           </h1>
             <p className='hidden md:block'>Le contactaremos a la brevedad.</p>
         </div>
