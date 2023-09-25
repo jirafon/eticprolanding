@@ -13,7 +13,7 @@ const Contacto = () => {
     const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone},${company} \n\nGracias.`;
   
     try {
-      await axios.post('https://compliax.onrender.com/utils/emailcontacto4', JSON.stringify({
+      await axios.post('https://unbiax-main-server.onrender.com/utils/emailcontacto4', JSON.stringify({
       emails: [email],
       emailTemplate,
       }), {
@@ -28,7 +28,7 @@ const Contacto = () => {
       setEmail('');
     } catch (error) {
       console.error(error);
-      alert('FAllo el envio del mail.');
+      alert('Falló el envio del mail.');
     }
   };
   
