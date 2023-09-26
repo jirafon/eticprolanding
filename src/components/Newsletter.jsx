@@ -13,7 +13,7 @@ const Contacto = () => {
     const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone},${company} \n\nGracias.`;
   
     try {
-      await axios.post('https://unbiax-main-server.onrender.com/utils/emailcontacto4', JSON.stringify({
+      await axios.post('https://unbiax-main-server.onrender.com/utils/emailcontacto', JSON.stringify({
       emails: [email],
       emailTemplate,
       }), {
