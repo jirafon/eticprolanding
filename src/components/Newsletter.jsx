@@ -10,25 +10,31 @@ const Contacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone},${company} \n\nGracias.`;
+    const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone},${company}, ${email} \n\nGracias.`;
   
     try {
-      await axios.post('https://unbiax-main-server.onrender.com/utils/emailcontacto', JSON.stringify({
-      emails: [email],
-      emailTemplate,
-      }), {
+      const response = await fetch('https://unbiax-main-server.onrender.com/email4/send4', {
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          emailTemplate,
+        }),
       });
-      alert('Solicitud de contacto enviada exitosamente!');
-      setName('');
-      setPhone('');
-      setCompany('');
-      setEmail('');
+  
+      if (response.ok) {
+        alert('Solicitud de contacto enviada exitosamente!');
+        setName('');
+        setPhone('');
+        setCompany('');
+        setEmail('');
+      } else {
+        alert('Falló el envío del mail.');
+      }
     } catch (error) {
       console.error(error);
-      alert('Falló el envio del mail.');
+      alert('Falló el envío del mail.');
     }
   };
   
