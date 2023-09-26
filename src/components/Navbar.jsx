@@ -42,9 +42,10 @@ const Navbar = () => {
           </a>
         </li>
         <li className='p-4 menu-item-box'>
-          <button className='border-b-2 border-black-800 nav-button' onClick={handleLogin}>
-            Entrar
-          </button>
+        <button className='border-b-2 border-black-800 nav-button' style={{ width: '150px' }} onClick={handleLogin}>
+  Entrar
+</button>
+
         </li>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
