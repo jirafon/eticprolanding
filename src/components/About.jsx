@@ -14,7 +14,7 @@ const About = () => {
           <p>
 
 
-          Nuestro equipo está compuesto por Giovana y Cristian, expertos en Compliance y Tecnologia. Nos enorgullece contar con profesionales altamente capacitados que trabajan en conjunto para brindar soluciones efectivas y personalizadas a nuestros clientes.
+          Nuestro equipo está compuesto por Giovanna y Cristian, expertos en Compliance y Tecnologia. Nos enorgullece contar con profesionales altamente capacitados que trabajan en conjunto para brindar soluciones efectivas y personalizadas a nuestros clientes.
 
 La calidad y la innovación son pilares fundamentales en todo lo que hacemos. Estamos constantemente actualizando nuestros conocimientos y adoptando nuevas tecnologías para garantizar que nuestros productos y servicios estén a la vanguardia de la industria.
 
