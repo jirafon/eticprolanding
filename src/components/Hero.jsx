@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Typed from 'react-typed';
+import LogoImage from '../assets/eticprologo1.png';
+import unsplash from '../assets/carunsplash.jpg';
 
 const Hero = () => {
   const [nav, setNav] = useState(false);
@@ -19,39 +21,38 @@ const Hero = () => {
 
   return (
     <div id="inicio" className="inicio">
+      <div className='bg-white relative'>
+        <div
+          className="w-full h-screen mx-auto text-center flex flex-col items-start"
+          style={{
+            backgroundImage: `url(${unsplash})`,
+            backgroundSize: 'auto 100%',
+            backgroundPosition: 'center',
+          }}
+        ></div>
 
-    <div className='bg-white'>
-      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[#00df9a] font-bold p-2'>
-          COMPLIANCE MANAGER
-        </p>
-        <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-          Crecer con Sostenibilidad
-        </h1>
-        <div className='flex justify-center items-center'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
-            Rápido, flexible, confiable para...
-          </p>
-          <Typed
-            className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2'
-            strings={['Conflictos de Interés', 'Reuniones Comunidades / Funcionarios Públicos', 'Denuncias Anónimas']}
-            typeSpeed={120}
-            backSpeed={140}
-            loop
-          />
+        <div className="absolute top-0 right-3 mt-8 ml-16 text-white text-5xl font-serif">
+          <div className="flex">
+            <div className="bg-black rounded-full p-4 mr-4">
+              <p>Procesos</p>
+            </div>
+            <div className="bg-blue-500 rounded-full p-4">
+              <p>de</p>
+            </div>
+          </div>
+          <div className="flex mt-4">
+            <div className="bg-black rounded-full p-4 mr-4">
+              <p>Compliance</p>
+            </div>
+          </div>
+          <div className="flex mt-4">
+            <div className="bg-blue-500 rounded-full p-4">
+              <p>Automatizados</p>
+            </div>
+          </div>
         </div>
-        <p className='md:text-2xl text-xl font-bold text-black'>y
-          Monitoree y maneje sus labores de compliance con un gestor seguro y flexible
-        </p>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
-          <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>
-            Comenzar
-          </a>
-        </button>
       </div>
     </div>
-    </div>
-
   );
 };
 

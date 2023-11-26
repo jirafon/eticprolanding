@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Contacto from './components/Newsletter';
 import About from './components/About';
 import Description from './components/Description';
+import Help from './components/Help';
 
 function App() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -23,14 +24,15 @@ function App() {
   };
 
   return (
-    <div>
+    <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
+      
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
       <Hero />
       <Analytics />
+      <Help />
       <Description />
     {/*}  <Cards />*/}
       <Contacto />
-      <About />
       <Footer />
     </div>
   );
