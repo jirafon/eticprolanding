@@ -1,5 +1,5 @@
 import React from 'react';
-import Control from '../assets/cont1.png';
+import Control from '../assets/cont3.png';
 
 const Analytics = () => {
   return (
