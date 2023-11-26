@@ -8,6 +8,7 @@ import Contacto from './components/Newsletter';
 import About from './components/About';
 import Description from './components/Description';
 import Help from './components/Help';
+import Centre from './components/centre';
 
 function App() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -29,6 +30,8 @@ function App() {
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
       <Hero />
       <Analytics />
+      <Centre />
+
       <Help />
       <Description />
     {/*}  <Cards />*/}

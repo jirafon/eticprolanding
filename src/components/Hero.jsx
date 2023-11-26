@@ -33,12 +33,10 @@ const Hero = () => {
 
         <div className="absolute top-0 right-3 mt-8 ml-16 text-white text-5xl font-serif">
           <div className="flex">
-            <div className="bg-black rounded-full p-4 mr-4">
+            <div className="bg-blue-500 rounded-full p-4 mr-4">
               <p>Procesos</p>
             </div>
-            <div className="bg-blue-500 rounded-full p-4">
-              <p>de</p>
-            </div>
+           
           </div>
           <div className="flex mt-4">
             <div className="bg-black rounded-full p-4 mr-4">
@@ -48,6 +46,12 @@ const Hero = () => {
           <div className="flex mt-4">
             <div className="bg-blue-500 rounded-full p-4">
               <p>Automatizados</p>
+            </div>
+          </div>
+      
+          <div className="flex mt-4">
+            <div className="bg-cyan-800 rounded-full p-4">
+              <p>UNA sola Herramienta</p>
             </div>
           </div>
         </div>

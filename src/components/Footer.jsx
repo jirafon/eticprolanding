@@ -49,7 +49,6 @@ const Footer = () => {
   return (
     <div className='max-w-[1240px] mx-auto py-8 px-4 grid lg:grid-cols-2 gap-8 text-gray-300'>
       <div>
-        <img src={LogoImage} alt='Eticpro' className='w-32 h-20 mb-4' />
         <p className='mb-4'>Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. 
         Nuestra misión es brindar las herramientas necesarias para mantener el cumplimiento normativo sin complicaciones y minimizar los riesgos asociados.</p>
         <p>Contacto: <a href="mailto:hello@eticpro.com" className="text-[#00df9a]">hello@eticpro.com</a></p>
