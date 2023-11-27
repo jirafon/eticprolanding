@@ -26,12 +26,12 @@ const Hero = () => {
           className="w-full h-screen mx-auto text-center flex flex-col items-start"
           style={{
             backgroundImage: `url(${unsplash})`,
-            backgroundSize: 'auto 100%',
+            backgroundSize: 'auto 140%',
             backgroundPosition: 'center',
           }}
         ></div>
 
-        <div className="absolute top-0 right-3 mt-8 ml-16 text-white text-5xl font-serif">
+        <div className="absolute top-40 right-10 mt-11 ml-16 text-white text-6xl font-serif">
           <div className="flex">
             <div className="bg-blue-500 rounded-full p-4 mr-4">
               <p>Procesos</p>
