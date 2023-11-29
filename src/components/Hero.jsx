@@ -31,7 +31,7 @@ const Hero = () => {
           }}
         ></div>
 
-        <div className="absolute top-40 right-10 mt-11 ml-16 text-white text-6xl font-serif">
+<div className="absolute top-40 right-10 mt-11 ml-16 text-white text-6xl font-serif" style={{ fontSize: '180%' }}>
           <div className="flex">
             <div className="bg-blue-500 rounded-full p-4 mr-4">
               <p>Procesos</p>
