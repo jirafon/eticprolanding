@@ -34,6 +34,8 @@ function App() {
 
       <Help />
       <Description />
+      <About />
+
     {/*}  <Cards />*/}
       <Contacto />
       <Footer />

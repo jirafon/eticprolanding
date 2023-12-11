@@ -51,7 +51,7 @@ const Hero = () => {
       
           <div className="flex mt-4">
             <div className="bg-cyan-800 rounded-full p-4">
-              <p>UNA sola Herramienta</p>
+              <p>Una sola Herramienta</p>
             </div>
           </div>
         </div>
