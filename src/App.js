@@ -9,6 +9,9 @@ import About from './components/About';
 import Description from './components/Description';
 import Help from './components/Help';
 import Centre from './components/centre';
+import News from './components/News';
+import Blog from './components/Blog';
+
 
 function App() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -35,9 +38,12 @@ function App() {
       <Help />
       <Description />
       <About />
+     
+
 
     {/*}  <Cards />*/}
       <Contacto />
+      <News />
       <Footer />
     </div>
   );
