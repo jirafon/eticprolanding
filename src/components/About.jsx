@@ -24,7 +24,7 @@ const About = () => {
             <img className='w-[150px] mx-auto my-4' src={CH} alt='/' />
             <div>
               <p>
-                Cristian es Ingeniero Civil Industrial, posee un título MBA en Negocios Internacionales. Trabajó en empresas líderes tecnológicas en Chile y en BHP Billiton en Brasil, con enfoque en manejo de datos y alta comprensión de procesos. Su experiencia abarca liderar áreas de negocios y de desarrollo en HW y SW, incluyendo habilidades en Machine Learning, LLM, y Computer Vision. Además de tener gran experiencia como Full-Stack Developer y arquitecto de soluciones. Se distingue por aplicar soluciones tecnológicas completas integradas para mejorar procesos empresariales.
+                Cristian es Ingeniero Civil Industrial, posee un título MBA en Negocios Internacionales. Trabajó en empresas líderes tecnológicas en Chile y en BHP Billiton en Brasil, con enfoque en manejo de datos y alta comprensión de procesos. Su experiencia abarca liderar áreas de negocios y de desarrollo en HW y SW, incluyendo habilidades en Machine Learning, LLM, y Computer Vision. Además de tener gran experiencia como Full-Stack Developer y arquitecto de soluciones, se distingue por aplicar soluciones tecnológicas completas integradas para mejorar procesos empresariales.
               </p>
             </div>
           </div>
