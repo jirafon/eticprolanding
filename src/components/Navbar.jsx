@@ -34,9 +34,15 @@ const Navbar = () => {
         </li>
         <li className='p-4'>
         <a href='#about' onClick={(e) => handleSmoothScroll(e, 'about')}>
-            Acerca de
+            Acerca
           </a>
         </li>
+        <li className='p-4'>
+          <a href='#news' onClick={(e) => handleSmoothScroll(e, 'news')}>
+            Blog
+          </a>
+        </li>
+
         <li className='p-4'>
           <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>
             Contacto
@@ -77,6 +83,11 @@ const Navbar = () => {
         <li className='p-4'>
           <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>
             Contacto
+          </a>
+        </li>
+        <li className='p-4'>
+          <a href='#news' onClick={(e) => handleSmoothScroll(e, 'news')}>
+            News
           </a>
         </li>
         <li className='p-4 menu-item-box'>
