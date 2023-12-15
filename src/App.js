@@ -11,6 +11,7 @@ import Help from './components/Help';
 import Centre from './components/centre';
 import News from './components/News';
 import Blog from './components/Blog';
+import Partner from './components/Partner';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
 
     {/*}  <Cards />*/}
       <Contacto />
+
       <News />
       <Footer />
     </div>
