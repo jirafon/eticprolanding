@@ -37,7 +37,7 @@ function App() {
       <Centre />
 
       <Help />
-      <Description />
+     {/* <Description /> */}
       <About />
      
 

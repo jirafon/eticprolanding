@@ -22,14 +22,23 @@ const Hero = () => {
   return (
     <div id="inicio" className="inicio">
       <div className='bg-white relative'>
-        <div
-          className="w-full h-screen mx-auto text-center flex flex-col items-start"
-          style={{
-            backgroundImage: `url(${unsplash})`,
-            backgroundSize: 'auto 140%',
-            backgroundPosition: 'center',
-          }}
-        ></div>
+
+      <div style={{ position: 'relative', paddingBottom: '39.375%', height: 0, overflow: 'hidden', width: '60%', top: '0%', left: '20%' }}>
+  <iframe
+    allow="autoplay; gyroscope;"
+    allowfullscreen
+    height="100%"
+    referrerpolicy="strict-origin"
+    src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
+    style={{ border: '0', height: '80%', left: '0%', position: 'absolute', top: '20%', width: '80%' }}
+    title="Eticpro- Que es?"
+    width="100%"
+  ></iframe>
+</div>
+
+
+
+
 
 <div className="absolute top-40 right-10 mt-11 ml-16 text-white text-6xl font-serif" style={{ fontSize: '180%' }}>
           <div className="flex">

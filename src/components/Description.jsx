@@ -8,12 +8,22 @@ const Analytics = () => {
         <div className='flex flex-col items-center justify-center'>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>¿Qué es Eticpro?
 </h1>
-          <img className='w-[2000px] mx-auto my-4' src={Control} alt='/' />
-          <p>
-            {/* Your additional content goes here */}
-          </p>
-          {/* <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>COMENZAR</button> */}
-        </div>
+        {/*   <img className='w-[2000px] mx-auto my-4' src={Control} alt='/' /> */}
+        <div style={{ position: 'relative', paddingBottom: '39.375%', height: 0, overflow: 'hidden', width: '70%' }}>
+  <iframe
+    allow="autoplay; gyroscope;"
+    allowfullscreen
+    height="100%"
+    referrerpolicy="strict-origin"
+    src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
+    style={{ border: '0', height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}
+    title="Embedded content made on Kapwing"
+    width="100%"
+  ></iframe>
+</div>
+
+</div>
+
       </div>
     </div>
   );
