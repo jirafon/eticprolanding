@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LogoImage from '../assets/eticprologo1.png';
+import LinkedInLogo from '../assets/linkedinlogo.png'; // Assuming you have a LinkedIn logo image
 
 const Footer = () => {
   const [showTermsModal, setShowTermsModal] = useState(false);
@@ -52,8 +53,16 @@ const Footer = () => {
         <p className='mb-4'>Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. 
         Nuestra misión es brindar las herramientas necesarias para mantener el cumplimiento normativo sin complicaciones y minimizar los riesgos asociados.</p>
         <p>Contacto: <a href="mailto:hello@eticpro.com" className="text-[#00df9a]">hello@eticpro.com</a></p>
+        <p>Wsup: <a href="mailto:hello@eticpro.com" className="text-[#00df9a]">+56 96848 4088, +56 97765 7352</a></p>
+
       </div>
       <div className="text-center">
+      <div className="text-center">
+        {/* LinkedIn Logo */}
+        <a href="https://cl.linkedin.com/company/eticpro" target="_blank" rel="noopener noreferrer">
+          <img src={LinkedInLogo} alt="LinkedIn Logo" className="cursor-pointer" />
+        </a>
+      </div>
         <h6 className='font-medium text-gray-400'>Legal</h6>
         <ul>
           <li className='py-2 text-sm' onClick={handleRespoClick}>Privacidad de Datos</li>
