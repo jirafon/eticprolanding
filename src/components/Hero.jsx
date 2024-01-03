@@ -46,7 +46,7 @@ const Hero = () => {
 
           <div className="flex mt-4">
             <div className="bg-cyan-800 rounded-full p-4">
-              <p>en 24 Hrs</p>
+              <p>En 24 Hrs</p>
             </div>
           </div>
           <div className="flex mt-4">
@@ -57,7 +57,7 @@ const Hero = () => {
       
           <div className="flex mt-4">
             <div className="bg-cyan-800 rounded-full p-4">
-              <p>Una sola Herramienta</p>
+              <p>En una sola Herramienta</p>
             </div>
           </div>
         </div>

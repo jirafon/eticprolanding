@@ -17,7 +17,7 @@ const About = () => {
             <img className='w-[150px] mx-auto my-4' src={GG} alt='/' />
             <div>
             <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Giovanna</h6>
-            <h6 className='md:text-4xl sm:text-3xl text-4xl  py-2'>Managing Director</h6>
+            <h6 className='md:text-2xl sm:text-3xl text-4xl  py-2'>Managing Director</h6>
 
               <p>
 
@@ -27,10 +27,10 @@ const About = () => {
             <img className='w-[150px] mx-auto my-4' src={CH} alt='/' />
             <div>
             <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Cristian</h6>
-            <h6 className='md:text-4xl sm:text-3xl text-2xl  py-2'>Managing Director</h6>
+            <h6 className='md:text-2xl sm:text-3xl text-2xl  py-2'>Managing Director</h6>
 
               <p>
-              Cristian es Ingeniero Civil Industrial de la Universidad de Santiago, com título MBA en Negocios Internacionales de la U. Federico Santa Maria. Trabajó en empresas tecnológicas líderes en Chile como Ericcson, Nortel, Siemens y en BHP Billiton en Brasil, con enfoque en manejo de datos y alta comprensión de procesos. Su experiencia abarca liderar áreas de negocios y de desarrollo en HW y SW, incluyendo habilidades en Machine Learning, LLM y Computer Vision. Además de tener gran experiencia en consultoria a empresas, es Full-Stack Developer y arquitecto de soluciones. Se distingue en entender desde el negocio a sus clientes y desarrollar sus propias herramientas aplicando soluciones tecnológicas completas integradas para mejorar procesos empresariales.
+              Cristian es Ingeniero Civil Industrial de la Universidad de Santiago, com título MBA en Negocios Internacionales de la U. Federico Santa Maria. Trabajó en empresas  líderes como Siemens y BHP Billiton. Su experiencia abarca liderar áreas de negocios, manejo y gestión de datos, diseño de procesos y  desarrollo de Hardware y Software, incluyendo habilidades en Machine Learning, LLM y Computer Vision. Además de tener su experiencia en consultoria a empresas, es Full-Stack Developer y arquitecto de soluciones. 
               </p>
             </div>
           </div>
