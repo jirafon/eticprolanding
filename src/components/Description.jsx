@@ -8,8 +8,7 @@ const Analytics = () => {
         <div className='flex flex-col items-center justify-center'>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>¿Qué es Eticpro?
 </h1>
-        {/*   <img className='w-[2000px] mx-auto my-4' src={Control} alt='/' /> */}
-        <div style={{ position: 'relative', paddingBottom: '39.375%', height: 0, overflow: 'hidden', width: '70%' }}>
+       <div style={{ position: 'relative', paddingBottom: '39.375%', height: 0, overflow: 'hidden', width: '70%' }}>
   <iframe
     allow="autoplay; gyroscope;"
     allowfullscreen
@@ -20,7 +19,7 @@ const Analytics = () => {
     title="Embedded content made on Kapwing"
     width="100%"
   ></iframe>
-</div>
+  </div>  
 
 </div>
 
