@@ -16,7 +16,7 @@ const About = () => {
             </p>
             <img className='w-[150px] mx-auto my-4' src={GG} alt='/' />
             <div>
-            <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Giovanna</h6>
+            <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Giovanna  Gardella</h6>
             <h6 className='md:text-2xl sm:text-3xl text-4xl  py-2'>Managing Director</h6>
 
               <p>
@@ -26,7 +26,7 @@ const About = () => {
             </div>
             <img className='w-[150px] mx-auto my-4' src={CH} alt='/' />
             <div>
-            <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Cristian</h6>
+            <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Cristian Haquin</h6>
             <h6 className='md:text-2xl sm:text-3xl text-2xl  py-2'>Managing Director</h6>
 
               <p>
