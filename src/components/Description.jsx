@@ -14,12 +14,14 @@ const Analytics = () => {
     allowfullscreen
     height="100%"
     referrerpolicy="strict-origin"
-    src="https://www.youtube.com/watch?v=YUJlXCVAs4U"
+    src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
     style={{ border: '0', height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}
     title="Embedded content made on Kapwing"
     width="100%"
   ></iframe>
   </div>  
+
+
 
 </div>
 
