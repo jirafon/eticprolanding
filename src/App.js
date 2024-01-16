@@ -34,11 +34,15 @@ function App() {
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
       <Hero />
       <Analytics />
+      
+
       <Centre />
 
       <Help />
      <Description /> 
       <About />
+      <Partner />
+      
      
 
 
