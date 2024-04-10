@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Typed from 'react-typed';
 import LogoImage from '../assets/eticprologo1.png';
 import unsplash from '../assets/carunsplash.jpg';
 
