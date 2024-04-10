@@ -64,10 +64,7 @@ const Footer = () => {
         </a>
       </div>
         <h6 className='font-medium text-gray-400'>Legal</h6>
-        <ul>
-          <li className='py-2 text-sm' onClick={handleRespoClick}>Privacidad de Datos</li>
-          <li className='py-2 text-sm' onClick={handleLegalClick}>Términos y Condiciones</li>
-        </ul>
+      
       </div>
 
       {/* Modals go here */}
