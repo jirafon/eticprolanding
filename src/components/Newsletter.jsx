@@ -13,14 +13,18 @@ const Contacto = () => {
   
     const emailTemplate = `Hola,llego la siguiente solicitud \n\del contacto ${name},${phone}\n Empresa: ${company}\n Email: ${email}\n Mensaje: ${comment} \n\nGracias.`;
   
+   
     try {
-      const response = await fetch('https://unbiax-main-server.onrender.com/email4/send4', {
+      const response = await fetch('https://unbiax-main-server.onrender.com/email2/send2', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          /*emails: [aprobador1Email, aprobador2Email], // Use variables directly in the array*/
+          emails: "hello@eticpro.com",
           emailTemplate,
+          subject : "Solicitud de Contacto Pagina web Eticpro recibida",
         }),
       });
   
