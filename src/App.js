@@ -12,6 +12,7 @@ import Centre from './components/centre';
 import News from './components/News';
 import Blog from './components/Blog';
 import Partner from './components/Partner';
+import Clients from './components/Clients';
 
 
 function App() {
@@ -41,9 +42,7 @@ function App() {
       <Help />
      <Description /> 
       <About />
-      <Partner />
-      
-     
+      <Clients />
 
 
     {/*}  <Cards />*/}

@@ -63,7 +63,6 @@ const Footer = () => {
           <img src={LinkedInLogo} alt="LinkedIn Logo" className="cursor-pointer" />
         </a>
       </div>
-        <h6 className='font-medium text-gray-400'>Legal</h6>
       
       </div>
 
