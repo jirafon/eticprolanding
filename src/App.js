@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import Contacto from './components/Newsletter';
 import About from './components/About';
 import Description from './components/Description';
+import Description1 from './components/Description1';
+
 import Help from './components/Help';
 import Centre from './components/centre';
 import News from './components/News';
@@ -41,12 +43,14 @@ function App() {
 
       <Help />
      <Description /> 
+   
       <About />
       <Clients />
-
+   
 
     {/*}  <Cards />*/}
       <Contacto />
+      <Cards />
 
       <News />
       <Footer />

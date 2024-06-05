@@ -2,9 +2,18 @@ import React from 'react';
 import Schwager from '../assets/logo-schwager.png';
 import Bago from '../assets/logo-bago.png';
 import Mapsa from '../assets/logo-larrain.png';
+import SC1 from '../assets/sc1.png';
+import Ese from '../assets/ese.png';
+
+import SC2 from '../assets/sc3.png';
+import SC3 from '../assets/sc2.png';
+
+import SC4 from '../assets/sc4.png';
+
 import ADS from '../assets/logoads2.png';
 import Gruas from '../assets/logo-gruas5.png';
 import Slider from "react-slick";
+import Dimerco from '../assets/dimercologo.png';
 
 import ComplianceGC from '../assets/compliancegc.png';
 import ComplianceTracker from '../assets/ctracker.png';
@@ -80,10 +89,43 @@ const Clients = () => {
       <img className='w-[200px] mx-2 my-8' src={ComplianceTracker} alt='ADS' />
     </a>
   </div>
-
+  <div>
+    <a href={Dimerco} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={Dimerco} alt='Dimerco' />
+    </a>
+  </div>
+  
   <div>
     <a href={ComplianceGC} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={ComplianceGC} alt='ADS' />
+    </a>
+  </div>
+  <div>
+    <a href={ADS} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={ADS} alt='ADS' />
+    </a>
+  </div>  <div>
+    <a href={SC3} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={SC3} alt='SC3' />
+    </a>
+  </div>  
+  <div>
+    <a href={SC2} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={SC2} alt='SC2' />
+    </a>
+  </div>  
+  <div>
+    <a href={SC4} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={SC4} alt='SC4' />
+    </a>
+  </div>
+  <div>
+    <a href={SC1} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={SC1} alt='SC1' />
+    </a>
+  </div>  <div>
+    <a href={Ese} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={Ese} alt='Ese' />
     </a>
   </div>
   <div>
