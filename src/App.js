@@ -50,7 +50,7 @@ function App() {
 
     {/*}  <Cards />*/}
       <Contacto />
-      <Cards />
+   
 
       <News />
       <Footer />

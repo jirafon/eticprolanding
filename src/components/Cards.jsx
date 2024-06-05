@@ -89,7 +89,6 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>Repositorio</p>
             <p className='py-2 border-b mx-8'>Canal Denuncias</p>
             <p className='py-2 border-b mx-8'>Gestor de Reuniones</p>
-            <p className='py-2 border-b mx-8'>Licencias E-learning </p>
             <p className='py-2 border-b mx-8 mt-8'>Formularios Especiales</p>
             <p className='py-2 border-b mx-8 mt-8'>Exportacion Customizada</p>
 
