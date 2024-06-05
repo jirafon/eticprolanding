@@ -20,7 +20,9 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>400 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>3 Usuarios Admin</p>
             <p className='py-2 border-b mx-8'>50Mb Almacenamiento</p>
-       
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
+
 
 
 
@@ -40,6 +42,8 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>10 Usuarios Admin</p>
 
             <p className='py-2 border-b mx-8'>200Mb Almacenamiento </p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
 
 
           </div>
@@ -57,6 +61,8 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>20 Usuarios Admin</p>
 
             <p className='py-2 border-b mx-8'>1GB Almacenamiento </p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
 
           </div>
         </div>
@@ -75,7 +81,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>5 Licencias E-learning</p>
 
           </div>
-        </div>*/}
+        </div>
 
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           
@@ -91,11 +97,15 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>Gestor de Reuniones</p>
             <p className='py-2 border-b mx-8 mt-8'>Formularios Especiales</p>
             <p className='py-2 border-b mx-8 mt-8'>Exportacion Customizada</p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  
+</p>
+
 
 
 
           </div>
         </div>
+        */}
       </div>
     </div>
   );
