@@ -100,16 +100,18 @@ const Quiz = ({ questions, currentQuestion, quizAnswers, onAnswerChange, onNext,
     </div>
     <p className="mt-4"></p>
     <div className='navigation-buttons mt-4'>
-      <button type="button" onClick={onBack} disabled={currentQuestion === 0} className="mt-4">
+      <button type="button" onClick={onBack} disabled={currentQuestion === 0} className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
+
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
       {currentQuestion < questions.length - 1 && (
-        <button type="button" onClick={onNext} className="mt-4">
+        <button type="button" onClick={onNext} className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       )}
       {currentQuestion === questions.length - 1 && (
-        <button type="submit" className="mt-4">Enviar</button>
+        <button type="submit" className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
+          Enviar</button>
       )}
     </div>
   </form>
@@ -374,6 +376,7 @@ const Contacto = () => {
       setCurrentQuestion(currentQuestion - 1);
     }
   };
+
 
   const handleAnswerChange = (e) => {
     setQuizAnswers({ ...quizAnswers, [questions[currentQuestion].name]: e.target.value });
