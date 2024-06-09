@@ -395,14 +395,16 @@ const Contacto = () => {
   return (
     <div id="contacto" className="newsletter-container animate__animated animate__fadeIn" style={{ backgroundColor: '#033D84', color: 'white' }}>
       <div className='w-full py-16 text-white px-4'>
-        <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3'>
-          <div className='lg:col-span-2 my-4'>
-            <h1 className='hidden sm:block md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
-              Contactenos Aqui
+      <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 my-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold py-2">
+              Contáctenos Aquí
             </h1>
-            <p className='hidden md:block md:text-2xl sm:text-2xl text-1xl  py-2'>Porfavor complete sus  datos de contacto y 12 preguntas para conocer que tan preparado esta para cumplir con la ley.</p>
+            <p className="text-base sm:text-lg md:text-xl py-2">
+              ¿Desea conocer qué tan preparado está para cumplir con la ley?
+            </p>
           </div>
-         <div className='my-4'>
+          <div className="my-4">
 
             <button
               onClick={handleContestarEncuestaClick}
@@ -415,25 +417,25 @@ const Contacto = () => {
         </div>
       </div>
       {showQuiz && (
-        <div className='modal'>
-          <div className='modal-content'>
-            <span className='close' onClick={() => setShowQuiz(false)}>&times;</span>
+        <div className='modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50'>
+          <div className='modal-content bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative'>
+            <span className='close text-black text-2xl cursor-pointer absolute top-4 right-4' onClick={() => setShowQuiz(false)}>&times;</span>
             {!isQuizStarted ? (
-              <form onSubmit={handleStartQuiz}>
-                <h2>Bienvenido, por favor complete aquí sus datos:</h2>
-                <p></p>
+              <form onSubmit={handleStartQuiz} className='flex flex-col items-center'>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
+                  Bienvenido, por favor complete aquí sus datos:
+                </h2>
                 <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4 ${name ? 'input-orange-border' : ''}`}
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${name ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Nombre'
                   value={name}
                   onChange={handleInputChange(setName)}
                   required
-
                 />
                 <p></p>
                 <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4 ${email ? 'input-orange-border' : ''}`}
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${email ? 'input-orange-border' : ''}`}
                   type='email'
                   placeholder='Email'
                   value={email}
@@ -441,7 +443,7 @@ const Contacto = () => {
                   required
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4 ${phone ? 'input-orange-border' : ''}`}
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${phone ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Teléfono'
                   value={phone}
@@ -449,21 +451,21 @@ const Contacto = () => {
                   required
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4 ${company ? 'input-orange-border' : ''}`}
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${company ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Empresa'
                   value={company}
                   onChange={handleInputChange(setCompany)}
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4${industria ? 'input-orange-border' : ''}`}
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${industria ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Industria'
                   value={industria}
                   onChange={handleInputChange(setIndustria)}
                 />
-                  <input
-                  className={`p-3 rounded-md text-black mt-4  mb-4 mr-4${comment ? 'input-orange-border' : ''}`}
+                <input
+                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${comment ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Mensaje'
                   value={comment}
@@ -471,33 +473,34 @@ const Contacto = () => {
                 />
                 <p></p>
                 <button type='submit' className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'>
-                  Seguir
+                  Continuar
                 </button>
               </form>
             ) : (
               <Quiz
-              questions={questions}
-              currentQuestion={currentQuestion}
-              quizAnswers={quizAnswers}
-              onAnswerChange={handleAnswerChange}
-              onNext={handleNext}
-              onBack={handleBack}
-              onQuizSubmit={handleQuizSubmit}
-            />
-          )}
+                questions={questions}
+                currentQuestion={currentQuestion}
+                quizAnswers={quizAnswers}
+                onAnswerChange={handleAnswerChange}
+                onNext={handleNext}
+                onBack={handleBack}
+                onQuizSubmit={handleQuizSubmit}
+              />
+            )}
+          </div>
         </div>
-      </div>
-    )}
-    {showQuizResultsModal && (
-      <QuizResultsModal
-        onClose={handleCloseQuizResultsModal}
-        obtainedPoints={obtainedPoints}
-        totalPoints={totalPoints}
-        percentage={percentage}
-      />
-    )}
-  </div>
-);
+      )}
+      {showQuizResultsModal && (
+        <QuizResultsModal
+          onClose={handleCloseQuizResultsModal}
+          obtainedPoints={obtainedPoints}
+          totalPoints={totalPoints}
+          percentage={percentage}
+        />
+      )}
+    </div>
+  );
 };
+
 
 export default Contacto;
