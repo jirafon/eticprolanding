@@ -332,11 +332,12 @@ const Contacto = () => {
     setShowQuizResultsModal(true);
   
     try {
-      const response = await fetch('https://unbiax-main-server.onrender.com/email/send', {
+      const response = await fetch('https://unbiax-main-server.onrender.com/email2/send2', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           emails: ['hello@eticpro.com'],
+          
           emailTemplate,
           subject: 'Respuestas de la Encuesta recibida',
         }),
