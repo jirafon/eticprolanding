@@ -153,16 +153,7 @@ const Contacto = () => {
       name: 'q1',
       points: 5 // Máximo 5 puntos
     },
-    {
-      question: '¿Cómo controla a sus contrapartes que no están ligadas a situaciones delictivas? ¿Tiene procedimientos escritos como por ejemplo procedimiento de Diligencia Debida?',
-      options: [
-        { label: 'Realizamos investigaciones exhaustivas y continuas de nuestras contrapartes, incluyendo procedimientos de Diligencia Debida', points: 3 },
-        { label: 'Hacemos verificaciones iniciales pero no las seguimos continuamente, falta implementar procedimientos de Diligencia Debida', points: 2 },
-        { label: 'No tenemos un control específico sobre nuestras contrapartes ni procedimientos de Diligencia Debida establecidos', points: 1 }
-      ],
-      name: 'q2',
-      points: 3 // Máximo 3 puntos
-    },
+ 
     {
       question: '¿Qué procedimientos cuentan con controles reales, escritos y efectivos, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen:',
       options: [
@@ -175,7 +166,7 @@ const Contacto = () => {
         { label: 'Diligencia debida de contrapartes', points: 2 },
         { label: 'Diligencia debida de postulantes de empleo', points: 2 }
       ],
-      name: 'q3',
+      name: 'q2',
       points: 16 // 8 opciones * 2 puntos cada una
     },
     {
@@ -185,7 +176,7 @@ const Contacto = () => {
         { label: 'Hemos identificado algunos riesgos, pero falta profundizar', points: 2 },
         { label: 'No hemos realizado una identificación formal de riesgos', points: 1 }
       ],
-      name: 'q4',
+      name: 'q3',
       points: 3 // Máximo 3 puntos
     },
     {
@@ -195,16 +186,12 @@ const Contacto = () => {
         { label: 'No', points: 0 },
         { label: 'En proceso', points: 2 }
       ],
-      name: 'q5',
+      name: 'q4',
       points: 3 // Máximo 3 puntos
     }
   ];
   
   
-   
-
-  
-
   const handleInputChange = (setter) => (e) => setter(e.target.value);
 
   const handleContestarEncuestaClick = () => {
@@ -343,7 +330,7 @@ const Contacto = () => {
               Contáctenos Aquí
             </h1>
             <p className="text-base sm:text-lg md:text-xl py-2">
-              ¿Desea conocer qué tan preparado está para cumplir con la ley?
+              ¿Porfavor complete sus datos y unas breves preguntas para ayudarle mejor.
             </p>
           </div>
           <div className="my-4">
