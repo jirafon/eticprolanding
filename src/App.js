@@ -8,6 +8,7 @@ import Contacto from './components/Newsletter';
 import About from './components/About';
 import Description from './components/Description';
 import Description1 from './components/Description1';
+import CardsSimple from './components/CardsSimple';
 
 import Help from './components/Help';
 import Centre from './components/centre';
