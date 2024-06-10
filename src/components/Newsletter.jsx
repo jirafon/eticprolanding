@@ -82,16 +82,16 @@ const Quiz = ({ questions, currentQuestion, quizAnswers, onAnswerChange, onNext,
     <h2 className="mt-4">{`Encuesta de Compliance - Pregunta ${currentQuestion + 1} / ${questions.length}`}</h2>
     <div className="mt-4">
       <h3>{questions[currentQuestion].question}</h3>
-      <div className={`mt-4 radio-container ${questions[currentQuestion].name === 'q3' ? 'question-3-radio-container' : ''}`}>
+      <div className='mt-4 radio-container'>
         {questions[currentQuestion].options.map((option, index) => (
           <div key={index} className='mt-2'>
             <input
-              type={questions[currentQuestion].name === 'q3' ? 'checkbox' : 'radio'} 
+              type={questions[currentQuestion].name === 'q2' ? 'checkbox' : 'radio'} 
               name={questions[currentQuestion].name}
               value={option.label}
               checked={quizAnswers[questions[currentQuestion].name]?.includes(option.label)} 
               onChange={onAnswerChange}
-              required={!quizAnswers[questions[currentQuestion].name]?.length && questions[currentQuestion].name !== 'q3'}
+              required={!quizAnswers[questions[currentQuestion].name]?.length && questions[currentQuestion].name !== 'q2'}
               className='mr-2'
             />
             <label className="ml-2">{option.label}</label>
@@ -205,7 +205,10 @@ const Contacto = () => {
     
   ];
   
+   
+
   
+
   const handleInputChange = (setter) => (e) => setter(e.target.value);
 
   const handleContestarEncuestaClick = () => {
@@ -310,7 +313,7 @@ const Contacto = () => {
 
   const handleAnswerChange = (e) => {
     const { name, value, checked } = e.target;
-    if (questions[currentQuestion].name === 'q3') {
+    if (questions[currentQuestion].name === 'q2') {
       // Si es la pregunta 3 y permite selección múltiple
       let updatedAnswers = [...quizAnswers[questions[currentQuestion].name] || []]; // Obtener respuestas anteriores o un array vacío
       if (checked) {
@@ -344,7 +347,7 @@ const Contacto = () => {
               Contáctenos Aquí
             </h1>
             <p className="text-base sm:text-lg md:text-xl py-2">
-              Porfavor complete sus datos y unas breves preguntas para ayudarle mejor.
+              ¿Desea conocer qué tan preparado está para cumplir con la ley?
             </p>
           </div>
           <div className="my-4">
