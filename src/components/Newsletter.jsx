@@ -330,7 +330,7 @@ const Contacto = () => {
               Contáctenos Aquí
             </h1>
             <p className="text-base sm:text-lg md:text-xl py-2">
-              ¿Porfavor complete sus datos y unas breves preguntas para ayudarle mejor.
+              Porfavor complete sus datos y unas breves preguntas para ayudarle mejor.
             </p>
           </div>
           <div className="my-4">
