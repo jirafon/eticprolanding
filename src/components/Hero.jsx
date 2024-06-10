@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LogoImage from '../assets/eticprologo11.png';
-import unsplash from '../assets/carunsplash.jpg';
+import unsplash from '../assets/carunsplash11.jpg';
 
 const Hero = () => {
   const [nav, setNav] = useState(false);

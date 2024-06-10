@@ -38,16 +38,16 @@ function App() {
       <Hero />
       <Analytics />
       
-      <Contacto />
-s
+    
+
       <Centre />
 
       <Help />
      <Description /> 
-   
+    
       <About />
       <Clients />
-   
+      <Contacto />
 
     {/*}  <Cards />*/}
 

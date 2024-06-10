@@ -138,6 +138,11 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.question-3-radio-container input[type="radio"] {
+  width: 20px; /* Adjust the width */
+  height: 20px; /* Adjust the height */
+}
+
 .radio-container input[type="radio"] {
   width: 20px; /* Adjust the width */
   height: 20px; /* Adjust the height */
@@ -147,3 +152,4 @@ button:disabled {
 .radio-container label {
   font-size: 16px; /* Adjust the font size */
 }
+

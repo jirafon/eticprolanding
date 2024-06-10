@@ -1,5 +1,5 @@
 import React from 'react';
-import Laptop from '../assets/laptop.jpg';
+import Laptop from '../assets/laptop11.jpg';
 import Control from '../assets/cont6.png';
 
 const Analytics = () => {
