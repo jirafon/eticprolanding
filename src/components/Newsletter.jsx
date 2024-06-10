@@ -423,7 +423,7 @@ const Contacto = () => {
             {!isQuizStarted ? (
               <form onSubmit={handleStartQuiz} className='flex flex-col items-center'>
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
-                  Bienvenido, por favor complete aquí sus datos:
+                  Bienvenido, por favor complete sus datos:
                 </h2>
                 <input
                   className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${name ? 'input-orange-border' : ''}`}

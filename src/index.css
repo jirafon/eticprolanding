@@ -91,6 +91,8 @@ body {
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
+  max-height: 90vh; /* Ensures the modal does not exceed 90% of the viewport height */
+  overflow-y: auto; /* Enables vertical scrolling if content exceeds max-height */
   border-radius: 10px;
   position: relative;
 }
