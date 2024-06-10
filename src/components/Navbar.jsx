@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import LogoImage from '../assets/eticprologo1.png';
+import LogoImage from '../assets/eticprologo11.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);

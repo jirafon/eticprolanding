@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LogoImage from '../assets/eticprologo1.png';
+import LogoImage from '../assets/eticprologo11.png';
 import unsplash from '../assets/carunsplash.jpg';
 
 const Hero = () => {

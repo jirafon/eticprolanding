@@ -38,7 +38,8 @@ function App() {
       <Hero />
       <Analytics />
       
-
+      <Contacto />
+s
       <Centre />
 
       <Help />
@@ -49,9 +50,9 @@ function App() {
    
 
     {/*}  <Cards />*/}
-      <Contacto />
 
       <News />
+
       <Footer />
     </div>
   );

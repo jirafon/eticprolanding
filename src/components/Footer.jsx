@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LogoImage from '../assets/eticprologo1.png';
+import LogoImage from '../assets/eticprologo11.png';
 import LinkedInLogo from '../assets/linkedinlogo.png'; // Assuming you have a LinkedIn logo image
 
 const Footer = () => {

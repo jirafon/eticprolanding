@@ -422,6 +422,7 @@ const Contacto = () => {
             <span className='close text-black text-2xl cursor-pointer absolute top-4 right-4' onClick={() => setShowQuiz(false)}>&times;</span>
             {!isQuizStarted ? (
               <form onSubmit={handleStartQuiz} className='flex flex-col items-center'>
+                <p></p>
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
                   Bienvenido, por favor complete sus datos:
                 </h2>
