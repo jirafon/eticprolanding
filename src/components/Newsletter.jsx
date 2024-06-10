@@ -141,21 +141,23 @@ const Contacto = () => {
 
 
   const questions = [
+
     {
       question: '¿Cuáles son las principales prioridades de su empresa en términos de compliance?',
       options: [
         { label: 'Inicial (sin implementación)', points: 0 },
         { label: 'Implementación de políticas y procedimientos', points: 1 },
-        { label: 'Formación y concienciación de empleados', points: 2 },
-        { label: 'Monitoreo y auditoría de actividades', points: 4 },
-        { label: 'Establecimiento de un programa integral de compliance (compliance 360)', points: 5 }
+        { label: 'Gestión de políticas y procedimientos', points: 2 },
+        { label: 'Alineación de cultura de cumplimiento', points: 3 },
+        { label: 'Reportes de gestión cumplimiento', points: 4 },
+
       ],
       name: 'q1',
       points: 5 // Máximo 5 puntos
     },
  
     {
-      question: '¿Qué procedimientos cuentan con controles reales, escritos y efectivos, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen:',
+      question: '¿Tiene algunos  de estos procedimientos que tengan un control real, escrito y efectivo, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen',
       options: [
         { label: 'Registros de reuniones', points: 2 },
         { label: 'Declaraciones de conflictos de interés', points: 2 },
@@ -170,7 +172,7 @@ const Contacto = () => {
       points: 16 // 8 opciones * 2 puntos cada una
     },
     {
-      question: '¿Ha realizado su empresa una identificación de los riesgos asociados a los delitos de lavado de activos, financiamiento del terrorismo y cohecho dentro de sus actividades y procesos?',
+      question: '¿Ha identificado las actividad o procesos de la persona juridica que impliquen riesgos de conducta delitiva?',
       options: [
         { label: 'Sí, hemos identificado todos los riesgos relevantes', points: 3 },
         { label: 'Hemos identificado algunos riesgos, pero falta profundizar', points: 2 },
@@ -180,7 +182,7 @@ const Contacto = () => {
       points: 3 // Máximo 3 puntos
     },
     {
-      question: '¿Ha designado su empresa a una persona responsable con autonomía para supervisar el cumplimiento del modelo de prevención de delitos?',
+      question: '¿Ha designado su empresa a una persona responsable con autonomía para  gestionar el cumplimiento del modelo de prevención de delitos?',
       options: [
         { label: 'Sí', points: 3 },
         { label: 'No', points: 0 },
@@ -188,7 +190,19 @@ const Contacto = () => {
       ],
       name: 'q4',
       points: 3 // Máximo 3 puntos
-    }
+    },
+    {
+      question: 'Cúal es el número de empleados en su organización',
+      options: [
+        { label: 'Menos de 50', points: 0 },
+        { label: 'Entre 50 y 100', points: 1 },
+        { label: 'Entre 100 y 500', points: 2 },
+        { label: 'Más de 500', points: 3 }
+      ],
+      name: 'q5',
+      points: 3 // Máximo 3 puntos
+    },
+    
   ];
   
   
