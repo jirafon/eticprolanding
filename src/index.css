@@ -153,3 +153,14 @@ button:disabled {
   font-size: 16px; /* Adjust the font size */
 }
 
+.modal-frame {
+  border: 2px solid #FFA500; /* Orange border */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #FFF; /* White background */
+}
+
+.orange-frame {
+  border: 2px solid #ff9900; /* Orange color */
+  padding: 10px; /* Adjust padding as needed */
+}

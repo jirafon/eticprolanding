@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-
 const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) => (
   <div className='modal'>
     <div className='modal-content'>
@@ -15,11 +14,61 @@ const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) 
   </div>
 );
 
+const PrivacyPolicyModal = ({ onClose }) => (
+  <div className='modal'>
+    <div className='modal-content'>
+      <span className='close' onClick={onClose}>&times;</span>
+      <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
+          Política de Privacidad
+        </h2>
+        <div className='text-justify space-y-4 overflow-y-auto max-h-[80vh]'>
+  <p>
+    El acceso a determinados servicios que se ofrecen en el sitio puede requerir el ingreso de datos personales, a saber: dirección de e-mail, nombre, apellido, domicilio completo, tipo y número de documento y otros datos opcionales, o cualquier otra información que permita individualizarlo. En todos los casos que usted brinde información personal, y de acuerdo a la legislación vigente, usted declara que la información brindada es cierta.
+  </p>
+  <p>
+    Los datos que usted ingrese al Sitio se utilizarán para: envío de información de Productos y servicios, reporte de Irregularidades, análisis e investigaciones, Compliance, Asesoramiento legal, aplicaciones de servicios de proceso de negociación y gestión de reclamos previo a la judicialización, sistemas de comunicación internos y externos, obtener estadísticas.
+  </p>
+  <p>
+    El ingreso de datos personales al Sitio por parte de los usuarios es voluntario, sin embargo, Eticpro manifiesta que su ingreso facilitará el uso de los servicios que ofrece y la relación con los usuarios. En los casos en que usted nos brinde su información personal, usted acepta y presta su consentimiento libre, expreso e informado para que dicha información personal sea utilizada en su propio beneficio optimizando la calidad del servicio que le ofrecemos a fin de mantenerlo informado de posibles cambios, y autoriza a que la misma sea tratada, almacenada, recopilada en la base de datos de la compañía.
+  </p>
+  <p>
+    Eticpro garantiza a los usuarios que ingresen sus datos en el Sitio, que los mismos serán encriptados para preservar la seguridad, integridad y confidencialidad de los datos considerados como personales. Eticpro realiza todos los esfuerzos necesarios para evitar su adulteración, pérdida, consulta o tratamiento no autorizado, que permitan detectar desviaciones, intencionales o no, de información, ya sea que los riesgos provengan de la acción humana o del medio técnico utilizado. Para ello, notificamos de nuestras prácticas de privacidad, y las alternativas sobre la manera que su información es recopilada y utilizada.
+  </p>
+  <p>
+    El sistema de encriptado implica que los datos solo podrán ser interpretados por Eticpro y ningún intermediario tendrá acceso a la información.
+  </p>
+  <p>
+    El usuario podrá acceder a sus datos de carácter personal, rectificarlos, cancelarlos u oponerse a su tratamiento, mediante notificación al responsable de la base de datos hello@eticpro.com (LATAM)
+  </p>
+  <p>
+    Eticpro no cederá esta información con terceros. No obstante, Eticpro podrá enviar a sus usuarios ofertas promocionales o comunicados especiales, donde el usuario siempre tendrá la opción de solicitar dejar de recibirlos.
+  </p>
+  <p>
+    El usuario responderá, en cualquier caso, de la veracidad de los datos facilitados, reservándose Eticpro el derecho de excluir a todo usuario que haya facilitado datos falsos, sin perjuicio de iniciar acciones legales.
+  </p>
+  <p>
+    Eticpro se reserva el derecho de brindar información a organismos de control de cualquier país y/o autoridades judiciales que así lo requieran y cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o la salud pública.
+  </p>
+</div>
+
+      {/* Add the rest of the privacy policy here */}
+    </div>
+  </div>
+);
+
 const ContactForm = ({ onSubmit, onInputChange, formData }) => {
   const { name, phone, company, email, comment, industria } = formData;
   return (
     <form onSubmit={onSubmit}>
       <div className='flex flex-col w-full'>
+    <input
+          className={`p-3 rounded-md text-black mb-4 ${email ? 'input-orange-border' : ''}`}
+          type='email'
+          placeholder='Email'
+          value={email}
+          onChange={onInputChange('email')}
+          required
+        />
         <input
           className={`p-3 rounded-md text-black mb-4 ${name ? 'input-orange-border' : ''}`}
           type='text'
@@ -50,14 +99,7 @@ const ContactForm = ({ onSubmit, onInputChange, formData }) => {
           value={company}
           onChange={onInputChange('company')}
         />
-        <input
-          className={`p-3 rounded-md text-black mb-4 ${email ? 'input-orange-border' : ''}`}
-          type='email'
-          placeholder='Email'
-          value={email}
-          onChange={onInputChange('email')}
-          required
-        />
+      
         <input
           className={`p-3 rounded-md text-black mb-4 ${comment ? 'input-orange-border' : ''}`}
           type='text'
@@ -65,12 +107,7 @@ const ContactForm = ({ onSubmit, onInputChange, formData }) => {
           value={comment}
           onChange={onInputChange('comment')}
         />
-        <button
-          type='submit'
-          className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'
-        >
-          Contactarme
-        </button>
+       
       </div>
     </form>
   );
@@ -128,7 +165,9 @@ const Contacto = () => {
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');
   const [industria, setIndustria] = useState('');
+  const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
 
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   const [showQuiz, setShowQuiz] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -338,6 +377,18 @@ const Contacto = () => {
   const handleCloseQuizResultsModal = () => {
     setShowQuizResultsModal(false);
   };
+  const handlePrivacyModalOpen = () => {
+    setShowPrivacyModal(true);
+  };
+
+  const handlePrivacyModalClose = () => {
+    setShowPrivacyModal(false);
+  };
+
+  const handleCheckboxChange = () => {
+    setIsPrivacyChecked(!isPrivacyChecked);
+  };
+
   return (
     <div id="contacto" className="newsletter-container animate__animated animate__fadeIn" style={{ backgroundColor: '#033D84', color: 'white' }}>
       <div className='w-full py-16 text-white px-4'>
@@ -351,17 +402,27 @@ const Contacto = () => {
             </p>
           </div>
           <div className="my-4">
+         
+<input
+        type="checkbox"
+        checked={isPrivacyChecked}
+        onChange={handleCheckboxChange}
+      />
+<label onClick={handlePrivacyModalOpen}>Acepto la <span className="privacy-policy-link">Política de privacidad</span></label>
+<button
+  onClick={handleContestarEncuestaClick}
+  disabled={!isPrivacyChecked} // Disable button if privacy checkbox is not checked
+  className="bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3"
+>
+  Comenzar
+</button>
+{showPrivacyModal && <PrivacyPolicyModal onClose={handlePrivacyModalClose} />}
 
-            <button
-              onClick={handleContestarEncuestaClick}
-              className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'
-            >
-              Comenzar
-            </button>
           </div>
  
         </div>
       </div>
+      
       {showQuiz && (
         <div className='modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50'>
           <div className='modal-content bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative'>

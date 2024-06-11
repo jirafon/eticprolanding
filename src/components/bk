@@ -1,0 +1,420 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) => (
+  <div className='modal'>
+    <div className='modal-content'>
+      <span className='close' onClick={onClose}>&times;</span>
+      <h2>Hemos recibido sus datos y su resultados de la Encuesta</h2>
+      <p>Su resultado es {obtainedPoints} puntos de un total de {totalPoints} puntos.</p>
+      <p>Su porcentaje de avance es {percentage}%.</p>
+      <button onClick={onClose} className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'>Cerrar</button>
+    </div>
+  </div>
+);
+
+const ContactForm = ({ onSubmit, onInputChange, formData }) => {
+  const { name, phone, company, email, comment, industria } = formData;
+  return (
+    <form onSubmit={onSubmit}>
+      <div className='flex flex-col w-full'>
+      <input
+          className={`p-3 rounded-md text-black mb-4 ${email ? 'input-orange-border' : ''}`}
+          type='email'
+          placeholder='Email'
+          value={email}
+          onChange={onInputChange('email')}
+          required
+        />
+        <input
+          className={`p-3 rounded-md text-black mb-4 ${name ? 'input-orange-border' : ''}`}
+          type='text'
+          placeholder='Nombre'
+          value={name}
+          onChange={onInputChange('name')}
+          required
+        />
+        <input
+          className={`p-3 rounded-md text-black mb-4 ${phone ? 'input-orange-border' : ''}`}
+          type='text'
+          placeholder='Teléfono'
+          value={phone}
+          onChange={onInputChange('phone')}
+          required
+        />
+        <input
+          className={`p-3 rounded-md text-black mb-4 ${industria ? 'input-orange-border' : ''}`}
+          type='text'
+          placeholder='Industria'
+          value={industria}
+          onChange={onInputChange('industria')}
+        />
+        <input
+          className={`p-3 rounded-md text-black mb-4 ${company ? 'input-orange-border' : ''}`}
+          type='text'
+          placeholder='Empresa'
+          value={company}
+          onChange={onInputChange('company')}
+        />
+      
+        <input
+          className={`p-3 rounded-md text-black mb-4 ${comment ? 'input-orange-border' : ''}`}
+          type='text'
+          placeholder='Mensaje'
+          value={comment}
+          onChange={onInputChange('comment')}
+        />
+       
+      </div>
+    </form>
+  );
+};
+
+const Quiz = ({ questions, currentQuestion, quizAnswers, onAnswerChange, onNext, onBack, onQuizSubmit }) => (
+  <form onSubmit={currentQuestion === questions.length - 1 ? onQuizSubmit : undefined} className="mt-4 mr-4 ml-4">
+    <h2 className="mt-4">{`Encuesta de Compliance - Pregunta ${currentQuestion + 1} / ${questions.length}`}</h2>
+    <div className="mt-4">
+      <h3>{questions[currentQuestion].question}</h3>
+      <div className='mt-4 radio-container'>
+        {questions[currentQuestion].options.map((option, index) => (
+          <div key={index} className='mt-2'>
+            <input
+              type={questions[currentQuestion].name === 'q2' ? 'checkbox' : 'radio'} 
+              name={questions[currentQuestion].name}
+              value={option.label}
+              checked={quizAnswers[questions[currentQuestion].name]?.includes(option.label)} 
+              onChange={onAnswerChange}
+              required={!quizAnswers[questions[currentQuestion].name]?.length && questions[currentQuestion].name !== 'q2'}
+              className='mr-2'
+            />
+            <label className="ml-2">{option.label}</label>
+          </div>
+        ))}
+      </div>
+    </div>
+    <p className="mt-4"></p>
+    <div className='navigation-buttons mt-4'>
+      <button type="button" onClick={onBack} disabled={currentQuestion === 0} className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </button>
+      {currentQuestion < questions.length - 1 && (
+        <button type="button" onClick={onNext} className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      )}
+      {currentQuestion === questions.length - 1 && (
+        <button type="submit" className='bg-[#00df9a] text-black rounded-md font-medium w-[100px] mx-auto my-6 px-6 py-3'>
+          Enviar</button>
+      )}
+    </div>
+  </form>
+);
+
+const Contacto = () => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [company, setCompany] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [industria, setIndustria] = useState('');
+
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const [isQuizStarted, setIsQuizStarted] = useState(false);
+  const [showQuizResultsModal, setShowQuizResultsModal] = useState(false);
+  const [obtainedPoints, setObtainedPoints] = useState(0);
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [percentage, setPercentage] = useState(0);
+  const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+
+  const questions = [
+    {
+      question: '¿Cuáles son las principales prioridades de su empresa en términos de compliance?',
+      options: [
+        { label: 'Inicial (sin implementación)', points: 0 },
+        { label: 'Implementación de políticas y procedimientos', points: 1 },
+        { label: 'Gestión de políticas y procedimientos', points: 2 },
+        { label: 'Alineación de cultura de cumplimiento', points: 3 },
+        { label: 'Reportes de gestión cumplimiento', points: 4 },
+      ],
+      name: 'q1',
+      points: 5 // Máximo 5 puntos
+    },
+    {
+      question: '¿Tiene algunos  de estos procedimientos que tengan un control real, escrito y efectivo, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen',
+      options: [
+        { label: 'Registros de reuniones', points: 2 },
+        { label: 'Declaraciones de conflictos de interés', points: 2 },
+        { label: 'Declaraciones de transferencias de valor', points: 2 },
+        { label: 'Control de lectura de documentos', points: 2 },
+        { label: 'Canal de denuncia anónima', points: 2 },
+        { label: 'Campaña comunicacional', points: 2 },
+        { label: 'Diligencia debida de contrapartes', points: 2 },
+        { label: 'Diligencia debida de postulantes de empleo', points: 2 }
+      ],
+      name: 'q2',
+      points: 16 // 8 opciones * 2 puntos cada una
+    },
+    {
+      question: '¿Ha identificado las actividad o procesos de la persona juridica que impliquen riesgos de conducta delitiva?',
+      options: [
+        { label: 'Sí, hemos identificado todos los riesgos relevantes', points: 3 },
+        { label: 'Hemos identificado algunos riesgos, pero falta profundizar', points: 2 },
+        { label: 'No hemos realizado una identificación formal de riesgos', points: 1 }
+      ],
+      name: 'q3',
+      points: 3 // Máximo 3 puntos
+    },
+    {
+      question: '¿Tiene su empresa protocolos, procedimientos, manuales o similares que describen las medidas y políticas de prevención?',
+      options: [
+        { label: 'No tenemos ningún documento de este tipo', points: 1 },
+        { label: 'Tenemos algunos documentos, pero no están actualizados', points: 2 },
+        { label: 'Sí, tenemos documentos actualizados y aplicados', points: 3 }
+      ],
+      name: 'q4',
+      points: 3 // Máximo 3 puntos
+    },
+    {
+      question: '¿Cuál es el nivel de involucramiento de la alta dirección en temas de compliance?',
+      options: [
+        { label: 'La alta dirección no está involucrada', points: 0 },
+        { label: 'La alta dirección apoya pero no está directamente involucrada', points: 1 },
+        { label: 'La alta dirección está activamente involucrada en el cumplimiento', points: 2 }
+      ],
+      name: 'q5',
+      points: 2 // Máximo 2 puntos
+    },
+    {
+      question: '¿Su empresa realiza capacitaciones periódicas en temas de compliance?',
+      options: [
+        { label: 'No realizamos capacitaciones en temas de compliance', points: 0 },
+        { label: 'Realizamos capacitaciones, pero no con regularidad', points: 1 },
+        { label: 'Realizamos capacitaciones periódicas y obligatorias', points: 2 }
+      ],
+      name: 'q6',
+      points: 2 // Máximo 2 puntos
+    },
+    {
+      question: '¿Tiene su empresa un canal de denuncias?',
+      options: [
+        { label: 'No tenemos un canal de denuncias', points: 0 },
+        { label: 'Tenemos un canal de denuncias pero no es anónimo', points: 1 },
+        { label: 'Tenemos un canal de denuncias anónimo', points: 2 }
+      ],
+      name: 'q7',
+      points: 2 // Máximo 2 puntos
+    }
+  ];
+
+  const handleInputChange = (field) => (event) => {
+    const { value } = event.target;
+    if (field === 'name') setName(value);
+    if (field === 'phone') setPhone(value);
+    if (field === 'company') setCompany(value);
+    if (field === 'email') setEmail(value);
+    if (field === 'comment') setComment(value);
+    if (field === 'industria') setIndustria(value);
+  };
+
+  const handleStartQuiz = () => {
+    setIsQuizStarted(true);
+    setShowQuiz(true);
+  };
+
+  const handleQuizAnswerChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    if (type === 'checkbox') {
+      const currentAnswers = quizAnswers[name] || [];
+      const newAnswers = checked
+        ? [...currentAnswers, value]
+        : currentAnswers.filter((answer) => answer !== value);
+      setQuizAnswers({
+        ...quizAnswers,
+        [name]: newAnswers,
+      });
+    } else {
+      setQuizAnswers({
+        ...quizAnswers,
+        [name]: [value],
+      });
+    }
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    }
+  };
+
+  const handleBackQuestion = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  };
+
+  const handleQuizSubmit = (event) => {
+    event.preventDefault();
+    let points = 0;
+    let total = 0;
+
+    questions.forEach((question) => {
+      const answers = quizAnswers[question.name];
+      if (answers) {
+        if (Array.isArray(answers)) {
+          answers.forEach((answer) => {
+            const option = question.options.find((opt) => opt.label === answer);
+            if (option) {
+              points += option.points;
+            }
+          });
+        } else {
+          const option = question.options.find((opt) => opt.label === answers[0]);
+          if (option) {
+            points += option.points;
+          }
+        }
+      }
+      total += question.points;
+    });
+
+    const percentage = ((points / total) * 100).toFixed(2);
+
+    setObtainedPoints(points);
+    setTotalPoints(total);
+    setPercentage(percentage);
+    setShowQuizResultsModal(true);
+  };
+
+  const handleCloseQuizResultsModal = () => {
+    setShowQuizResultsModal(false);
+    setShowQuiz(false);
+    setCurrentQuestion(0);
+    setQuizAnswers({});
+    setIsQuizStarted(false);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Add form submission logic here
+  };
+
+  const handlePrivacyCheckboxChange = (event) => {
+    setIsPrivacyChecked(event.target.checked);
+  };
+
+  const handleOpenPrivacyModal = () => {
+    setShowPrivacyModal(true);
+  };
+
+  const handleClosePrivacyModal = () => {
+    setShowPrivacyModal(false);
+  };
+
+  return (
+    <div className='w-full h-screen bg-white flex justify-center items-center p-4'>
+      <div className='w-full max-w-md'>
+        {!isQuizStarted ? (
+          <>
+            <h1 className='text-4xl font-bold text-center text-black'>Contacto</h1>
+            <ContactForm
+              onSubmit={handleFormSubmit}
+              onInputChange={handleInputChange}
+              formData={{ name, phone, company, email, comment, industria }}
+            />
+            <div className='flex items-center'>
+              <input
+                type='checkbox'
+                id='privacy'
+                checked={isPrivacyChecked}
+                onChange={handlePrivacyCheckboxChange}
+                className='mr-2'
+              />
+              <label htmlFor='privacy' className='text-black'>
+                He leído y acepto los{' '}
+                <span onClick={handleOpenPrivacyModal} className='underline cursor-pointer'>
+                  términos de privacidad de la información
+                </span>
+              </label>
+            </div>
+            <button
+              onClick={handleStartQuiz}
+              className={`bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3 ${!isPrivacyChecked && 'opacity-50 cursor-not-allowed'}`}
+              disabled={!isPrivacyChecked}
+            >
+              Comenzar
+            </button>
+          </>
+        ) : (
+          <Quiz
+            questions={questions}
+            currentQuestion={currentQuestion}
+            quizAnswers={quizAnswers}
+            onAnswerChange={handleQuizAnswerChange}
+            onNext={handleNextQuestion}
+            onBack={handleBackQuestion}
+            onQuizSubmit={handleQuizSubmit}
+          />
+        )}
+        {showQuizResultsModal && (
+          <QuizResultsModal
+            onClose={handleCloseQuizResultsModal}
+            obtainedPoints={obtainedPoints}
+            totalPoints={totalPoints}
+            percentage={percentage}
+          />
+        )}
+      {showPrivacyModal && (
+        <div className='modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 z-50'>
+          <div className='modal-content bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative overflow-y-auto max-h-[80vh]'>
+            <button
+              className='close text-black text-2xl absolute top-4 right-4 font-bold cursor-pointer z-50'
+              onClick={handleClosePrivacyModal}
+            >
+              &times;
+            </button>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
+              Política de Privacidad
+            </h2>
+            <div className='text-justify space-y-4'>
+              <p>
+                El acceso a determinados servicios que se ofrecen en el sitio puede requerir el ingreso de datos personales, a saber: dirección de e-mail, nombre, apellido, domicilio completo, tipo y número de documento y otros datos opcionales, o cualquier otra información que permita individualizarlo. En todos los casos que usted brinde información personal, y de acuerdo a la legislación vigente, usted declara que la información brindada es cierta.
+              </p>
+              <p>
+                Los datos que usted ingrese al Sitio se utilizarán para: envío de información de Productos y servicios, reporte de Irregularidades, análisis e investigaciones, Compliance, Asesoramiento legal, aplicaciones de servicios de proceso de negociación y gestión de reclamos previo a la judicialización, sistemas de comunicación internos y externos, obtener estadísticas.
+              </p>
+              <p>
+                El ingreso de datos personales al Sitio por parte de los usuarios es voluntario, sin embargo, Eticpro manifiesta que su ingreso facilitará el uso de los servicios que ofrece y la relación con los usuarios. En los casos en que usted nos brinde su información personal, usted acepta y presta su consentimiento libre, expreso e informado para que dicha información personal sea utilizada en su propio beneficio optimizando la calidad del servicio que le ofrecemos a fin de mantenerlo informado de posibles cambios, y autoriza a que la misma sea tratada, almacenada, recopilada en la base de datos de la compañía.
+              </p>
+              <p>
+                Eticpro garantiza a los usuarios que ingresen sus datos en el Sitio, que los mismos serán encriptados para preservar la seguridad, integridad y confidencialidad de los datos considerados como personales. Eticpro realiza todos los esfuerzos necesarios para evitar su adulteración, pérdida, consulta o tratamiento no autorizado, que permitan detectar desviaciones, intencionales o no, de información, ya sea que los riesgos provengan de la acción humana o del medio técnico utilizado. Para ello, notificamos de nuestras prácticas de privacidad, y las alternativas sobre la manera que su información es recopilada y utilizada.
+              </p>
+              <p>
+                El sistema de encriptado implica que los datos solo podrán ser interpretados por Eticpro y ningún intermediario tendrá acceso a la información.
+              </p>
+              <p>
+                El usuario podrá acceder a sus datos de carácter personal, rectificarlos, cancelarlos u oponerse a su tratamiento, mediante notificación al responsable de la base de datos hello@eticpro.com (LATAM)
+              </p>
+              <p>
+                Eticpro no cederá esta información con terceros. No obstante, Eticpro podrá enviar a sus usuarios ofertas promocionales o comunicados especiales, donde el usuario siempre tendrá la opción de solicitar dejar de recibirlos.
+              </p>
+              <p>
+                El usuario responderá, en cualquier caso, de la veracidad de los datos facilitados, reservándose Eticpro el derecho de excluir a todo usuario que haya facilitado datos falsos, sin perjuicio de iniciar acciones legales.
+              </p>
+              <p>
+                Eticpro se reserva el derecho de brindar información a organismos de control de cualquier país y/o autoridades judiciales que así lo requieran y cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o la salud pública.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+    </div>
+
+  );
+};
+
+export default Contacto;
