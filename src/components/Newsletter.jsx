@@ -88,7 +88,7 @@ const ContactForm = ({ onSubmit, onInputChange, formData }) => {
         <input
           className={`p-3 rounded-md text-black mb-4 ${industria ? 'input-orange-border' : ''}`}
           type='text'
-          placeholder='Industria'
+          placeholder='Rubro'
           value={industria}
           onChange={onInputChange('industria')}
         />
