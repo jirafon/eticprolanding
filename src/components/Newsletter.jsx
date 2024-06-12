@@ -16,13 +16,13 @@ const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) 
 
 const PrivacyPolicyModal = ({ onClose }) => (
   <div className='modal'>
-    <div className='modal-content'>
-      <span className='close' onClick={onClose}>&times;</span>
-      <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
-          Política de Privacidad
-        </h2>
-        <div className='text-justify space-y-4 overflow-y-auto max-h-[80vh]'>
-  <p>
+  <div className='modal-content' style={{ maxHeight: '70%', overflowY: 'auto' }}>
+    <span className='close' onClick={onClose}>&times;</span>
+    <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
+      Política de Privacidad
+    </h2>
+    <div className='text-justify space-y-4'>
+      <p>
     El acceso a determinados servicios que se ofrecen en el sitio puede requerir el ingreso de datos personales, a saber: dirección de e-mail, nombre, apellido, domicilio completo, tipo y número de documento y otros datos opcionales, o cualquier otra información que permita individualizarlo. En todos los casos que usted brinde información personal, y de acuerdo a la legislación vigente, usted declara que la información brindada es cierta.
   </p>
   <p>
@@ -230,6 +230,24 @@ const Contacto = () => {
       name: 'q4',
       points: 3 // Máximo 3 puntos
     },
+
+    
+      {
+        "question": "¿Las definiciones de prevención de delitos económicos en su organización son de responsabilidad de?",
+        "options": [
+          { "label": "Directorio", "points": 2 },
+          { "label": "Gerente General o CEO", "points": 2 },
+          { "label": "Gerente de finanzas, CFO o controller", "points": 2 },
+          { "label": "Gerente legal", "points": 3 },
+          { "label": "Gerente de compliance", "points": 3 },
+          { "label": "Auditoría", "points": 0 },
+          { "label": "Otro", "points": 1 },
+          { "label": "No tienen aún responsable claro", "points": 0 }
+        ],
+        "name": "q5",
+        "points": 3
+      },
+
     {
       question: 'Cúal es el número de empleados en su organización',
       options: [
@@ -238,7 +256,7 @@ const Contacto = () => {
         { label: 'Entre 100 y 500', points: 2 },
         { label: 'Más de 500', points: 3 }
       ],
-      name: 'q5',
+      name: 'q6',
       points: 3 // Máximo 3 puntos
     },
     

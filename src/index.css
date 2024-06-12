@@ -48,7 +48,10 @@ body {
   body {
     background-color: white;
     color: black;
+    zoom: 90%;
   }
+ 
+  
 
   .nav-button {
     background-color: grey;
