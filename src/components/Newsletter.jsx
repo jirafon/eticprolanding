@@ -409,12 +409,10 @@ const Contacto = () => {
 
   return (
     <div id="contacto" className="newsletter-container animate__animated animate__fadeIn" style={{ backgroundColor: '#033D84', color: 'white' }}>
-      <div className='w-full py-16 text-white px-4'>
+    <div className='w-full py-16 text-white px-4'>
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 my-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold py-2">
-              Contáctenos Aquí
-            </h1>
+        <div className="lg:col-span-2 my-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold py-2">Contáctenos Aquí</h1>
             <p className="text-base sm:text-lg md:text-xl py-2">
               ¿Desea conocer qué tan preparado está para cumplir con la ley?
             </p>
@@ -451,16 +449,15 @@ const Contacto = () => {
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
                 </h2>
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${name ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${name ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Nombre'
                   value={name}
                   onChange={handleInputChange(setName)}
                   required
                 />
-                <p></p>
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${email ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${email ? 'input-orange-border' : ''}`}
                   type='email'
                   placeholder='Email'
                   value={email}
@@ -468,7 +465,7 @@ const Contacto = () => {
                   required
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${phone ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${phone ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Teléfono'
                   value={phone}
@@ -476,28 +473,27 @@ const Contacto = () => {
                   required
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${company ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${company ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Empresa'
                   value={company}
                   onChange={handleInputChange(setCompany)}
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${industria ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${industria ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Industria'
                   value={industria}
                   onChange={handleInputChange(setIndustria)}
                 />
                 <input
-                  className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${comment ? 'input-orange-border' : ''}`}
+                  className={`p-2 rounded-md text-black mt-2 mb-2 w-full sm:w-auto ${comment ? 'input-orange-border' : ''}`}
                   type='text'
                   placeholder='Mensaje'
                   value={comment}
                   onChange={handleInputChange(setComment)}
                 />
-                <p></p>
-                <button type='submit' className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3'>
+                <button type='submit' className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-4 px-6 py-3'>
                   Continuar
                 </button>
               </form>
