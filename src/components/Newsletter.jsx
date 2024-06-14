@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) => (
   <div className='modal'>
@@ -17,7 +17,7 @@ const QuizResultsModal = ({ onClose, obtainedPoints, totalPoints, percentage }) 
 const PrivacyPolicyModal = ({ onClose }) => (
   <div className='modal'>
   <div className='modal-content' style={{ maxHeight: '70%', overflowY: 'auto' }}>
-    <span className='close' onClick={onClose}>&times;</span>
+    <span className='close' onClick={onClose} style={{ color: 'limegreen' }}>&times;</span>
     <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
       Política de Privacidad
     </h2>
@@ -426,7 +426,7 @@ const Contacto = () => {
         checked={isPrivacyChecked}
         onChange={handleCheckboxChange}
       />
-<label onClick={handlePrivacyModalOpen}>Acepto la <span className="privacy-policy-link">Política de privacidad</span></label>
+<label onClick={handlePrivacyModalOpen}>  Acepto la <span className="privacy-policy-link">Política de privacidad</span></label>
 <button
   onClick={handleContestarEncuestaClick}
   disabled={!isPrivacyChecked} // Disable button if privacy checkbox is not checked
@@ -449,7 +449,6 @@ const Contacto = () => {
               <form onSubmit={handleStartQuiz} className='flex flex-col items-center'>
                 <p></p>
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold py-2 text-center">
-                  Bienvenido, por favor complete sus datos:
                 </h2>
                 <input
                   className={`p-3 rounded-md text-black mt-4 mb-4 mr-4 w-full sm:w-auto ${name ? 'input-orange-border' : ''}`}

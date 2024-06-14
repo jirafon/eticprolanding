@@ -18,7 +18,7 @@ const Cards = () => {
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>30 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>50Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio,  Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
 
 
@@ -37,7 +37,7 @@ const Cards = () => {
           <div className='text-center font-medium'>
           <p className='py-2 border-b mx-8'>60 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>200Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio,  Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
 
 
@@ -56,7 +56,7 @@ const Cards = () => {
           <div className='text-center font-medium'>
           <p className='py-2 border-b mx-8'>120 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>1GbMb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio,  Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
 
 

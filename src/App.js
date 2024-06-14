@@ -49,9 +49,9 @@ function App() {
       <About />
       <Clients />
       <Contacto />
-
+    
     {/*}  <Cards />*/}
-
+    {/*}  <CardsSimple />*/}
       <News />
 
       <Footer />

@@ -9,6 +9,7 @@ import SC2 from '../assets/sc3.png';
 import SC3 from '../assets/sc2.png';
 
 import SC4 from '../assets/sc4.png';
+import Life4 from '../assets/life4logo.png';
 
 import ADS from '../assets/logoads2.png';
 import Gruas from '../assets/logo-gruas5.png';
@@ -72,6 +73,11 @@ const Clients = () => {
   <div>
     <a href={Mapsa} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={Mapsa} alt='Mapsa' />
+    </a>
+  </div>
+  <div>
+    <a href={Life4} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={Life4} alt='Life4' />
     </a>
   </div>
   <div>

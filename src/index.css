@@ -88,12 +88,12 @@ body {
 }
 
 .modal-content {
-  background-color: #15143a;
+  background-color: #09184a;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  max-width: 300px;
   border-radius: 10px;
   position: relative;
 }
@@ -145,6 +145,10 @@ button:disabled {
   width: 20px; /* Adjust the width */
   height: 20px; /* Adjust the height */
 }
+.privacy-policy-link {
+  color: #b7f190; /* Deep Blue color */
+  cursor: pointer; /* Optional: change cursor to pointer to indicate it's clickable */
+}
 
 .radio-container input[type="radio"] {
   width: 20px; /* Adjust the width */
@@ -166,4 +170,23 @@ button:disabled {
 .orange-frame {
   border: 2px solid #ff9900; /* Orange color */
   padding: 10px; /* Adjust padding as needed */
+}
+
+
+@media (min-width: 640px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-content {
+    width: 60%;
+  }
 }
