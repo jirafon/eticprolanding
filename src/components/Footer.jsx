@@ -59,7 +59,7 @@ const Footer = () => {
   const handleCloseModal = () => setShowPrivacyModal(false);
 
   return (
-    <div className='footer max-w-[1240px] mx-auto py-8 px-4 grid lg:grid-cols-2 gap-8'>
+    <div className='footer w-full mx-auto py-8 px-4 grid lg:grid-cols-2 gap-8'>
       <div className='flex flex-col'>
         <img src={LogoImage} alt='Eticpro' className='w-40 h-26' />
         <p className='mb-4 text-white text-sm'>
