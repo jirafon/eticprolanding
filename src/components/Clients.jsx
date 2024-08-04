@@ -95,11 +95,7 @@ const Clients = () => {
       <img className='w-[200px] mx-2 my-8' src={ComplianceTracker} alt='ADS' />
     </a>
   </div>
-  <div>
-    <a href={Dimerco} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={Dimerco} alt='Dimerco' />
-    </a>
-  </div>
+
   
   <div>
     <a href={ComplianceGC} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
