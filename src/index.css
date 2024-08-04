@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 /* Styles for larger screens */
+
+
+
+
+/* Asegúrate de que la fuente se aplique a cada parte que necesites */
+
 body {
   background-color: #000300;
+  font-family: 'Inter', sans-serif;
 }
 .nav-button-demo {
+  font-family: 'Inter', sans-serif;
   background-color: rgb(15, 15, 98);
   color: white;
   width: 250px;
@@ -21,8 +29,10 @@ body {
 
 .nav-button-demo:hover {
   background-color: darkblue;
+  font-family: 'Inter', sans-serif;
 }
 .nav-button {
+  font-family: 'Inter', sans-serif;
   width: 180px;
   color: white;
   padding: 8px 8px;
@@ -37,23 +47,28 @@ body {
 
 .nav-button-demo {
   background-color: rgb(43, 71, 146);
+  font-family: 'Inter', sans-serif;
 }
 
 .nav-button-demo:hover {
   background-color: rgb(43, 71, 146);
+  font-family: 'Inter', sans-serif;
 }
 
 .nav-button-entrar {
+  font-family: 'Inter', sans-serif;
   background-color: white;
   color: rgb(19, 19, 107); /* Para que el texto sea visible sobre el fondo blanco */
   border: 2px solid rgb(43, 71, 146);/* Para agregar un borde negro */
 }
 
 .nav-button-entrar:hover {
+  font-family: 'Inter', sans-serif;
   background-color: lightgray; /* Cambiar el fondo al pasar el mouse por encima */
 }
 
 .nav-center {
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,12 +78,14 @@ body {
 }
 
 .nav-item {
+  font-family: 'Inter', sans-serif;
   padding: 0 20px;
   text-align: center;
 }
 
 
 .logo-wrapper {
+  font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center; /* Vertically center the content */
   height: 200px; /* Adjust the height of the logo wrapper */
@@ -76,16 +93,19 @@ body {
 
 
 .nav-button:hover {
+  font-family: 'Inter', sans-serif;
   background-color: grey;
   color: white;
 }
 
 .newsletter-container {
+  font-family: 'Inter', sans-serif;
   transition: transform 0.5s ease;
 }
 
 .newsletter-container.animate__fadeIn {
   animation: fadeIn 0.5s;
+  font-family: 'Inter', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -100,6 +120,7 @@ body {
 /* Media query for mobile screens */
 @media screen and (max-width: 767px) {
   body {
+    font-family: 'Inter', sans-serif;
     background-color: white;
     color: black;
     zoom: 90%;
@@ -108,6 +129,7 @@ body {
   
 
   .nav-button {
+    font-family: 'Inter', sans-serif;
     background-color: grey;
     color: white;
   }
@@ -115,18 +137,21 @@ body {
 
 /* Define the orange border for input fields */
 .input-orange-border {
+  font-family: 'Inter', sans-serif;
   border: 2px solid orange;
 }
 
 /* Hide the border on mobile devices */
 @media (max-width: 767px) {
   .input-orange-border {
+    font-family: 'Inter', sans-serif;
     border: none;
   }
 }
 
 
 .modal {
+  font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,6 +167,7 @@ body {
 }
 
 .modal-content {
+  font-family: 'Inter', sans-serif;
   background-color: #09184a;
   margin: auto;
   padding: 20px;
@@ -153,6 +179,7 @@ body {
 }
 
 .close {
+  font-family: 'Inter', sans-serif;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -161,6 +188,7 @@ body {
 
 .close:hover,
 .close:focus {
+  font-family: 'Inter', sans-serif;
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -170,18 +198,21 @@ body {
 
 .close:hover,
 .close:focus {
+  font-family: 'Inter', sans-serif;
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
 .navigation-buttons {
+  font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
 button {
+  font-family: 'Inter', sans-serif;
   background-color: #00df9a;
   color: black;
   border: none;
@@ -191,41 +222,50 @@ button {
 }
 
 button:disabled {
+  font-family: 'Inter', sans-serif;
   background-color: #ddd;
   cursor: not-allowed;
 }
 
 .question-3-radio-container input[type="radio"] {
+  font-family: 'Inter', sans-serif;
   width: 20px; /* Adjust the width */
   height: 20px; /* Adjust the height */
 }
 .privacy-policy-link {
+  font-family: 'Inter', sans-serif;
   color: #b7f190; /* Deep Blue color */
   cursor: pointer; /* Optional: change cursor to pointer to indicate it's clickable */
 }
 .footer p {
+  font-family: 'Inter', sans-serif;
   color: white; /* Asegura que todo el texto en los párrafos del footer sea blanco */
 }
 .footer {
+  font-family: 'Inter', sans-serif;
   background-color: #1c1c60 !important;
 }
 
 /* Actualización del modal */
 .modal-content p {
+  font-family: 'Inter', sans-serif;
   color: white; /* Asegura que el texto en los párrafos del modal sea blanco */
 }
 
 .radio-container input[type="radio"] {
+  font-family: 'Inter', sans-serif;
   width: 20px; /* Adjust the width */
   height: 20px; /* Adjust the height */
 }
 
 /* Optional: Increase the size of the radio button label for better visibility */
 .radio-container label {
+  font-family: 'Inter', sans-serif;
   font-size: 16px; /* Adjust the font size */
 }
 
 .modal-frame {
+  font-family: 'Inter', sans-serif;
   border: 2px solid #FFA500; /* Orange border */
   border-radius: 10px;
   padding: 10px;
@@ -233,12 +273,14 @@ button:disabled {
 }
 
 .orange-frame {
+  font-family: 'Inter', sans-serif;
   border: 2px solid #ff9900; /* Orange color */
   padding: 10px; /* Adjust padding as needed */
 }
 
 
 @media (min-width: 640px) {
+  font-family: 'Inter', sans-serif;
   .modal-content {
     width: 80%;
   }
@@ -246,18 +288,21 @@ button:disabled {
 
 @media (min-width: 768px) {
   .modal-content {
+    font-family: 'Inter', sans-serif;
     width: 70%;
   }
 }
 
 @media (min-width: 1024px) {
   .modal-content {
+    font-family: 'Inter', sans-serif;
     width: 60%;
   }
 }
 
 /* src/App.css */
 .chat-container {
+  font-family: 'Inter', sans-serif;
   max-width: 600px;
   margin: 50px auto;
   border: 1px solid #ccc;
@@ -266,22 +311,26 @@ button:disabled {
 }
 
 .chat-window {
+  font-family: 'Inter', sans-serif;
   height: 300px;
   overflow-y: scroll;
   padding: 10px;
 }
 
 .message {
+  font-family: 'Inter', sans-serif;
   margin-bottom: 10px;
 }
 
 .message-content {
+  font-family: 'Inter', sans-serif;
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
 }
 
 .user .message-content {
+  font-family: 'Inter', sans-serif;
   background-color: #d5f5e3;
   text-align: right;
 }
