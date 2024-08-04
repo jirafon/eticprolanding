@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import LogoImage from '../assets/eticprov22.png';
+import LogoImage from '../assets/eticprov23.png';
 import unsplash from '../assets/fondo-hero@2x.png';
 import DemoModal from './Demo'; // Import the modal component
 import Quiz from './Quiz'; // Import the modal component
