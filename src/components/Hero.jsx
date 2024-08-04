@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import LogoImage from '../assets/eticprologo11.png';
-import unsplash from '../assets/carunsplash11.jpg';
+import unsplash from '../assets/fondo-hero@2x.png';
+import Description from './Description'; // Import the Description component
 
 const Hero = () => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const handleLogin = () => {
+    window.location.replace('https://compliax.onrender.com');
   };
 
   const handleSmoothScroll = (event, targetId) => {
@@ -19,49 +23,51 @@ const Hero = () => {
   };
 
   return (
-    <div id="inicio" className="inicio">
-      <div className='bg-white relative'>
-        <div
-          className="w-full h-screen mx-auto text-center flex flex-col items-start"
-          style={{
-            backgroundImage: `url(${unsplash})`,
-            backgroundSize: 'auto 140%',
-            backgroundPosition: 'center',
-          }}
-        ></div>
-
-<div className="absolute top-40 right-10 mt-11 ml-16 text-white text-6xl font-serif" style={{ fontSize: '180%' }}>
-          <div className="flex">
-            <div className="bg-blue-500 rounded-full p-4 mr-4">
-              <p>Procesos</p>
-            </div>
-           
+    <>
+      <div id="inicio" className="inicio relative h-screen bg-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={unsplash}
+            alt="Background"
+            className="w-full h-full object-cover"
+            style={{ height: '130vh' }} // Extend the height of the background image by 30%
+          />
+        </div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <div className="text-black mb-8">
+            <p className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%]" style={{ fontSize: '300%' }}>
+              Maneja tus procesos de compliance en un solo lugar, de manera segura.
+            </p>
+            <p className="text-2xl lg:text-3xl px-4 lg:px-[15%]" style={{ fontSize: '100%', marginTop: '2rem' }}>
+              EticPro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
+            </p>
           </div>
-          <div className="flex mt-4">
-            <div className="bg-black rounded-full p-4 mr-4">
-              <p>Compliance</p>
-            </div>
-          </div>
-
-          <div className="flex mt-4">
-            <div className="bg-cyan-800 rounded-full p-4">
-              <p>En 24 Hrs</p>
-            </div>
-          </div>
-          <div className="flex mt-4">
-            <div className="bg-blue-500 rounded-full p-4">
-              <p>Automatizados</p>
-            </div>
-          </div>
-      
-          <div className="flex mt-4">
-            <div className="bg-cyan-800 rounded-full p-4">
-              <p>En una sola Herramienta</p>
-            </div>
+          <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
+            <button className="nav-button nav-button-demo" onClick={handleLogin}>
+              Solicita un demo
+            </button>
+            <button className="nav-button nav-button-entrar" onClick={handleLogin}>
+              Diagnóstico en Línea
+            </button>
           </div>
         </div>
+
+        {/* Video Section */}
+        <div className="relative z-20 w-full flex justify-center mt-12">
+          <div style={{ position: 'relative', paddingBottom: '39.375%', height: 0, width: '80%' }}>
+            <iframe
+              allow="autoplay; gyroscope; fullscreen;"
+              allowFullScreen
+              src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
+              style={{ border: '0', height: '100%', width: '100%', position: 'absolute', top: '0' }} // Adjust top positioning as needed
+              title="Video Eticpro"
+            ></iframe>
+          </div>
+        </div>
+        
+        <Description /> {/* Add the Description component */}
       </div>
-    </div>
+    </>
   );
 };
 

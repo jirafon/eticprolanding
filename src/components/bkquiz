@@ -1,0 +1,247 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+const SurveyModal = ({ isOpen, onClose }) => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [answers, setAnswers] = useState(Array(questions.length).fill(null));
+  const [showQuizResultsModal, setShowQuizResultsModal] = useState(false);
+  const [obtainedPoints, setObtainedPoints] = useState(0);
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [percentage, setPercentage] = useState(0);
+  
+  // Form data state
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [company, setCompany] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [industria, setIndustria] = useState('');
+  const [quizAnswers, setQuizAnswers] = useState({});
+
+  // Function to reset all states
+  const resetState = () => {
+    setCurrentStep(0);
+    setAnswers(Array(questions.length).fill(null));
+    setObtainedPoints(0);
+    setTotalPoints(0);
+    setPercentage(0);
+    setShowQuizResultsModal(false);
+    setName('');
+    setPhone('');
+    setCompany('');
+    setEmail('');
+    setComment('');
+    setIndustria('');
+    setQuizAnswers({});
+  };
+
+  // Close modal and reset everything
+  const handleClose = () => {
+    resetState();
+    onClose();
+  };
+
+  const handleOptionChange = (step, optionIndex) => {
+    const newAnswers = [...answers];
+    newAnswers[step] = questions[step].options[optionIndex];
+    setAnswers(newAnswers);
+  };
+
+  const handleNextStep = () => {
+    setCurrentStep((prev) => prev + 1);
+  };
+
+  const handlePrevStep = () => {
+    setCurrentStep((prev) => prev - 1);
+  };
+
+  const handleQuizSubmit = async (e) => {
+    e.preventDefault();
+
+    // Crear el contenido del correo electrónico
+    let emailTemplate = `Hola, llegaron las siguientes respuestas de la encuesta junto con los detalles de contacto:\n\n`;
+    emailTemplate += `<p><strong>Nombre:</strong> ${name}</p>`;
+    emailTemplate += `<p><strong>Teléfono:</strong> ${phone}</p>`;
+    emailTemplate += `<p><strong>Empresa:</strong> ${company}</p>`;
+    emailTemplate += `<p><strong>Industria:</strong> ${industria}</p>`;
+    emailTemplate += `<p><strong>Email:</strong> ${email}</p>`;
+    emailTemplate += `<p><strong>Mensaje:</strong> ${comment}</p>`;
+    emailTemplate += `<br/>Respuestas de la Encuesta:\n\n`;
+
+    // Calcular el total de puntos posibles
+    const totalPossiblePoints = questions.reduce((acc, question) => acc + question.points, 0);
+
+    // Calcular los puntos obtenidos
+    let obtainedPoints = 0;
+    questions.forEach((question, index) => {
+      const answer = quizAnswers[question.name];
+      emailTemplate += `
+        <li>
+          <p><strong>${index + 1}. ${question.question}</strong></p>
+          <p>Respuesta: ${answer}</p>
+        </li>
+      `;
+      const selectedOption = question.options.find(option => option.label === answer);
+      if (selectedOption) {
+        obtainedPoints += selectedOption.points;
+      }
+    });
+
+    // Calcular el porcentaje de avance
+    const percentage = ((obtainedPoints / totalPossiblePoints) * 100).toFixed(2);
+
+    emailTemplate += `<p>Su resultado es ${obtainedPoints} puntos, de un total de ${totalPossiblePoints}. El % de avance es de ${percentage}%.</p>`;
+
+    // Mostrar el modal de resultados del cuestionario
+    setShowQuizResultsModal(true);
+    setObtainedPoints(obtainedPoints);
+    setTotalPoints(totalPossiblePoints);
+    setPercentage(percentage);
+
+    try {
+      // Enviar el correo electrónico
+      const response = await fetch('https://unbiax-main-server.onrender.com/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          emails: ['chaquin@gmail.com'],
+          emailTemplate,
+          subject: 'Respuestas de la Encuesta recibida',
+        }),
+      });
+
+      if (response.ok) {
+        // Limpiar los estados y ocultar el cuestionario
+        resetState();
+        onClose();
+      } else {
+        alert('Falló el envío de la encuesta.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Falló el envío de la encuesta.');
+    }
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'>
+      <div className='bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative'>
+        <button
+          onClick={handleClose}
+          className='absolute top-2 right-2 text-xl'
+          style={{ color: 'white' }}
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
+        <h2 className='text-3xl font-bold mb-6 text-center'>Diagnóstico de Eticpro</h2>
+        <form className='space-y-4' onSubmit={handleQuizSubmit}>
+          <div>
+            <h3 className='text-lg font-medium mb-4'>{questions[currentStep].question}</h3>
+            {questions[currentStep].options.map((option, index) => (
+              <div key={index} className='flex items-center mb-2'>
+                <input
+                  type='radio'
+                  id={`option-${currentStep}-${index}`}
+                  name={`question-${currentStep}`}
+                  value={option.label}
+                  checked={answers[currentStep]?.label === option.label}
+                  onChange={() => handleOptionChange(currentStep, index)}
+                  className='form-radio'
+                />
+                <label htmlFor={`option-${currentStep}-${index}`} className='ml-2'>
+                  {option.label}
+                </label>
+              </div>
+            ))}
+          </div>
+          <div className='flex justify-between mt-4'>
+            {currentStep > 0 && (
+              <button
+                type='button'
+                onClick={handlePrevStep}
+                className='bg-white text-blue-500 border border-black p-2 rounded-md flex items-center'
+                style={{ marginRight: '10px' }}
+              >
+                <FontAwesomeIcon icon={faArrowLeft} />
+                <span style={{ marginLeft: '10px' }}>Anterior</span>
+              </button>
+            )}
+            {currentStep < questions.length - 1 && (
+              <button
+                type='button'
+                onClick={handleNextStep}
+                className='bg-blue-500 text-white p-2 rounded-md bg-[rgb(43,71,146)]'
+              >
+                <span className='mr-2'>Siguiente</span>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            )}
+            {currentStep === questions.length - 1 && (
+              <button
+                type='submit'
+                className='bg-[rgb(43,71,146)] text-white p-2 rounded-md'
+              >
+                Enviar
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+const questions = [
+  {
+    question: '¿Cuáles son las principales prioridades de su empresa en términos de compliance?',
+    options: [
+      { label: 'Inicial (sin implementación)', points: 0 },
+      { label: 'Implementación de políticas y procedimientos', points: 1 },
+      { label: 'Gestión de políticas y procedimientos', points: 2 },
+      { label: 'Alineación de cultura de cumplimiento', points: 3 },
+      { label: 'Reportes de gestión cumplimiento', points: 4 },
+    ],
+    name: 'q1',
+    points: 5
+  },
+  {
+    question: '¿Tiene algunos de estos procedimientos que tengan un control real, escrito y efectivo, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen',
+    options: [
+      { label: 'Registros de reuniones', points: 2 },
+      { label: 'Declaraciones de conflictos de interés', points: 2 },
+      { label: 'Declaraciones de transferencias de valor', points: 2 },
+      { label: 'Control de lectura de documentos', points: 2 },
+      { label: 'Canal de denuncia anónima', points: 2 },
+      { label: 'Campaña comunicacional', points: 1 }
+    ],
+    name: 'q2',
+    points: 6
+  },
+  {
+    question: '¿Cuáles de los siguientes tipos de capacitaciones ofrece su empresa a sus empleados? Seleccione todas las que apliquen',
+    options: [
+      { label: 'Capacitación en ética y compliance', points: 2 },
+      { label: 'Capacitación en prevención de lavado de dinero', points: 2 },
+      { label: 'Capacitación en prevención de corrupción', points: 2 },
+      { label: 'Capacitación en protección de datos', points: 2 },
+      { label: 'Capacitación en ciberseguridad', points: 1 }
+    ],
+    name: 'q3',
+    points: 8
+  },
+  {
+    question: '¿Cuál es el estado actual del cumplimiento de políticas en los diferentes departamentos?',
+    options: [
+      { label: 'Sí, tenemos un Oficial de Cumplimiento designado', points: 3 },
+      { label: 'Estamos en proceso de designación', points: 2 },
+      { label: 'No, no hemos designado a nadie', points: 1 }
+    ],
+    name: 'q4',
+    points: 3
+  }
+];
+
+export default SurveyModal;

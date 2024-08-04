@@ -1,29 +1,36 @@
 import React from 'react';
-import Laptop from '../assets/laptop11.jpg';
-import Control from '../assets/cont6.png';
+import QuotationMarks from '../assets/comillas@2x.png'; // Asegúrate de que la ruta sea correcta
+import XimenaPhoto from '../assets/ximena.png'; // Asegúrate de que la ruta sea correcta
 
 const Analytics = () => {
   return (
     <div className='w-full bg-white py-16 px-4'>
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-        <img className='w-[500px] mx-auto my-4' src={Laptop} alt='/' />
-        <div className='flex flex-col justify-center'>
-          <p className='text-[#00df9a] font-bold '>COMPLIANCE DASHBOARD CONTROL & STORAGE</p>
-          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Maneja tus Datos  y controles de compliance centralizado y seguro. </h1>
-
-<p>EticPro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización. Con una interfaz fácil de usar, EticPro ofrece características clave, como la gestión de reuniones con Personas Expuestas Políticamente (PEP), un sistema de denuncias anónimas, campañas eficientes de conflictos de interés y evaluaciones claras con certificación auditada.</p>
-<p>Accede a declaraciones históricas, crea formularios personalizados y otorga privilegios de co-administrador para una supervisión efectiva. Asegura una cultura de integridad y transparencia con EticPro.</p>
-
-<p>Solicita una demostración ahora y descubre la vanguardia del cumplimiento ético.</p>
-
-  
-
-         
-   
-    {/*      <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>COMENZAR</button> */}
+      <div className='max-w-[1240px] mx-auto flex flex-col items-center'>
+        <div className='relative max-w-[800px] mx-auto p-6'>
+          <img 
+            src={QuotationMarks} 
+            alt="Gráfico de comillas" 
+            className='absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16' 
+          />
+          <div className='flex items-start'>
+            <div className='ml-20'> {/* Ajusta el margen a la izquierda según sea necesario */}
+              <p className='text-lg leading-relaxed'>
+                Quisiera destacar la plataforma Eticpro, es muy útil, bien diseñada, intuitiva y fácil de usar. Cada vez que he necesitado ayuda, el equipo de soporte me ha respondido de manera rápida y efectiva. Siempre han sido receptivos y serviciales ante cualquier pregunta que he tenido. Realmente valoro la experiencia que he tenido durante el periodo de implementación y marcha blanca que llevamos.
+              </p>
+              <div className='pt-6 flex items-center'>
+                <img 
+                  src={XimenaPhoto} 
+                  alt="Ximena Fritz" 
+                  className='w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4' // Añadido margen derecho
+                />
+                <div>
+                  <p className='font-bold text-xl'>Ximena Fritz</p>
+                  <p className='text-gray-600'>Lider Compliance, Laboratorio Bagó.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
       </div>
     </div>
   );

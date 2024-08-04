@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import LogoImage from '../assets/eticprologo11.png';
+import LogoImage from '../assets/eticprov21.png';
+import unsplash from '../assets/fondo-hero@2x.png';
+import DemoModal from './Demo'; // Import the modal component
+import Quiz from './Quiz'; // Import the modal component
+import celeste from '../assets/celeste.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+  const [isModalOpenQuiz, setIsModalOpenQuiz] = useState(false); // State to manage modal visibility
 
+  
   const handleNav = () => {
     setNav(!nav);
   };
@@ -22,81 +29,142 @@ const Navbar = () => {
     setNav(false); // Close the mobile menu after clicking the link
   };
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true); // Open the modal
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Close the modal
+  };
+
+  const handleOpenModalQuiz = () => {
+    setIsModalOpenQuiz(true); // Open the modal
+  };
+
+  const handleCloseModalQuiz = () => {
+    setIsModalOpenQuiz(false); // Close the modal
+  };
+
   return (
-    <div className='flex justify-between items-center h-24 max-w-[100%] mx-auto px-4 text-black-800 fixed top-0 z-10' style={{ backgroundColor: 'white', width: '100%' }}>
-    <img src={LogoImage} alt='Eticpro' className='w-40 h-25' />
-  
-      <ul className='hidden md:flex mx-auto'>
-        <li className='p-4'>
-          <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>
-            Inicio
-          </a>
-        </li>
-        <li className='p-4'>
-        <a href='#about' onClick={(e) => handleSmoothScroll(e, 'about')}>
-            Acerca
-          </a>
-        </li>
-        <li className='p-4'>
-          <a href='#news' onClick={(e) => handleSmoothScroll(e, 'news')}>
-            Blog
-          </a>
-        </li>
-
-        <li className='p-4'>
-          <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>
-            Contacto
-          </a>
-        </li>
-        <li className='p-4 menu-item-box'>
-        <button className='border-b-2 border-black-800 nav-button' style={{ width: '150px' }} onClick={handleLogin}>
-  Entrar
-</button>
-
-        </li>
-      </ul>
-
-      <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-      </div>
-      {/* Use inline style to set the background color based on `nav` state */}
-      <ul
+    <>
+      <div
+        className='fixed top-0 left-0 w-full h-24 flex justify-between items-center px-4 text-black z-30'
         style={{
-          backgroundColor: 'white', // Establecer el color de fondo en blanco
-          left: nav ? '0' : '-100%',
-          width: '60%', // Ajustar el ancho según sea necesario
-          textAlign: 'center', // Centrar el contenido
+          backgroundImage: `url(${celeste})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
-        className='fixed top-0 h-full border-r border-r-gray-900 ease-in-out duration-500 z-20'
       >
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>Eticpro</h1>
-        <li className='p-4 border-b border-gray-600'>
-          <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>
-            Inicio
-          </a>
-        </li>
-        <li className='p-4'>
-          <a href='#about' onClick={(e) => handleSmoothScroll(e, 'about')}>
-            Quienes Somos
-          </a>
-        </li>
-        <li className='p-4'>
-          <a href='#contacto' onClick={(e) => handleSmoothScroll(e, 'contacto')}>
-            Contacto
-          </a>
-        </li>
-        <li className='p-4'>
-          <a href='#news' onClick={(e) => handleSmoothScroll(e, 'news')}>
-            News
-          </a>
-        </li>
-        <li className='p-4 menu-item-box'>
-          <button className='border-b-2 border-black-800 nav-button' onClick={handleLogin}>
-            Entrar
-          </button>
-        </li>
-      </ul>
-    </div>
+        <img src={LogoImage} alt='Eticpro' className='w-33 h-13.2' /> {/* Increased size by 10% */}
+
+        <ul className='hidden md:flex items-center space-x-4'>
+          <li className='p-4'>
+            <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>Inicio</a>
+          </li>
+          <li className='p-4'>
+            <a href='#ventajas' onClick={(e) => handleSmoothScroll(e, 'ventajas')}>Ventajas</a>
+          </li>
+          <li className='p-4'>
+            <a href='#planes' onClick={(e) => handleSmoothScroll(e, 'planes')}>Planes</a>
+          </li>
+          <li className='p-4'>
+            <a href='#FAQ' onClick={(e) => handleSmoothScroll(e, 'FAQ')}>FAQ</a>
+          </li>
+          <li>
+            <button className='nav-button nav-button-entrar' onClick={handleLogin}>Entrar</button>
+          </li>
+          <li>
+            <button className='nav-button nav-button-demo' onClick={handleOpenModal}>Solicita un demo</button>
+          </li>
+        </ul>
+
+        <div onClick={handleNav} className='block md:hidden'>
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
+
+        {/* Mobile Menu */}
+        <ul
+          style={{
+            backgroundImage: `url(${unsplash})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            left: nav ? '0' : '-100%',
+            width: '60%',
+            textAlign: 'center',
+            position: 'fixed',
+            top: '0',
+            height: '100%',
+            transition: 'left 0.5s ease-in-out',
+          }}
+          className='z-20'
+        >
+          <li className='p-4'>
+            <a href='#inicio' onClick={(e) => handleSmoothScroll(e, 'inicio')}>Inicio</a>
+          </li>
+          <li className='p-4'>
+            <a href='#ventajas' onClick={(e) => handleSmoothScroll(e, 'ventajas')}>Ventajas</a>
+          </li>
+          <li className='p-4'>
+            <a href='#planes' onClick={(e) => handleSmoothScroll(e, 'planes')}>Planes</a>
+          </li>
+          <li className='p-4'>
+            <a href='#FAQ' onClick={(e) => handleSmoothScroll(e, 'FAQ')}>FAQ</a>
+          </li>
+          <li>
+            <button className='nav-button nav-button-entrar' onClick={handleLogin}>Entrar</button>
+          </li>
+          <li>
+            <button className='nav-button nav-button-demo' onClick={handleOpenModal}>Solicita un demo</button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="inicio" className="inicio relative min-h-screen bg-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={unsplash}
+            alt="Background"
+            className="w-full h-full object-cover"
+            style={{ height: '130vh' }} // Extend the height of the background image by 92%
+          />
+        </div>
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
+          <div className="text-black mb-8">
+            <p className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%]" style={{ fontSize: '300%', marginTop: '10%' }}>
+              Maneja tus procesos de compliance en un solo lugar, de manera segura.
+            </p>
+            <p className="text-2xl lg:text-3xl px-4 lg:px-[15%]" style={{ fontSize: '100%', marginTop: '2rem' }}>
+              EticPro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
+            <button className="nav-button nav-button-demo" onClick={handleOpenModal}>
+              Solicita un demo
+            </button>
+            <button className="nav-button nav-button-entrar" onClick={handleOpenModalQuiz}>
+              Diagnóstico en Línea
+            </button>
+          </div>
+          {/* Video Section */}
+          <div className="relative z-20 w-full flex justify-center mt-12">
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: '40vh', width: '70%' }}>
+              <iframe
+                allow="autoplay; gyroscope; fullscreen;"
+                allowFullScreen
+                src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
+                style={{ border: '0', height: '100%', width: '100%', position: 'absolute', top: '0' }}
+                title="Video Eticpro"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Render the modal */}
+      <DemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Quiz isOpen={isModalOpenQuiz} onClose={handleCloseModalQuiz} />
+
+    </>
   );
 };
 

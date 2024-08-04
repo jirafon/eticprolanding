@@ -412,25 +412,19 @@ const Contacto = () => {
     <div className='w-full py-16 text-white px-4'>
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2 my-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold py-2">Contáctenos Aquí</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold py-2">¿Qué tan preparado estás para cumplir con la ley?</h1>
             <p className="text-base sm:text-lg md:text-xl py-2">
-              ¿Desea conocer qué tan preparado está para cumplir con la ley?
+            Descúbrelo con nuestro diagnóstico en línea completamente gratis
             </p>
           </div>
           <div className="my-4">
          
-<input
-        type="checkbox"
-        checked={isPrivacyChecked}
-        onChange={handleCheckboxChange}
-      />
-<label onClick={handlePrivacyModalOpen}>  Acepto la <span className="privacy-policy-link">Política de privacidad</span></label>
+
 <button
   onClick={handleContestarEncuestaClick}
-  disabled={!isPrivacyChecked} // Disable button if privacy checkbox is not checked
-  className="bg-[#00df9a] text-black rounded-md font-medium w-[200px] mx-auto my-6 px-6 py-3"
+ 
 >
-  Comenzar
+  Diagnostico en Línea
 </button>
 {showPrivacyModal && <PrivacyPolicyModal onClose={handlePrivacyModalClose} />}
 

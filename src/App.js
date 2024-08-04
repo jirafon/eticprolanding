@@ -1,21 +1,28 @@
+// App.js
 import React, { useState, useRef } from 'react';
 import Analytics from './components/Analytics';
-import Cards from './components/Cards';
+import Faq from './components/Faq';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import Contacto from './components/Newsletter';
+import Newsletter from './components/Newsletter';
 import About from './components/About';
 import Description from './components/Description';
 import Description1 from './components/Description1';
-import CardsSimple from './components/CardsSimple';
+import Features from './components/Features';
+import CardsPdm from './components/CardsPdm';
+import CardsKb from './components/CardsKb';
+import Cards from './components/Cards';
 
 import Help from './components/Help';
 import Centre from './components/centre';
 import News from './components/News';
 import Blog from './components/Blog';
 import Partner from './components/Partner';
+
 import Clients from './components/Clients';
+import Chatbot from './components/Chat';
+import CardsDr from './components/CardsDr';
 
 
 function App() {
@@ -33,29 +40,33 @@ function App() {
   };
 
   return (
+
     <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
       
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
-      <Hero />
       <Analytics />
-      
-    
+      <Help />
 
       <Centre />
+      
+      <Features />
+   
+    
+      {/* <Cards /> */}
+    <Cards />
+   
+    <Clients />
+    <Faq />
+    <News />
 
-      <Help />
-     <Description /> 
     
-     
-      <Clients />
-      <Contacto />
-    
-    {/*}  <Cards />*/}
-    {/*}  <CardsSimple />*/}
-      <News />
 
       <Footer />
+    
     </div>
+    
+
+    
   );
 }
 

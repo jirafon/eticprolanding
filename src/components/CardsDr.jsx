@@ -14,11 +14,12 @@ const Cards = () => {
           
           <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="Single" />
           <h2 className='text-2xl font-bold text-center py-8'>Small</h2>
-          <p className='text-center text-4xl font-bold'>3,0 UF /  Mensual</p>
+          <p className='text-center text-4xl font-bold'>15 UF /  Mensual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8'>30 Usuarios Invitados</p>
-            <p className='py-2 border-b mx-8'>50 Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
+            <p className='py-2 border-b mx-8'>100 Mb Almacenamiento</p>
+            <p className='py-2 border-b mx-8'>50 Itemes</p>
+
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Levantamiento de datos y Riesgos  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
 
 
@@ -33,12 +34,15 @@ const Cards = () => {
         <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Double} alt="double" />
 
           <h2 className='text-2xl font-bold text-center py-8'>STARTER</h2>
-          <p className='text-center text-4xl font-bold'>6,5 UF / Mensual</p>
+          <p className='text-center text-4xl font-bold'>45 UF / Mensual</p>
+
           <div className='text-center font-medium'>
-          <p className='py-2 border-b mx-8'>60 Usuarios Invitados</p>
-            <p className='py-2 border-b mx-8'>200 Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
+
+            <p className='py-2 border-b mx-8'>500 Mb Almacenamiento</p>
+            <p className='py-2 border-b mx-8'>200 Itemes</p>
+
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Levantamiento de datos y Riesgos  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 100 UF+ IVA </p>
 
 
 
@@ -52,12 +56,13 @@ const Cards = () => {
         <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="triple" />
 
           <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
-          <p className='text-center text-4xl font-bold'>12 UF / Mensual</p>
+          <p className='text-center text-4xl font-bold'>140 UF / Mensual</p>
           <div className='text-center font-medium'>
-          <p className='py-2 border-b mx-8'>120 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>1 Gb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Canal de Denuncias, Repositorio,  Centro de Mensajes.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
+            <p className='py-2 border-b mx-8'>1000 Itemes</p>
+
+            <p className='py-2 border-b mx-8 mt-8'>Módulos: Levantamiento de datos y Riesgos  </p>
+            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 250 UF+ IVA </p>
 
 
 

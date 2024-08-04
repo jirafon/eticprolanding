@@ -6,15 +6,17 @@ import Multi from '../assets/multi.png';
 
 const Cards = () => {
   return (
+    <section id="planes">
+
     <div className='w-full py-[10rem] px-4 bg-white'>
-      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8'>
+      <h4 className='text-2xl font-bold text-center py-8'>Planes</h4>
+    
+      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 transform translate-x-[10%]'>
         {/* Small Card */}
-        
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-          
           <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="Single" />
-          <h2 className='text-2xl font-bold text-center py-8'>Small</h2>
-          <p className='text-center text-4xl font-bold'>30 UF / Mensual</p>
+          <h2 className='text-2xl font-bold text-center py-8'>STARTER</h2>
+        <p className='text-center text-4xl font-bold'>30 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8 mt-8'>250 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>400 Usuarios Invitados</p>
@@ -31,11 +33,10 @@ const Cards = () => {
 
 
         {/* Mid Card */}
-        <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-        <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Double} alt="double" />
-
-          <h2 className='text-2xl font-bold text-center py-8'>STARTER</h2>
-          <p className='text-center text-4xl font-bold'>75 UF / Mensual</p>
+    <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+      <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Double} alt="double" />
+      <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
+        <p className='text-center text-4xl font-bold'>75 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8 mt-8'>500 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>1000 Usuarios Invitados</p>
@@ -48,13 +49,11 @@ const Cards = () => {
 
           </div>
         </div>
-
-        {/* Pro Card */}
-        <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-        <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="triple" />
-
-          <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
-          <p className='text-center text-4xl font-bold'>135 UF / Mensual</p>
+ {/* Pro Card */}
+ <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+      <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="triple" />
+      <h2 className='text-2xl font-bold text-center py-8'>CORPORATIVA</h2>
+       <p className='text-center text-4xl font-bold'>135 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8 mt-8'>2.000 Declaraciones Anuales</p>
             <p className='py-2 border-b mx-8'>2000 Usuarios Invitados</p>
@@ -108,6 +107,7 @@ const Cards = () => {
         */}
       </div>
     </div>
+    </section>
   );
 };
 

@@ -57,7 +57,7 @@ const Clients = () => {
       <div className='w-full bg-white py-16 px-4'>
         <div className='max-w-[1240px] mx-auto text-center'>
           {/* Title */}
-          <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Quienes confían en Eticpro</h6>
+          <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Empresas que confían en EticPro</h6>
 
           <Slider {...settings}>
   <div>
