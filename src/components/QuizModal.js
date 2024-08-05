@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const QuizModal = ({ isOpen, onClose, formData }) => {
+const QuizModal = ({ isOpen, onClose, onComplete, formData }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
   const [showQuizResultsModal, setShowQuizResultsModal] = useState(false);
   const [obtainedPoints, setObtainedPoints] = useState(0);
   const [totalPoints, setTotalPoints] = useState(0);
   const [percentage, setPercentage] = useState(0);
+  const [quizPercentage, setQuizPercentage] = useState(0);
 
   // Form data state
   const [name, setName] = useState('');
@@ -48,6 +49,17 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
     setQuizAnswers({});
   };
 
+    // Function to check if the "Siguiente" button should be disabled
+    const isNextButtonDisabled = () => {
+      return !answers[currentStep];
+    };
+
+     // Function to check if the "Enviar" button should be disabled
+  const isSubmitButtonDisabled = () => {
+    return !answers[currentStep];
+  };
+
+
   // Close modal and reset everything
   const handleClose = () => {
     resetState();
@@ -64,13 +76,22 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
     }));
   };
 
-  const handleNextStep = () => {
-    setCurrentStep((prev) => prev + 1);
-  };
+ 
 
   const handlePrevStep = () => {
-    setCurrentStep((prev) => prev - 1);
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
   };
+
+  const handleNextStep = () => {
+    if (currentStep < questions.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+
+
 
   const handleQuizSubmit = async (e) => {
     e.preventDefault();
@@ -105,15 +126,14 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
     });
 
     // Calcular el porcentaje de avance
-    const percentage = ((obtainedPoints / totalPossiblePoints) * 100).toFixed(2);
-
-    emailTemplate += `<p>Su resultado es ${obtainedPoints} puntos, de un total de ${totalPossiblePoints}. El % de avance es de ${percentage}%.</p>`;
-
+    let calculatedPercentage = ((obtainedPoints / totalPossiblePoints) * 100).toFixed(2);
+    emailTemplate += `<p>Su resultado es ${obtainedPoints} puntos, de un total de ${totalPossiblePoints}. El % de avance es de ${calculatedPercentage}%.</p>`;
+    setQuizPercentage(calculatedPercentage);
+    onComplete(calculatedPercentage);
     // Mostrar el modal de resultados del cuestionario
     setShowQuizResultsModal(true);
     setObtainedPoints(obtainedPoints);
     setTotalPoints(totalPossiblePoints);
-    setPercentage(percentage);
 
     try {
       // Enviar el correo electrónico
@@ -141,7 +161,6 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
   };
 
   if (!isOpen) return null;
-
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'>
       <div className='bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative'>
@@ -149,6 +168,7 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
           onClick={handleClose}
           className='absolute top-2 right-2 text-xl'
           style={{ color: 'white' }}
+          aria-label="Close"
         >
           <FontAwesomeIcon icon={faTimes} />
         </button>
@@ -166,6 +186,7 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
                   checked={answers[currentStep] === option.label}
                   onChange={() => handleOptionChange(currentStep, index)}
                   className='form-radio'
+                  aria-labelledby={`option-${currentStep}-${index}`}
                 />
                 <label htmlFor={`option-${currentStep}-${index}`} className='ml-2'>
                   {option.label}
@@ -180,6 +201,7 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
                 onClick={handlePrevStep}
                 className='bg-white text-blue-500 border border-black p-2 rounded-md flex items-center'
                 style={{ marginRight: '10px' }}
+                aria-label="Previous Step"
               >
                 <FontAwesomeIcon icon={faArrowLeft} />
                 <span style={{ marginLeft: '10px' }}>Anterior</span>
@@ -189,7 +211,9 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
               <button
                 type='button'
                 onClick={handleNextStep}
-                className='bg-blue-500 text-white p-2 rounded-md bg-[rgb(43,71,146)]'
+                className={`bg-[rgb(43,71,146)] text-white p-2 rounded-md ${isNextButtonDisabled() ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={isNextButtonDisabled()}
+                aria-label="Next Step"
               >
                 <span className='mr-2'>Siguiente</span>
                 <FontAwesomeIcon icon={faArrowRight} />
@@ -198,7 +222,10 @@ const QuizModal = ({ isOpen, onClose, formData }) => {
             {currentStep === questions.length - 1 && (
               <button
                 type='submit'
-                className='bg-[rgb(43,71,146)] text-white p-2 rounded-md'
+                className={`bg-[rgb(43,71,146)] text-white p-2 rounded-md ${isSubmitButtonDisabled() ? 'opacity-50 cursor-not-allowed' : ''}`}
+                aria-label="Submit"
+                disabled={isSubmitButtonDisabled()}
+
               >
                 Enviar
               </button>

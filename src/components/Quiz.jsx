@@ -63,11 +63,13 @@ const DemoModal = ({ isOpen, onClose }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showQuizModal, setShowQuizModal] = useState(false);
+  const [percentage, setPercentage] = useState(0);
 
   const handlePrivacyModalOpen = () => {
     setShowPrivacyModal(true);
   };
 
+  
   const handlePrivacyModalClose = () => {
     setShowPrivacyModal(false);
   };
@@ -93,8 +95,8 @@ const DemoModal = ({ isOpen, onClose }) => {
   };
 
 
-
-  const handleQuizComplete = () => {
+  const handleQuizComplete = (percentage) => {
+    setPercentage(percentage);
     setShowQuizModal(false);
     onClose(); // Close the DemoModal as well
   };
@@ -106,8 +108,8 @@ const DemoModal = ({ isOpen, onClose }) => {
       <QuizModal 
       isOpen={showQuizModal} 
       onClose={() => setShowQuizModal(false)}
-       onComplete={handleQuizComplete}
-       formData={formData}  // Pasa los datos correctos
+      onComplete={handleQuizComplete} 
+      formData={formData}  // Pasa los datos correctos
 
        />}
       
@@ -120,7 +122,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               <p className='text-base md:text-lg mb-6 text-center'>
                 Ya estás más cerca de cumplir con la Ley y manejar tus procesos de compliance de manera fácil y segura.
                 Un representante te contactará en máximo 48h.
-              </p>
+                <br />
+                Su resultado de cumplimiento es : {percentage}%              </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false);
@@ -210,7 +213,7 @@ const DemoModal = ({ isOpen, onClose }) => {
                 className='bg-[rgb(43,71,146)] text-white p-2 rounded-md w-full'
                 disabled={!isPrivacyChecked}
               >
-                Enviar
+                Comenzar Quiz
               </button>
             </form>
           </div>
