@@ -85,7 +85,7 @@ const Navbar = () => {
             <a href="#FAQ" onClick={(e) => handleSmoothScroll(e, 'FAQ')}>FAQ</a>
           </li>
           <li>
-            <button className="nav-button nav-button-entrar" onClick={handleOpenModal}>Entrar</button>
+            <button className="nav-button nav-button-entrar" onClick={handleLogin}>Entrar</button>
           </li>
           <li>
             <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Solicita un demo</button>
@@ -125,7 +125,7 @@ const Navbar = () => {
             <a href="#FAQ" onClick={(e) => handleSmoothScroll(e, 'FAQ')}>FAQ</a>
           </li>
           <li>
-            <button className="nav-button nav-button-entrar" onClick={handleOpenModal}>Entrar</button>
+            <button className="nav-button nav-button-entrar" onClick={handleLogin}>Entrar</button>
           </li>
           <li>
             <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Solicita un demo</button>
