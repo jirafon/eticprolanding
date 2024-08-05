@@ -6,7 +6,7 @@ import denuncias from '../assets/denuncias1.png'; // Cambia esto a las rutas cor
 import declar from '../assets/aut.png'; // Cambia esto a las rutas correctas para tus imágenes
 
 import certeval from '../assets/misd.png'; // Cambia esto a las rutas correctas para tus imágenes
-import reuniones from '../assets/reuniones.png'; // Cambia esto a las rutas correctas para tus imágenes
+import reuniones from '../assets/reunioneschil.jpg'; // Cambia esto a las rutas correctas para tus imágenes
 const KeyFeatures = () => {
   const [selectedImage, setSelectedImage] = useState(image1); // Imagen por defecto
 
