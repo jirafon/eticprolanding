@@ -4,6 +4,7 @@ import Bago from '../assets/logo-bago.png';
 import Mapsa from '../assets/logo-larrain.png';
 import SC1 from '../assets/sc1.png';
 import Ese from '../assets/ese.png';
+import DeCapital from '../assets/decapital.png';
 
 import SC2 from '../assets/sc3.png';
 import SC3 from '../assets/sc2.png';
@@ -73,6 +74,11 @@ const Clients = () => {
   <div>
     <a href={Mapsa} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={Mapsa} alt='Mapsa' />
+    </a>
+  </div>
+  <div>
+    <a href={DeCapital} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
+      <img className='w-[200px] mx-2 my-8' src={DeCapital} alt='DeCapital' />
     </a>
   </div>
   <div>
