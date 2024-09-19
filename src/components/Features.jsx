@@ -6,7 +6,7 @@ import denuncias from '../assets/denuncias1.png'; // Cambia esto a las rutas cor
 import declar from '../assets/aut.png'; // Cambia esto a las rutas correctas para tus imágenes
 
 import certeval from '../assets/misd.png'; // Cambia esto a las rutas correctas para tus imágenes
-import reuniones from '../assets/reuchil.png'; // Cambia esto a las rutas correctas para tus imágenes
+import reuniones from '../assets/meet1.png'; // Cambia esto a las rutas correctas para tus imágenes
 const KeyFeatures = () => {
   const [selectedImage, setSelectedImage] = useState(image1); // Imagen por defecto
 
@@ -30,7 +30,7 @@ const KeyFeatures = () => {
               style={{ maxWidth: '100%' }}
             >
               <span className='text-lg md:text-xl'>
-                Gestión de reuniones con Personas Expuestas Políticamente
+              El Registro de Reuniones con Personas de Interés permite reportes de la actividades declaradas. 
               </span>
             </li>
             <li
@@ -39,8 +39,7 @@ const KeyFeatures = () => {
               style={{ maxWidth: '100%' }}
             >
               <span className='text-lg md:text-xl'>
-                Sistema de denuncias anónimas(Ley Karin y otras)
-              </span>
+              Canal de denuncias con denunciante anónimo o identificable para el caso de la Ley Karin y con perfil de investigador con confidencialidad sólo para un caso determinado              </span>
             </li>
             <li
               className='bg-white p-4 flex items-start cursor-pointer'
@@ -48,7 +47,7 @@ const KeyFeatures = () => {
               style={{ maxWidth: '100%' }}
             >
               <span className='text-lg md:text-xl'>
-                Campañas eficientes de conflictos de interés
+              Permite campañas de invitación para Declaración de Conflicto de Interés 
               </span>
             </li>
             <li
@@ -57,7 +56,7 @@ const KeyFeatures = () => {
               style={{ maxWidth: '100%' }}
             >
               <span className='text-lg md:text-xl'>
-                Evaluaciones claras con certificación auditada
+              Permite campañas de invitación para Declaración de Conflicto de Interés 
               </span>
             </li>
             <li
@@ -66,7 +65,7 @@ const KeyFeatures = () => {
               style={{ maxWidth: '100%' }}
             >
               <span className='text-lg md:text-xl'>
-                Acceso a declaraciones históricas
+              Actividad de usuarios tiene cada uno su registro único con trazabilidad para evidencia
               </span>
             </li>
        
