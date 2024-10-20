@@ -78,11 +78,15 @@ const Footer = () => {
           <a href="mailto:hello@eticpro.com" className="text-white text-lg font-bold">hello@eticpro.com</a>
         </p>
         <p className='text-white text-lg font-bold flex items-center space-x-2'>
-          <img src={WS} alt="WhatsApp Logo" className="w-6 h-6 cursor-pointer" />
-          <a href="tel:+56968484088" className="text-white text-lg font-bold">+56 96848 4088, +56 97765 7352</a>
+          <img src={WS} alt="WhatsApp Logo" className="w-6 h-6 cursor-pointer" aria-label="WhatsApp" />
+          {/* Use the WhatsApp URL scheme to open a chat when clicked */}
+      
+          <a href="https://wa.me/56978830533" target="_blank" rel="noopener noreferrer" className="text-white text-lg font-bold">
+          +56 9 7883 0533
+          </a>
         </p>
         <div className="text-center mt-4 flex justify-center">
-          <a href="https://cl.linkedin.com/company/eticpro" target="_blank" rel="noopener noreferrer">
+          <a href="https://cl.linkedin.com/company/eticpro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <img src={LinkedInLogo} alt="LinkedIn Logo" className="w-6 h-6 cursor-pointer" />
           </a>
         </div>
