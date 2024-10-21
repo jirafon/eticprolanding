@@ -81,8 +81,8 @@ const Footer = () => {
           <img src={WS} alt="WhatsApp Logo" className="w-6 h-6 cursor-pointer" aria-label="WhatsApp" />
           {/* Use the WhatsApp URL scheme to open a chat when clicked */}
       
-          <a href="https://wa.me/56978830533" target="_blank" rel="noopener noreferrer" className="text-white text-lg font-bold">
-          +56 9 7883 0533
+          <a href="https://wa.me/56977657352" target="_blank" rel="noopener noreferrer" className="text-white text-lg font-bold">
+          +56 9 77657 352
           </a>
         </p>
         <div className="text-center mt-4 flex justify-center">
