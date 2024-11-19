@@ -22,7 +22,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>3 Usuarios Admin</p>
             <p className='py-2 border-b mx-8'>50Mb Almacenamiento</p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 25 UF+ IVA </p>
 
 
 
@@ -42,7 +42,7 @@ const Cards = () => {
 
             <p className='py-2 border-b mx-8'>500Mb Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 50 UF+ IVA </p>
 
 
           </div>
@@ -58,7 +58,7 @@ const Cards = () => {
 
             <p className='py-2 border-b mx-8'>5GB Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 80 UF+ IVA </p>
 
           </div>
         </div>
@@ -103,6 +103,8 @@ const Cards = () => {
         </div>
         */}
       </div>
+      <p className='py-2 border-b mx-8 mt-8'>***Incluye 2 Capacitaciones Online</p>
+
     </div>
     </section>
   );

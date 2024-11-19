@@ -420,12 +420,7 @@ const Contacto = () => {
           <div className="my-4">
          
 
-<button
-  onClick={handleContestarEncuestaClick}
- 
->
-  Diagnostico en Línea
-</button>
+
 {showPrivacyModal && <PrivacyPolicyModal onClose={handlePrivacyModalClose} />}
 
           </div>

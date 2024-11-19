@@ -46,9 +46,7 @@ const Hero = () => {
             <button className="nav-button nav-button-demo" onClick={handleLogin}>
               Solicita un demo
             </button>
-            <button className="nav-button nav-button-entrar" onClick={handleLogin}>
-              Diagnóstico en Línea
-            </button>
+      
           </div>
         </div>
 

@@ -156,9 +156,7 @@ const Navbar = () => {
             <button className="nav-button nav-button-demo" onClick={handleOpenModal}>
               Solicita un demo
             </button>
-            <button className="nav-button nav-button-entrar" onClick={handleOpenModalQuiz}>
-              Diagnóstico en Línea
-            </button>
+         
           </div>
           {/* Video Section */}
           <div className="relative z-20 w-full flex justify-center mt-12">
