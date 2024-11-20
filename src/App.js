@@ -49,7 +49,7 @@ function App() {
 
       <Centre />
       
-      <Features />
+
    
     
       {/* <Cards /> */}
