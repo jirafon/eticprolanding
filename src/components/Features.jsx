@@ -12,7 +12,7 @@ import repovid from '../assets/repo.gif'; // Change this to the correct path for
 import denunciasvid from '../assets/denuncias.gif'; // Change this to the correct path for your GIF
 import campvid from '../assets/campvid.gif'; // Change this to the correct path for your GIF
 import actividadvid from '../assets/actividadvid.gif'; // Change this to the correct path for your GIF
-import transferenciavid from '../assets/transferenciavid.gif'; // Change this to the correct path for your GIF
+import transferenciavid from '../assets/transferenciasvid.gif'; // Change this to the correct path for your GIF
 import diligenciavid from '../assets/diligenciavid.gif'; // Change this to the correct path for your GIF
 
 const KeyFeatures = () => {
