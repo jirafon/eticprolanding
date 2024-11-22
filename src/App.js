@@ -49,9 +49,10 @@ function App() {
 
       <Centre />
       
+      <Features />
 
-   
-    
+      <About />
+      
       {/* <Cards /> */}
     <Cards />
    

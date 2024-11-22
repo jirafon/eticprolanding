@@ -76,7 +76,7 @@ const Navbar = () => {
             <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')}>Inicio</a>
           </li>
           <li className="p-4">
-            <a href="#ventajas" onClick={(e) => handleSmoothScroll(e, 'ventajas')}>Ventajas</a>
+            <a href="#aboutus" onClick={(e) => handleSmoothScroll(e, 'aboutus')}>Quienes Somos</a>
           </li>
           <li className="p-4">
             <a href="#planes" onClick={(e) => handleSmoothScroll(e, 'planes')}>Planes</a>
