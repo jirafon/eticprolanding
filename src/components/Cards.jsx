@@ -42,7 +42,7 @@ const Cards = () => {
 
             <p className='py-2 border-b mx-8'>250Mb Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Instalación: 50 UF+ IVA </p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 60 UF+ IVA </p>
 
 
           </div>
@@ -58,7 +58,7 @@ const Cards = () => {
 
             <p className='py-2 border-b mx-8'>1GB Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
-            <p className='py-2 border-b mx-8 mt-8'>Instalación: 80 UF+ IVA </p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 100 UF+ IVA </p>
 
           </div>
         </div>
