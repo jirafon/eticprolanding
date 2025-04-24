@@ -18,7 +18,7 @@ const Cards = () => {
           <h2 className='text-2xl font-bold text-center py-8'>STARTER</h2>
         <p className='text-center text-4xl font-bold'>30 UF / Mensual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8'>400 Usuarios Invitados</p>
+            <p className='py-2 border-b mx-8'>300 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>3 Usuarios Admin</p>
             <p className='py-2 border-b mx-8'>50Mb Almacenamiento</p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
@@ -37,10 +37,10 @@ const Cards = () => {
       <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
         <p className='text-center text-4xl font-bold'>85 UF / Mensual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8'>2000 Usuarios Invitados</p>
-            <p className='py-2 border-b mx-8'>10 Usuarios Admin</p>
+            <p className='py-2 border-b mx-8'>+1000 Usuarios Invitados</p>
+            <p className='py-2 border-b mx-8'>8 Usuarios Admin</p>
 
-            <p className='py-2 border-b mx-8'>500Mb Almacenamiento </p>
+            <p className='py-2 border-b mx-8'>250Mb Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 50 UF+ IVA </p>
 
@@ -53,10 +53,10 @@ const Cards = () => {
       <h2 className='text-2xl font-bold text-center py-8'>CORPORATIVA</h2>
        <p className='text-center text-4xl font-bold'>145 UF / Mensual</p>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8'>+5000 Usuarios Invitados</p>
+            <p className='py-2 border-b mx-8'>+2000 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>20 Usuarios Admin</p>
 
-            <p className='py-2 border-b mx-8'>5GB Almacenamiento </p>
+            <p className='py-2 border-b mx-8'>1GB Almacenamiento </p>
             <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 80 UF+ IVA </p>
 
