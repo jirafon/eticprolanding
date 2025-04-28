@@ -163,7 +163,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             </button>
             <h2 className='text-3xl font-bold mb-6 text-center'>Prueba Eticpro</h2>
             <p className='text-2xl md:text-lg mb-6 text-center'>
-              Llena el siguiente formulario y un representante te contactará para resolver tus dudas y activar tu demo sin costo.
+              Llena el siguiente formulario y un representante te contactará a la brevedad.
             </p>
             <form onSubmit={handleSubmit}>
               <input

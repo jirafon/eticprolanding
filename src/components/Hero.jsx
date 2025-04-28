@@ -44,7 +44,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
             <button className="nav-button nav-button-demo" onClick={handleLogin}>
-              Solicita un demo
+              Contactenme
             </button>
       
           </div>
