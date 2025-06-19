@@ -56,7 +56,7 @@ const Analytics = () => {
                         onClick={toggleContentVisibility}
                         aria-expanded={isContentVisible}
                     >
-                        Asegura una cultura de integridad y transparencia con EticPro.
+                        Asegura una cultura de integridad y transparencia con Eticpro.
                     </h1>
                     <h2 className='text-lg font-semibold mb-2 text-white'>
                         Solicita una demostración ahora y descubre la vanguardia del cumplimiento ético.

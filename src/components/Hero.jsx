@@ -39,7 +39,7 @@ const Hero = () => {
               Maneja tus procesos de compliance en un solo lugar, de manera segura.
             </p>
             <p className="text-2xl lg:text-3xl px-4 lg:px-[15%]" style={{ fontSize: '100%', marginTop: '2rem' }}>
-              EticPro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
+              Eticpro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
             </p>
           </div>
           <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
