@@ -97,11 +97,7 @@ const Clients = () => {
       <img className='w-[200px] mx-2 my-8' src={Gruas} alt='Gruas' />
     </a>
   </div>
-  <div>
-    <a href={ADS} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={ADS} alt='ADS' />
-    </a>
-  </div>
+
   <div>
     <a href={ComplianceTracker} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={ComplianceTracker} alt='ADS' />
@@ -114,11 +110,7 @@ const Clients = () => {
       <img className='w-[200px] mx-2 my-8' src={ComplianceGC} alt='ADS' />
     </a>
   </div>
-  <div>
-    <a href={ADS} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={ADS} alt='ADS' />
-    </a>
-  </div>  <div>
+ <div>
     <a href={SC3} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={SC3} alt='SC3' />
     </a>

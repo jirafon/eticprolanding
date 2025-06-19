@@ -34,14 +34,18 @@ const Hero = () => {
           />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-          <div className="text-black mb-8">
-            <p className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%]" style={{ fontSize: '300%' }}>
-              Maneja tus procesos de compliance en un solo lugar, de manera segura.
-            </p>
-            <p className="text-2xl lg:text-3xl px-4 lg:px-[15%]" style={{ fontSize: '100%', marginTop: '2rem' }}>
-              Eticpro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
-            </p>
-          </div>
+         <div className="text-black mb-8">
+  {/* ✅ Nuevo encabezado H1 para SEO */}
+  <h1 className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%]" style={{ fontSize: '300%' }}>
+    Eticpro: Plataforma de Compliance y Gestión Ética Empresarial
+  </h1>
+
+  <p className="text-2xl lg:text-3xl px-4 lg:px-[15%]" style={{ fontSize: '100%', marginTop: '2rem' }}>
+    Maneja tus procesos de compliance en un solo lugar, de manera segura.
+    Eticpro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
+  </p>
+</div>
+
           <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
             <button className="nav-button nav-button-demo" onClick={handleLogin}>
               Contactenme

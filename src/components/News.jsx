@@ -59,7 +59,7 @@ const Analytics = () => {
                         Asegura una cultura de integridad y transparencia con Eticpro.
                     </h1>
                     <h2 className='text-lg font-semibold mb-2 text-white'>
-                        Solicita una demostración ahora y descubre la vanguardia del cumplimiento ético.
+                        Contactanos y descubre la vanguardia del cumplimiento ético.
                     </h2>
                     {isContentVisible && (
                         <div className="text-white text-6xl font-serif" style={{ fontSize: '180%' }}>
