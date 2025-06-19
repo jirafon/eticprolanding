@@ -48,7 +48,7 @@ const Analytics = () => {
                         onClick={handleOpenModal}
                         style={{ backgroundColor: 'white', color: 'black' }}
                     >
-                        Solicita un demo
+                        Contactenme
                     </button>
                 
                     <h1

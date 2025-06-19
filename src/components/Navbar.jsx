@@ -88,7 +88,7 @@ const Navbar = () => {
             <button className="nav-button nav-button-entrar" onClick={handleLogin}>Entrar</button>
           </li>
           <li>
-            <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Solicita un demo</button>
+            <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Contactenme</button>
           </li>
         </ul>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
             <button className="nav-button nav-button-entrar" onClick={handleLogin}>Entrar</button>
           </li>
           <li>
-            <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Solicita un demo</button>
+            <button className="nav-button nav-button-demo" onClick={handleOpenModal}>Contactenme</button>
           </li>
         </ul>
       </div>
@@ -154,7 +154,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
             <button className="nav-button nav-button-demo" onClick={handleOpenModal}>
-              Solicita un demo
+              Contactenme
             </button>
          
           </div>
