@@ -156,8 +156,9 @@ const DemoModal = ({ isOpen, onClose }) => {
             >
             <button
               onClick={onClose}
-              className='absolute top-2 right-2 text-xl'
-              style={{ color: 'white' }}
+              className='absolute top-2 right-2 text-xl bg-white bg-opacity-80 hover:bg-blue-100 rounded-full p-2 shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500'
+              style={{ color: '#2B4792' }}
+              aria-label='Cerrar'
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
