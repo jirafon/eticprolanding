@@ -161,7 +161,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
-            <h2 className='text-3xl font-bold mb-6 text-center'>Contactenme</h2>
+            <h2 className='text-3xl font-bold mb-6 text-center'>Contáctenme</h2>
             <p className='text-2xl md:text-lg mb-6 text-center'>
               Llena el siguiente formulario y un representante te contactará a la brevedad.
             </p>

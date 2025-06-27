@@ -1,336 +1,195 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Styles for larger screens */
 
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-
-
-/* Asegúrate de que la fuente se aplique a cada parte que necesites */
-
+/* Estilos base */
 body {
-  background-color: #000300;
+  background-color: #ffffff;
   font-family: 'Inter', sans-serif;
-}
-.nav-button-demo {
-  font-family: 'Inter', sans-serif;
-  background-color: rgb(15, 15, 98);
-  color: white;
-  width: 250px;
-  border: none;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  line-height: 1.6;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.nav-button-demo:hover {
-  background-color: darkblue;
-  font-family: 'Inter', sans-serif;
+/* Componentes personalizados */
+@layer components {
+  .nav-button {
+    @apply font-inter font-medium px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .nav-button-demo {
+    @apply bg-eticpro-blue-500 text-white shadow-soft hover:bg-eticpro-blue-600 hover:shadow-medium focus:ring-eticpro-blue-500;
+  }
+
+  .nav-button-entrar {
+    @apply bg-white text-eticpro-blue-500 border-2 border-eticpro-blue-500 shadow-soft hover:bg-eticpro-blue-50 hover:shadow-medium focus:ring-eticpro-blue-500;
+  }
+
+  .nav-center {
+    @apply font-inter flex justify-center items-center w-full text-eticpro-blue-500 font-semibold;
+  }
+
+  .nav-item {
+    @apply font-inter px-5 py-2 text-center transition-colors duration-200 hover:text-eticpro-blue-500;
+  }
+
+  .logo-wrapper {
+    @apply font-inter flex items-center h-48;
+  }
+
+  /* Efectos de hover mejorados */
+  .nav-button:hover {
+    @apply font-inter bg-eticpro-gray-600 text-white shadow-medium;
+  }
+
+  /* Contenedor de newsletter con animaciones */
+  .newsletter-container {
+    @apply font-inter transition-all duration-500 ease-in-out;
+  }
+
+  .newsletter-container.animate__fadeIn {
+    @apply animate-fade-in;
+  }
+
+  /* Modal mejorado */
+  .modal {
+    @apply font-inter flex items-center justify-center fixed z-50 inset-0 overflow-auto bg-black bg-opacity-50 backdrop-blur-sm;
+  }
+
+  .modal-content {
+    @apply font-inter bg-white rounded-2xl shadow-large p-8 max-w-md w-full mx-4 relative transform transition-all duration-300 ease-out;
+  }
+
+  .close {
+    @apply font-inter text-eticpro-gray-400 float-right text-3xl font-bold hover:text-eticpro-gray-600 transition-colors duration-200 cursor-pointer;
+  }
+
+  /* Botones mejorados */
+  button {
+    @apply font-inter transition-all duration-200 ease-in-out;
+  }
+
+  button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Contenedor de chat */
+  .chat-container {
+    @apply font-inter fixed bottom-4 right-4 z-40;
+  }
+
+  .chat-window {
+    @apply font-inter bg-white rounded-2xl shadow-large border border-eticpro-gray-200;
+  }
+
+  .message {
+    @apply font-inter mb-4;
+  }
+
+  .message-content {
+    @apply font-inter p-3 rounded-lg max-w-xs;
+  }
+
+  .user .message-content {
+    @apply font-inter bg-eticpro-blue-500 text-white ml-auto;
+  }
 }
-.nav-button {
-  font-family: 'Inter', sans-serif;
-  width: 180px;
-  color: white;
-  padding: 8px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border: none;
+
+/* Media queries para responsividad */
+@media screen and (max-width: 767px) {
+  body {
+    @apply font-inter bg-white text-black;
+    zoom: 90%;
+  }
+
+  .nav-button {
+    @apply font-inter bg-eticpro-gray-600 text-white;
+  }
+
+  .input-orange-border {
+    @apply font-inter border-none;
+  }
 }
 
-.nav-button-demo {
-  background-color: rgb(43, 71, 146);
-  font-family: 'Inter', sans-serif;
-}
-
-.nav-button-demo:hover {
-  background-color: rgb(43, 71, 146);
-  font-family: 'Inter', sans-serif;
-}
-
-.nav-button-entrar {
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-  color: rgb(19, 19, 107); /* Para que el texto sea visible sobre el fondo blanco */
-  border: 2px solid rgb(43, 71, 146);/* Para agregar un borde negro */
-}
-
-.nav-button-entrar:hover {
-  font-family: 'Inter', sans-serif;
-  background-color: lightgray; /* Cambiar el fondo al pasar el mouse por encima */
-}
-
-.nav-center {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: rgb(43, 71, 146); /* Para que el texto sea visible sobre el fondo blanco */
-
-}
-
-.nav-item {
-  font-family: 'Inter', sans-serif;
-  padding: 0 20px;
-  text-align: center;
-}
-
-
-.logo-wrapper {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  height: 200px; /* Adjust the height of the logo wrapper */
-}
-
-
-.nav-button:hover {
-  font-family: 'Inter', sans-serif;
-  background-color: grey;
-  color: white;
-}
-
-.newsletter-container {
-  font-family: 'Inter', sans-serif;
-  transition: transform 0.5s ease;
-}
-
-.newsletter-container.animate__fadeIn {
-  animation: fadeIn 0.5s;
-  font-family: 'Inter', sans-serif;
-}
-
+/* Animaciones personalizadas */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-/* Media query for mobile screens */
-@media screen and (max-width: 767px) {
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: white;
-    color: black;
-    zoom: 90%;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
- 
-  
-
-  .nav-button {
-    font-family: 'Inter', sans-serif;
-    background-color: grey;
-    color: white;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-/* Define the orange border for input fields */
-.input-orange-border {
-  font-family: 'Inter', sans-serif;
-  border: 2px solid orange;
+/* Utilidades adicionales */
+.text-gradient {
+  background: linear-gradient(135deg, #2B4792 0%, #1e3a7a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Hide the border on mobile devices */
-@media (max-width: 767px) {
-  .input-orange-border {
-    font-family: 'Inter', sans-serif;
-    border: none;
+.bg-gradient {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e9ff 100%);
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
-
-.modal {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+/* Focus visible para mejor accesibilidad */
+.focus-visible:focus {
+  outline: 2px solid #2B4792;
+  outline-offset: 2px;
 }
 
-.modal-content {
-  font-family: 'Inter', sans-serif;
-  background-color: #09184a;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 300px;
-  border-radius: 10px;
-  position: relative;
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.close {
-  font-family: 'Inter', sans-serif;
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
 }
 
-.close:hover,
-.close:focus {
-  font-family: 'Inter', sans-serif;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+::-webkit-scrollbar-thumb {
+  background: #2B4792;
+  border-radius: 4px;
 }
 
-
-
-.close:hover,
-.close:focus {
-  font-family: 'Inter', sans-serif;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.navigation-buttons {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-button {
-  font-family: 'Inter', sans-serif;
-  background-color: #00df9a;
-  color: black;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:disabled {
-  font-family: 'Inter', sans-serif;
-  background-color: #ddd;
-  cursor: not-allowed;
-}
-
-.question-3-radio-container input[type="radio"] {
-  font-family: 'Inter', sans-serif;
-  width: 20px; /* Adjust the width */
-  height: 20px; /* Adjust the height */
-}
-.privacy-policy-link {
-  font-family: 'Inter', sans-serif;
-  color: #b7f190; /* Deep Blue color */
-  cursor: pointer; /* Optional: change cursor to pointer to indicate it's clickable */
-}
-.footer p {
-  font-family: 'Inter', sans-serif;
-  color: white; /* Asegura que todo el texto en los párrafos del footer sea blanco */
-}
-.footer {
-  font-family: 'Inter', sans-serif;
-  background-color: #1c1c60 !important;
-}
-
-/* Actualización del modal */
-.modal-content p {
-  font-family: 'Inter', sans-serif;
-  color: white; /* Asegura que el texto en los párrafos del modal sea blanco */
-}
-
-.radio-container input[type="radio"] {
-  font-family: 'Inter', sans-serif;
-  width: 20px; /* Adjust the width */
-  height: 20px; /* Adjust the height */
-}
-
-/* Optional: Increase the size of the radio button label for better visibility */
-.radio-container label {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px; /* Adjust the font size */
-}
-
-.modal-frame {
-  font-family: 'Inter', sans-serif;
-  border: 2px solid #FFA500; /* Orange border */
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #FFF; /* White background */
-}
-
-.orange-frame {
-  font-family: 'Inter', sans-serif;
-  border: 2px solid #ff9900; /* Orange color */
-  padding: 10px; /* Adjust padding as needed */
-}
-
-
-@media (min-width: 640px) {
-  font-family: 'Inter', sans-serif;
-  .modal-content {
-    width: 80%;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal-content {
-    font-family: 'Inter', sans-serif;
-    width: 70%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .modal-content {
-    font-family: 'Inter', sans-serif;
-    width: 60%;
-  }
-}
-
-/* src/App.css */
-.chat-container {
-  font-family: 'Inter', sans-serif;
-  max-width: 600px;
-  margin: 50px auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.chat-window {
-  font-family: 'Inter', sans-serif;
-  height: 300px;
-  overflow-y: scroll;
-  padding: 10px;
-}
-
-.message {
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 10px;
-}
-
-.message-content {
-  font-family: 'Inter', sans-serif;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.user .message-content {
-  font-family: 'Inter', sans-serif;
-  background-color: #d5f5e3;
-  text-align: right;
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a7a;
 }
