@@ -1,4 +1,36 @@
 import React, { useState } from 'react';
+import wsIcon from '../assets/social-whatsapp@2x.png';
+
+const WHATSAPP_NUMBER = '56968484088';
+const WHATSAPP_MESSAGE = encodeURIComponent('Hola, quiero hablar con el asistente IA de Eticpro');
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+
+const FloatingWhatsAppButton = () => (
+  <a
+    href={WHATSAPP_LINK}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chatea con nosotros por WhatsApp"
+    style={{
+      position: 'fixed',
+      bottom: '32px',
+      right: '32px',
+      zIndex: 1000,
+      background: '#25D366',
+      borderRadius: '50%',
+      boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
+      width: '64px',
+      height: '64px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      transition: 'transform 0.2s',
+    }}
+    className="hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400"
+  >
+    <img src={wsIcon} alt="WhatsApp" style={{ width: '36px', height: '36px' }} />
+  </a>
+);
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -39,6 +71,7 @@ const Chat = () => {
   };
 
   return (
+    <>
     <div style={{ backgroundColor: 'white', padding: '20px' }}>
       <h2>Chat de Ventas</h2>
       <div style={{ minHeight: '300px', maxHeight: '400px', overflowY: 'scroll', border: '1px solid #ccc', padding: '10px' }}>
@@ -61,6 +94,8 @@ const Chat = () => {
         </button>
       </form>
     </div>
+      <FloatingWhatsAppButton />
+    </>
   );
 };
 

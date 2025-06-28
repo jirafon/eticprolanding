@@ -10,8 +10,8 @@ const PrivacyPolicyModal = ({ onClose }) => (
     <div className='bg-white p-8 rounded-2xl shadow-2xl max-w-4xl w-full h-[85vh] relative overflow-y-auto mx-4'>
       <div className='sticky top-0 bg-white pb-4 border-b border-gray-200'>
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-          Política de Privacidad
-        </h2>
+        Política de Privacidad
+      </h2>
         <p className='text-gray-600'>Última actualización: Enero 2024</p>
       </div>
       <div className='text-gray-700 leading-relaxed space-y-6 mt-6'>
@@ -181,8 +181,8 @@ const Footer = () => {
                     rel="noopener noreferrer" 
                     className='text-gray-300 hover:text-white transition-colors duration-200 block'
                   >
-                    +56 9 68484 088
-                  </a>
+          +56 9 68484 088
+          </a>
                   <a 
                     href="https://wa.me/56977657352" 
                     target="_blank" 

@@ -46,7 +46,7 @@ const News = () => {
     setCurrentSlide((prev) => (prev - 1 + linkedinPosts.length) % linkedinPosts.length);
   };
 
-  return (
+    return (
     <section id="news" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
@@ -82,14 +82,14 @@ const News = () => {
             <FaChevronLeft className="text-blue-600" />
           </button>
           
-          <button
+                    <button 
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             aria-label="Siguiente post"
           >
             <FaChevronRight className="text-blue-600" />
-          </button>
-
+                    </button>
+                
           {/* Posts Container */}
           <div className="overflow-hidden">
             <div 
@@ -230,8 +230,8 @@ const News = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default News;

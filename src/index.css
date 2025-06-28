@@ -97,6 +97,23 @@ body {
   .user .message-content {
     @apply font-inter bg-eticpro-blue-500 text-white ml-auto;
   }
+
+  /* Estilos para el formulario de contacto */
+  .contact-form-input {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .contact-form-input:focus {
+    @apply transform scale-105;
+  }
+
+  .contact-form-success {
+    animation: successPulse 0.6s ease-in-out;
+  }
+
+  .contact-form-error {
+    animation: errorShake 0.5s ease-in-out;
+  }
 }
 
 /* Media queries para responsividad */
@@ -147,6 +164,70 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* Animaciones para el formulario de contacto */
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes errorShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clases de utilidad para animaciones */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+.animate-success-pulse {
+  animation: successPulse 0.6s ease-in-out;
+}
+
+.animate-error-shake {
+  animation: errorShake 0.5s ease-in-out;
 }
 
 /* Utilidades adicionales */

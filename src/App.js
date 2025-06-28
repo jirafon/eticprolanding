@@ -31,10 +31,10 @@ function App() {
       <Centre />
       <Features />
       <About />
-      <Cards />
-      <Clients />
-      <Faq />
-      <News />
+    <Cards />
+    <Clients />
+    <Faq />
+    <News />
       <Footer />
     </div>
   );
