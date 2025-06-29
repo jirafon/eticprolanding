@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import LogoImage from '../assets/eticprov23.png';
 import unsplash from '../assets/fondo-hero@2x.png';
-import DemoModal from './Demo'; // Import the modal component
+import ContactForm from './ContactForm'; // Import the new contact form
 import Quiz from './Quiz'; // Import the modal component
 import celeste from '../assets/celeste.png';
 import inter from '../assets/inter.webloc'; // Ajusta la ruta según sea necesario
@@ -209,18 +209,18 @@ const Navbar = () => {
               FAQ
             </a>
           </li>
-          <li role="none" className="p-4">
+          <li role="none">
             <button 
-              className="nav-button nav-button-entrar w-full" 
+              className="block w-full p-4 text-left hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
               onClick={handleLogin}
               aria-label="Acceder a la plataforma Eticpro"
             >
               Iniciar Sesión
             </button>
           </li>
-          <li role="none" className="p-4">
+          <li role="none">
             <button 
-              className="nav-button nav-button-demo w-full" 
+              className="block w-full p-4 text-left hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
               onClick={handleOpenModal}
               aria-label="Contactar con Eticpro"
             >
@@ -230,54 +230,49 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      {/* Sección de Inicio */}
-      <section id="inicio" className="inicio relative min-h-screen bg-white overflow-hidden" role="banner" aria-label="Página principal">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={unsplash}
-            alt="Fondo de la página principal de Eticpro"
-            className="w-full h-full object-cover"
-            style={{ height: '130vh' }}
-            loading="eager"
-          />
-        </div>
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-24 md:pt-32">
-          <header className="text-black mb-8">
-            <h1 className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%] text-center md:leading-tight" style={{ fontSize: '180%', marginTop: '2rem' }}>
-              Maneja tus procesos de compliance en un solo lugar, de manera segura.
-            </h1>
-            <p className="text-2xl lg:text-3xl px-4 lg:px-[15%] text-center md:leading-tight" style={{ fontSize: '100%', marginTop: '2rem' }}>
-              Eticpro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
-            </p>
-          </header>
-          <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
-            <button 
-              className="nav-button nav-button-demo" 
-              onClick={handleOpenModal}
-              aria-label="Contactar con Eticpro"
-            >
-              Contáctenme
-            </button>
-          </div>
-          {/* Video Section */}
-          <div className="relative z-20 w-full flex justify-center mt-12">
-            <div style={{ position: 'relative', paddingBottom: '56.25%', height: '40vh', width: '70%' }}>
-              <iframe
-                allow="autoplay; gyroscope; fullscreen;"
-                allowFullScreen
-                src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
-                style={{ border: '0', height: '100%', width: '100%', position: 'absolute', top: '0' }}
-                title="Video demostrativo de Eticpro - Plataforma de Compliance"
-                loading="lazy"
-              ></iframe>
+      {/* Contact Form Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-2 sm:px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={handleCloseModal}></div>
+            <div className="inline-block w-full max-w-full sm:max-w-6xl p-2 sm:p-4 my-4 sm:my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="flex justify-end">
+                <button
+                  onClick={handleCloseModal}
+                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-2"
+                >
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
-      </section>
+      )}
 
-      {/* Render the modal */}
-      <DemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
-      <Quiz isOpen={isModalOpenQuiz} onClose={handleCloseModalQuiz} />
+      {/* Quiz Modal */}
+      {isModalOpenQuiz && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={handleCloseModalQuiz}></div>
+            <div className="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="flex justify-end">
+                <button
+                  onClick={handleCloseModalQuiz}
+                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <Quiz onClose={handleCloseModalQuiz} />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

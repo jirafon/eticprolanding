@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 const ContactPage = () => {
   return (
     <div className="min-h-screen">
-      <ContactForm />
+      <ContactForm isFullPage={true} />
     </div>
   );
 };
