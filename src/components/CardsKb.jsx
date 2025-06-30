@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Single from '../assets/single.png';
 import Double from '../assets/double.png';
@@ -18,7 +17,7 @@ const Cards = () => {
           <p className='text-center text-4xl font-bold'>15 UF /  Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>100 Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Knowledge Base, Trazabilidad.  </p>
+            <p className='py-2 border-b mx-8'>Módulos: Knowledge Base, Trazabilidad.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
 
 
@@ -36,7 +35,7 @@ const Cards = () => {
           <p className='text-center text-4xl font-bold'>45 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>500 Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Knowledge Base, Trazabilidad.  </p>
+            <p className='py-2 border-b mx-8'>Módulos: Knowledge Base, Trazabilidad.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
 
 
@@ -54,7 +53,7 @@ const Cards = () => {
           <p className='text-center text-4xl font-bold'>140 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>1 Gb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Knowledge Base, Trazabilidad.   </p>
+            <p className='py-2 border-b mx-8'>Módulos: Knowledge Base, Trazabilidad.   </p>
             <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
 
 
@@ -102,6 +101,7 @@ const Cards = () => {
         </div>
         */}
       </div>
+      <p className='text-center font-bold mt-2'>**Almacenamiento Adicional: UF 2/mensual por 1 giga extra**</p>
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Cards = () => {
       <div className='text-center font-medium'>
         <p className='py-2 border-b mx-8'>30 Usuarios Invitados</p>
         <p className='py-2 border-b mx-8'>50 Mb Almacenamiento</p>
-        <p className='py-2 border-b mx-8 mt-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
+        <p className='py-2 border-b mx-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
         <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 25 UF+ IVA </p>
       </div>
     </div>
@@ -31,7 +31,7 @@ const Cards = () => {
       <div className='text-center font-medium'>
         <p className='py-2 border-b mx-8'>60 Usuarios Invitados</p>
         <p className='py-2 border-b mx-8'>200 Mb Almacenamiento</p>
-        <p className='py-2 border-b mx-8 mt-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
+        <p className='py-2 border-b mx-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
         <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 50 UF+ IVA </p>
       </div>
     </div>
@@ -44,7 +44,7 @@ const Cards = () => {
       <div className='text-center font-medium'>
         <p className='py-2 border-b mx-8'>120 Usuarios Invitados</p>
         <p className='py-2 border-b mx-8'>1 Gb Almacenamiento</p>
-        <p className='py-2 border-b mx-8 mt-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
+        <p className='py-2 border-b mx-8'>Módulos: Privacy Data Management, Centro de Mensajes.</p>
         <p className='py-2 border-b mx-8 mt-8'>Setup Fee: 80 UF+ IVA </p>
       </div>
     </div>
@@ -83,6 +83,8 @@ const Cards = () => {
       </div>
     </div> */}
   </div>
+
+  <p className='text-center font-bold mt-2'>**Almacenamiento Adicional: UF 2/mensual por 1 giga extra**</p>
 </div>
 
 

@@ -21,7 +21,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>300 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>3 Usuarios Admin</p>
             <p className='py-2 border-b mx-8'>50Mb Almacenamiento</p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 25 UF+ IVA </p>
 
 
@@ -41,7 +41,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>8 Usuarios Admin</p>
 
             <p className='py-2 border-b mx-8'>250Mb Almacenamiento </p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 60 UF+ IVA </p>
 
 
@@ -57,7 +57,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>20 Usuarios Admin</p>
 
             <p className='py-2 border-b mx-8'>1GB Almacenamiento </p>
-            <p className='py-2 border-b mx-8 mt-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
+            <p className='py-2 border-b mx-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 100 UF+ IVA </p>
 
           </div>
@@ -103,6 +103,8 @@ const Cards = () => {
         </div>
         */}
       </div>
+      <p className='text-center font-bold mt-2'>**Almacenamiento Adicional: UF 2/mensual por 1 giga extra**</p>
+
       <p className='py-2 border-b mx-8 mt-8'>***Incluye 2 Capacitaciones Online</p>
 
     </div>
