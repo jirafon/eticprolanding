@@ -12,6 +12,8 @@ import Centre from './components/centre';
 import News from './components/News';
 import Clients from './components/Clients';
 import ContactForm from './components/ContactForm';
+import Description from './components/Description';
+import Hero from './components/Hero';
 
 function App() {
   const aboutRef = useRef(null);
@@ -37,6 +39,8 @@ function App() {
   return (
     <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
       <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
+      <Hero />
+      <Description />
       <Analytics />
       <Help />
       <Centre />
