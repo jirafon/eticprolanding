@@ -20,11 +20,11 @@ const Analytics = () => {
               <div className='pt-6 flex items-center'>
                 <img 
                   src={XimenaPhoto} 
-                  alt="Ximena Fritz" 
+                  alt="Ximena Friz" 
                   className='w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4' // Añadido margen derecho
                 />
                 <div>
-                  <p className='font-bold text-xl'>Ximena Fritz</p>
+                  <p className='font-bold text-xl'>Ximena Friz</p>
                   <p className='text-gray-600'>Lider Compliance, Laboratorio Bagó.</p>
                 </div>
               </div>
