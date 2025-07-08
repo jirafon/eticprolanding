@@ -14,6 +14,7 @@ import Clients from './components/Clients';
 import ContactForm from './components/ContactForm';
 import Description from './components/Description';
 import Hero from './components/Hero';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const aboutRef = useRef(null);
@@ -50,6 +51,7 @@ function App() {
       <Clients />
       <Faq />
       <News />
+      <WhatsAppButton />
       
       {/* Sección de Contacto */}
       <section ref={contactRef} id="contacto" className="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">

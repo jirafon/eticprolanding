@@ -1,0 +1,498 @@
+================================================================================
+                           CONTENIDO WEB ETICPRO
+                    Plataforma de Compliance y Gestión Ética Empresarial
+================================================================================
+
+================================================================================
+                                    NAVEGACIÓN
+================================================================================
+
+Menú Principal:
+- Inicio
+- Quienes Somos  
+- Planes
+- FAQ
+
+Botones de Acción:
+- Iniciar Sesión (redirige a https://compliax.onrender.com)
+- Contáctenme (abre formulario de contacto)
+
+================================================================================
+                                    HERO SECTION
+================================================================================
+
+Título Principal:
+"Eticpro: Plataforma de Compliance y Gestión Ética Empresarial"
+
+Descripción:
+"Maneja tus procesos de compliance en un solo lugar, de manera segura. 
+Eticpro es una plataforma de software robusta que simplifica el cumplimiento 
+ético y la gestión de conflictos en tu organización."
+
+Video Demostrativo:
+- URL: https://www.kapwing.com/e/65931ff121b875ab8f832aa1
+- Título: "Video demostrativo de Eticpro - Plataforma de Compliance"
+
+================================================================================
+                                    DESCRIPCIÓN
+================================================================================
+
+Sección de Video:
+- Título: "¿Qué es Eticpro? 3.30 min"
+- Mismo video demostrativo que en Hero section
+
+================================================================================
+                                    MÓDULOS PRINCIPALES
+================================================================================
+
+Título: "Módulos Principales de Cumplimiento en Eticpro"
+
+Descripción:
+"Eticpro contiene el contenido legal y operativo que tomaría muchas horas 
+de abogado y años de experiencia en formularios, junto con funcionalidad 
+clave para mejorar la eficiencia del cumplimiento normativo.
+
+Perfiles incluidos: Gerente de Cumplimiento, Director, Auditor, Aprobador, 
+Declarante, Denunciante, Investigador y Comité de Ética."
+
+Módulos Disponibles:
+1. Campañas de Cultura de Cumplimiento
+2. Repositorio de Políticas y Procedimientos
+3. Declaraciones de Conflictos de Interés
+4. Transferencias de Valor
+5. Registro de Reuniones con Personas de Interés
+6. Diligencia Debida de Contrapartes
+7. Canal de Denuncias
+8. Actividad de Usuarios
+
+================================================================================
+                                    QUIENES SOMOS
+================================================================================
+
+Título: "¿Qué es Eticpro?"
+
+Descripción Principal:
+"Una solución integral que combina tecnología avanzada con expertise legal 
+para transformar la gestión de compliance empresarial"
+
+Solución Integral de Compliance:
+"Eticpro es una herramienta integral de cumplimiento que combina tecnología 
+con conocimientos legales, permitiendo realizar controles preventivos de 
+delitos económicos necesarios para el Modelo de Prevención de Delitos.
+
+Las personas jurídicas enfrentan problemas complejos que las exponen a 
+altos riesgos de responsabilidad penal. Eticpro llena este vacío ofreciendo 
+una solución específica que permite implementar el Modelo de Prevención de 
+Delitos en 24 horas."
+
+Características Destacadas:
+- Implementación Rápida: Modelo operativo en 24 horas
+- Seguridad Legal: Protección jurídica garantizada
+- Enfoque Especializado: Solución específica para compliance
+- Eficiencia Operativa: Procesos optimizados y automatizados
+
+IDENTIDAD CORPORATIVA:
+
+Nuestra Misión:
+"Eticpro está dedicada a que las organizaciones puedan gestionar sus 
+necesidades de compliance de manera eficiente, con herramientas que tienen 
+sustento legal y ético."
+
+Nuestra Visión:
+"Ser una compañía que entrega soluciones concretas, tanto de forma como 
+de fondo, a los desafíos legales de cumplimiento, consolidándose como un 
+referente en el sector."
+
+Nuestros Valores:
+- Integridad
+- Innovación
+- Eficiencia
+- Empatía
+
+================================================================================
+                                    EQUIPO
+================================================================================
+
+Título: "Conoce a Nuestro Equipo"
+Subtítulo: "Expertos en compliance y tecnología trabajando juntos para 
+transformar la gestión ética empresarial"
+
+Giovanna Gardella - Managing Director:
+"Giovanna ha trabajado en distintas instituciones financieras en Miami, 
+EE.UU., como consultora especialista en la gestión e implementación de 
+modelos de prevención de delitos. En Latinoamérica, participó en la 
+implementación y certificación del Programa de Compliance de BHP Billiton, 
+Metales Base, de acuerdo al Foreign Corrupt Practices Act, Uk Bribery Act 
+y la Ley Chilena No. 20393 de Responsabilidad Penal de las Personas Jurídicas. 
+Esta experiencia le ha otorgado un amplio conocimiento de la legislación de 
+Antilavado de Activos y Anticorrupción en EE.UU. y Latinoamérica. Además, 
+Giovanna ha gestionado programas de cumplimiento en la industria farmacéutica 
+y dispositivos médicos como Compliance Officer de Stryker, Grünenthal y 
+Novartis. Es abogada de la Universidad de Chile, tiene un Master en Derecho 
+Comparado de la Universidad de Miami (LL.M.) y está certificada como 
+especialista en Antilavado de Dinero por la Asociación Mundial de Especialistas 
+en Antilavado de Dinero (ACAMS). Obtuvo un diploma en inglés legal en la 
+Universidad de Columbia en Nueva York y fue docente en el programa de 
+Diplomado de Oficiales de Cumplimiento en la Universidad Adolfo Ibáñez en Miami."
+
+Cristian Haquin - Managing Director:
+"Cristian es Ingeniero Civil Industrial de la Universidad de Santiago, con 
+un MBA en Negocios Internacionales de la Universidad Federico Santa María. 
+Trabajó en empresas líderes como Siemens y BHP Billiton. Es Full-Stack 
+Developer y arquitecto de soluciones."
+
+================================================================================
+                                    PLANES Y PRECIOS
+================================================================================
+
+Título: "Planes"
+
+PLAN STARTER - 30 UF / Mensual
+- 300 Usuarios Invitados
+- 3 Usuarios Admin
+- 50Mb Almacenamiento
+- Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, 
+  Reuniones, Conflictos de Interés, Canal de Denuncias
+- Instalación: 25 UF + IVA
+
+PLAN PRO - 85 UF / Mensual
+- 1000 Usuarios Invitados
+- 8 Usuarios Admin
+- 250Mb Almacenamiento
+- Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, 
+  Reuniones, Conflictos de Interés, Canal de Denuncias
+- Instalación: 60 UF + IVA
+
+PLAN CORPORATIVA - 145 UF / Mensual
+- 2000 Usuarios Invitados
+- 20 Usuarios Admin
+- 1GB Almacenamiento
+- Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, 
+  Reuniones, Conflictos de Interés, Canal de Denuncias
+- Instalación: 100 UF + IVA
+
+Notas Adicionales:
+- Almacenamiento Adicional: UF 2/mensual por 1 giga extra
+- Incluye 2 Capacitaciones Online
+
+================================================================================
+                                    CLIENTES
+================================================================================
+
+Título: "Empresas que confían en Eticpro"
+
+Empresas Cliente (logos mostrados):
+- Schwager
+- Bago
+- Mapsa (Larrain)
+- CLP
+- DeCapital
+- Life4
+- Grúas
+- Compliance Tracker
+- Compliance GC
+- SC1, SC2, SC3, SC4
+- ESE
+- Unbiax
+
+================================================================================
+                                    PREGUNTAS FRECUENTES
+================================================================================
+
+Título: "Preguntas Frecuentes"
+
+1. ¿Las denuncias son realmente anónimas?
+"Sí, aunque guardamos el email de quien realizó la denuncia, si el usuario 
+escoge no dar su nombre es opcional. Aunque lo hiciera, no se muestran los 
+datos a ningún usuario ni compartimos esta información de ninguna forma, 
+respetando el uso confidencial de la información."
+
+2. ¿Qué uso le da Eticpro a la información que maneja?
+"En Eticpro, valoramos y respetamos la privacidad de nuestros usuarios y 
+la confidencialidad de la información que manejan en nuestra plataforma. 
+Nuestra empresa tiene una política clara en cuanto al uso de la información, 
+y nos gustaría explicarte cómo gestionamos los datos que recopilamos:
+
+Uso de la información: La información que nuestros usuarios proporcionan a 
+través de la plataforma de Eticpro se utiliza exclusivamente para fines 
+relacionados con nuestros servicios y funciones. Esta información es 
+fundamental para facilitar la gestión de declaraciones, campañas y otras 
+actividades dentro de la plataforma.
+
+Confidencialidad y seguridad: Mantenemos un estricto nivel de confidencialidad 
+y seguridad en relación con la información que recopilamos. Implementamos 
+medidas técnicas y organizativas para proteger los datos contra el acceso 
+no autorizado, la divulgación y el uso indebido.
+
+No compartimos con terceros: Es importante destacar que en Eticpro no 
+compartimos, vendemos ni proporcionamos la información de nuestros usuarios 
+a terceros, ya sean empresas, organizaciones o individuos. La información 
+que recopilamos se mantiene dentro de nuestra plataforma y se utiliza 
+exclusivamente para mejorar la experiencia de nuestros usuarios y brindarles 
+un servicio de calidad.
+
+Uso interno en Eticpro: La información que recopilamos se utiliza para 
+optimizar y personalizar la experiencia del usuario en nuestra plataforma. 
+Esto incluye aspectos como facilitar la navegación, proporcionar 
+recomendaciones relevantes y mejorar nuestras funcionalidades.
+
+Consentimiento del usuario: Siempre solicitamos el consentimiento expreso 
+de nuestros usuarios para recopilar y utilizar su información. Los usuarios 
+tienen el control sobre los datos que comparten y pueden acceder, editar o 
+eliminar su información en cualquier momento.
+
+Transparencia y comunicación: En Eticpro nos comprometemos a mantener una 
+comunicación transparente con nuestros usuarios sobre cómo se utiliza la 
+información y cuáles son sus derechos en relación con sus datos personales. 
+Si tienes alguna pregunta o inquietud sobre el manejo de la información, 
+no dudes en ponerte en contacto con nuestro equipo de soporte.
+
+En resumen, en Eticpro utilizamos la información con responsabilidad y 
+ética, enfocándonos en brindar un servicio eficiente y seguro a nuestros 
+usuarios. Tu confianza es fundamental para nosotros, y estamos aquí para 
+garantizar que tus datos estén protegidos y utilizados de manera adecuada 
+dentro de nuestra plataforma."
+
+3. ¿Qué significa Funcionario Público?
+"Significa e incluye:
+1. Cualquier oficial o empleado de gobierno o de una organización pública 
+   internacional o cualquier departamento o agencia del mismo o cualquier 
+   otra entidad de propiedad del estado o controladas por éste (incluidas 
+   las empresas de propiedad estatal).
+2. Cualquier persona que actúe en una función oficial o empoderada de un 
+   gobierno u organización pública internacional.
+3. Cualquier dirigente de un partido político o candidato a un cargo público.
+4. Cualquier persona que tiene o ejerce las funciones de representación, 
+   oficio o cargo creado especialmente, incluyendo, potencialmente, algunos 
+   líderes de etnias y comunidades.
+5. Cualquier persona independiente que esté autorizada para representar a 
+   un funcionario del gobierno."
+
+4. ¿Qué es Persona Expuesta Públicamente (PEP)?
+"La Unidad de Análisis Financieros (UAF), según Circular N°49, indica que 
+la Persona Expuesta Políticamente (PEP) son los chilenos o extranjeros que 
+desempeñan o hayan desempeñado funciones públicas destacadas en un país, 
+hasta a lo menos un año de finalizado el ejercicio de las mismas.
+
+A lo menos deberán estar calificadas como PEP las siguientes personas 
+(esta lista es a modo de ejemplo, no exhaustiva):
+
+1. Presidente de la República.
+2. Senadores, Diputados y Alcaldes.
+3. Ministros de la Corte Suprema y de las Cortes de Apelaciones.
+4. Ministros de Estado, Subsecretarios, Intendentes, Gobernadores, 
+   Secretarios Regionales Ministeriales, Embajadores, Jefes Superiores de 
+   Servicios tanto centralizados como descentralizados y el directivo 
+   superior inmediato que deba subrogar a cada uno de ellos.
+5. Comandantes en Jefe de las Fuerzas Armadas, General Director de 
+   Carabineros, Director General de Investigaciones y el superior inmediato 
+   que deba subrogar a cada uno de ellos.
+6. Directores y ejecutivos principales de empresas públicas.
+7. Directores de sociedades anónimas nombrados por el Estado o sus organismos.
+8. Miembros de las directivas de los partidos políticos.
+9. Fiscal Nacional del Ministerio Público y Fiscales Regionales.
+10. Contralor General de la República.
+11. Consejeros del Banco Central de Chile.
+12. Presidente y Consejeros del Consejo de Defensa del Estado.
+13. Ministros del Tribunal Constitucional.
+14. Ministros del Tribunal de la Libre Competencia.
+15. Integrantes titulares y suplentes del Tribunal de Contratación Pública.
+16. Miembros del Consejo de Alta Dirección Pública.
+17. Consejeros Regionales (CORE).
+18. Concejales.
+19. Todos los candidatos en elecciones presidenciales, parlamentarias y 
+    municipales. De igual forma, las personas, naturales o jurídicas, con 
+    o sin fines de lucro, vinculadas a algún candidato a cargo de elección 
+    popular, desde el momento de inscripción de la respectiva candidatura, 
+    conforme a las disposiciones legales aplicables."
+
+================================================================================
+                                    DIAGNÓSTICO DE COMPLIANCE
+================================================================================
+
+Título: "¿Qué tan preparado estás para cumplir con la ley?"
+Subtítulo: "Descúbrelo con nuestro diagnóstico en línea completamente gratis"
+
+Preguntas del Diagnóstico:
+
+1. ¿Cuáles son las principales prioridades de su empresa en términos de compliance?
+   - Inicial (sin implementación) - 0 puntos
+   - Implementación de políticas y procedimientos - 1 punto
+   - Gestión de políticas y procedimientos - 2 puntos
+   - Alineación de cultura de cumplimiento - 3 puntos
+   - Reportes de gestión cumplimiento - 4 puntos
+
+2. ¿Tiene algunos de estos procedimientos que tengan un control real, escrito y efectivo, que cuentan con evidencia demostrable en todo momento y trazable para hacer seguimiento? Seleccione todas las que apliquen:
+   - Registros de reuniones - 2 puntos
+   - Declaraciones de conflictos de interés - 2 puntos
+   - Declaraciones de transferencias de valor - 2 puntos
+   - Control de lectura de documentos - 2 puntos
+   - Canal de denuncia anónima - 2 puntos
+   - Campaña comunicacional - 2 puntos
+   - Diligencia debida de contrapartes - 2 puntos
+   - Diligencia debida de postulantes de empleo - 2 puntos
+
+3. ¿Ha identificado las actividad o procesos de la persona juridica que impliquen riesgos de conducta delitiva?
+   - Sí, hemos identificado todos los riesgos relevantes - 3 puntos
+   - Hemos identificado algunos riesgos, pero falta profundizar - 2 puntos
+   - No hemos realizado una identificación formal de riesgos - 1 punto
+
+4. ¿Ha designado su empresa a una persona responsable con autonomía para gestionar el cumplimiento del modelo de prevención de delitos?
+   - Sí - 3 puntos
+   - No - 0 puntos
+   - En proceso - 2 puntos
+
+5. ¿Las definiciones de prevención de delitos económicos en su organización son de responsabilidad de?
+   - Directorio - 2 puntos
+   - Gerente General o CEO - 2 puntos
+   - Gerente de finanzas, CFO o controller - 2 puntos
+   - Gerente legal - 3 puntos
+   - Gerente de compliance - 3 puntos
+   - Auditoría - 0 puntos
+   - Otro - 1 punto
+   - No tienen aún responsable claro - 0 puntos
+
+6. ¿Cuál es el número de empleados en su organización?
+   - Menos de 50 - 0 puntos
+   - Entre 50 y 100 - 1 punto
+   - Entre 100 y 500 - 2 puntos
+   - Más de 500 - 3 puntos
+
+================================================================================
+                                    FORMULARIO DE CONTACTO
+================================================================================
+
+Título: "¿Listo para transformar tu compliance?"
+Subtítulo: "Completa el formulario y nuestro equipo de expertos te contactará en breve"
+
+Campos del Formulario:
+- Nombre completo (requerido)
+- Email (requerido)
+- Teléfono (requerido)
+- Nombre de empresa (opcional)
+- Industria (opcional)
+- Mensaje (requerido)
+
+Información Adicional:
+- Respuesta Rápida: En menos de 24 horas
+- Consulta Gratuita: Primera evaluación sin costo
+- Expertos Certificados: Equipo especializado en compliance
+
+================================================================================
+                                    FOOTER
+================================================================================
+
+Descripción de la Empresa:
+"Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia 
+para empresas de todos los tamaños. Nuestra misión es brindar las 
+herramientas necesarias para mantener el cumplimiento normativo sin 
+complicaciones y minimizar los riesgos asociados."
+
+Enlaces Rápidos:
+- Inicio
+- Quiénes Somos
+- Planes
+- FAQ
+
+Información de Contacto:
+- Email: hello@eticpro.com
+- Teléfonos: 
+  * +56 9 68484 088
+  * +56 9 77657 352
+- LinkedIn: https://cl.linkedin.com/company/eticpro
+- WhatsApp: https://wa.me/56968484088
+
+================================================================================
+                                    POLÍTICA DE PRIVACIDAD
+================================================================================
+
+Información que Recopilamos:
+"El acceso a determinados servicios que se ofrecen en el sitio puede 
+requerir el ingreso de datos personales, a saber: dirección de e-mail, 
+nombre, apellido, domicilio completo, tipo y número de documento y otros 
+datos opcionales, o cualquier otra información que permita individualizarlo."
+
+Uso de la Información:
+"Los datos que usted ingrese al Sitio se utilizarán para: envío de 
+información de Productos y servicios, reporte de Irregularidades, análisis 
+e investigaciones, Compliance, Asesoramiento legal, aplicaciones de servicios 
+de proceso de negociación y gestión de reclamos previo a la judicialización, 
+sistemas de comunicación internos y externos, obtener estadísticas."
+
+Seguridad y Protección:
+"Eticpro garantiza a los usuarios que ingresen sus datos en el Sitio, que 
+los mismos serán encriptados para preservar la seguridad, integridad y 
+confidencialidad de los datos considerados como personales. El sistema de 
+encriptado implica que los datos solo podrán ser interpretados por Eticpro."
+
+Derechos del Usuario:
+"El usuario podrá acceder a sus datos de carácter personal, rectificarlos, 
+cancelarlos u oponerse a su tratamiento, mediante notificación al responsable 
+de la base de datos hello@eticpro.com (LATAM)."
+
+Información Importante:
+- Eticpro no cederá esta información con terceros
+- El usuario responderá de la veracidad de los datos facilitados
+- Eticpro se reserva el derecho de brindar información a organismos de 
+  control cuando sea requerido
+
+================================================================================
+                                    INFORMACIÓN TÉCNICA
+================================================================================
+
+Plataforma de Acceso:
+- URL de la plataforma: https://compliax.onrender.com
+
+Características Técnicas:
+- Plataforma web responsive
+- Compatible con dispositivos móviles y desktop
+- Interfaz moderna con diseño profesional
+- Navegación intuitiva y accesible
+
+================================================================================
+                                    RESUMEN EJECUTIVO
+================================================================================
+
+Eticpro es una plataforma integral de compliance y gestión ética empresarial 
+que ofrece:
+
+PRODUCTO:
+- Software robusto para gestión de compliance
+- Módulos especializados para diferentes aspectos del cumplimiento normativo
+- Implementación rápida en 24 horas
+- Interfaz intuitiva y fácil de usar
+
+SERVICIOS:
+- Consultoría especializada en compliance
+- Implementación de modelos de prevención de delitos
+- Capacitación y soporte técnico
+- Diagnóstico gratuito de preparación para cumplimiento
+
+BENEFICIOS:
+- Reducción de riesgos legales y penales
+- Eficiencia operativa en procesos de compliance
+- Protección jurídica garantizada
+- Ahorro de tiempo y recursos
+
+MERCADO OBJETIVO:
+- Empresas de todos los tamaños
+- Organizaciones que requieren cumplimiento normativo
+- Empresas que buscan implementar modelos de prevención de delitos
+- Sectores regulados y de alto riesgo
+
+DIFERENCIACIÓN:
+- Experiencia especializada en compliance
+- Tecnología avanzada con sustento legal
+- Implementación rápida y eficiente
+- Soporte experto continuo
+
+================================================================================
+                                    FIN DEL DOCUMENTO
+================================================================================
+
+Este documento contiene toda la información publicada en el sitio web de 
+Eticpro, incluyendo contenido de todos los componentes principales, 
+formularios, políticas y elementos interactivos de la plataforma.
+
+Fecha de extracción: [Fecha actual]
+Versión del sitio: Landing page completa de Eticpro 
