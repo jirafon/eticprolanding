@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import wsIcon from '../assets/social-whatsapp@2x.png';
 
-const WHATSAPP_NUMBER = '56968484088';
+const WHATSAPP_NUMBER = '56987375517';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hola, quiero hablar con el asistente IA de Eticpro');
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 

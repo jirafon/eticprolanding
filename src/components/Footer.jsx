@@ -111,7 +111,7 @@ const Footer = () => {
                 <img src={LinkedInLogo} alt="LinkedIn" className='w-5 h-5' />
               </a>
               <a 
-                href="https://wa.me/56968484088" 
+                href="https://wa.me/56987375517" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className='bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-all duration-300 transform hover:scale-110'
@@ -176,12 +176,12 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faPhone} className='text-blue-400 mr-3 w-4' />
                 <div className='space-y-1'>
                   <a 
-                    href="https://wa.me/56968484088" 
+                    href="https://wa.me/5698484088" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className='text-gray-300 hover:text-white transition-colors duration-200 block'
                   >
-          +56 9 68484 088
+          +56 9 848 40 88
           </a>
                   <a 
                     href="https://wa.me/56977657352" 

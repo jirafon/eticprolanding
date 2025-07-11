@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showChatBubble, setShowChatBubble] = useState(false);
 
-  const phoneNumber = '56968484088'; // Número de WhatsApp de Eticpro
+  const phoneNumber = '56987375517'; // Número de WhatsApp de Eticpro
   const message = 'Hola, me interesa conocer más sobre Eticpro y sus soluciones de compliance. ¿Podrían ayudarme?';
 
   // Mostrar el botón después de 3 segundos
