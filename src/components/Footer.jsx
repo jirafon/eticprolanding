@@ -189,7 +189,7 @@ const Footer = () => {
                     rel="noopener noreferrer" 
                     className='text-gray-300 hover:text-white transition-colors duration-200 block'
                   >
-                    +56 9 77657 352
+                    +56 9 776 57 352
                   </a>
                 </div>
               </div>

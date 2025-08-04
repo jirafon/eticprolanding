@@ -68,12 +68,28 @@ const ContactForm = ({ isFullPage = false }) => {
     
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      setTimeout(() => {
-        setIsSubmitted(false);
+    const { name, email, phone, company, industry, message } = formData;
+    let emailTemplate = `Hola, llegó una nueva solicitud de contacto desde el formulario de Eticpro:\n\n`;
+    emailTemplate += `<p><strong>Nombre:</strong> ${name}</p>`;
+    emailTemplate += `<p><strong>Email:</strong> ${email}</p>`;
+    emailTemplate += `<p><strong>Teléfono:</strong> ${phone}</p>`;
+    emailTemplate += `<p><strong>Empresa:</strong> ${company || 'No especificada'}</p>`;
+    emailTemplate += `<p><strong>Industria:</strong> ${industry || 'No especificada'}</p>`;
+    emailTemplate += `<p><strong>Mensaje:</strong> ${message}</p>`;
+
+    try {
+      const response = await fetch('https://unbiax-main-server.onrender.com/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          emails: ['ncastillo@unbiax.com'],
+          emailTemplate,
+          subject: 'Nueva Solicitud de Contacto - Eticpro',
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
         setFormData({
           name: '',
           email: '',
@@ -82,8 +98,15 @@ const ContactForm = ({ isFullPage = false }) => {
           industry: '',
           message: ''
         });
-      }, 3000);
-    }, 2000);
+      } else {
+        alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputFields = [
@@ -135,7 +158,7 @@ const ContactForm = ({ isFullPage = false }) => {
             ¡Mensaje Enviado!
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-            Gracias por contactarnos. Un representante de nuestro equipo se pondrá en contacto contigo en breve.
+            ¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente. Un representante de nuestro equipo se pondrá en contacto contigo en las próximas 24 horas.
           </p>
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-4 sm:p-6 border border-blue-100/50">
             <p className="text-xs sm:text-sm text-blue-700 font-medium">

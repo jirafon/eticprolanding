@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import Check from '../assets/check@2x.png'; // Asegúrate de que esta ruta sea correcta
+import Check from '../assets/check@2x.png'; // A
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faUser, faPhone, faBuilding, faEnvelope, faComment, faCheckCircle, faChevronDown, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 const PrivacyPolicyModal = ({ onClose }) => (
   <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70'>
