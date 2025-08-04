@@ -331,7 +331,7 @@ const Contacto = () => {
           emails: ['ncastillo@unbiax.com'],
           
           emailTemplate,
-          subject: 'Respuestas de la Encuesta recibida',
+          subject: 'Respuestas de la Encuesta recibida Prospecto Eticpro',
         }),
       });
   
