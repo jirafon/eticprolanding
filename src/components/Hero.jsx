@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import unsplash from '../assets/fondo-hero@2x.png';
 import Description from './Description'; // Import the Description component
+import ContactForm from './ContactForm'; // Import ContactForm for modal
 
 const Hero = () => {
   const [nav, setNav] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -11,6 +13,14 @@ const Hero = () => {
 
   const handleLogin = () => {
     window.location.replace('https://compliax.onrender.com');
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true); // Open the modal
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Close the modal
   };
 
   const handleSmoothScroll = (event, targetId) => {
@@ -47,7 +57,7 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center space-x-4 px-4 lg:px-[15%] mt-8">
           <button 
             className="nav-button nav-button-demo" 
-            onClick={handleLogin}
+            onClick={handleOpenModal}
             aria-label="Contactar con Eticpro"
           >
             Contáctenme
@@ -70,6 +80,28 @@ const Hero = () => {
       </div>
       
       <Description />
+      
+      {/* Contact Form Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-2 sm:px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={handleCloseModal}></div>
+            <div className="inline-block w-full max-w-6xl p-2 sm:p-4 my-4 sm:my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="flex justify-end">
+                <button
+                  onClick={handleCloseModal}
+                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-2"
+                >
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
