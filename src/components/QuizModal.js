@@ -137,7 +137,7 @@ const QuizModal = ({ isOpen, onClose, onComplete, formData }) => {
 
     try {
       // Enviar el correo electrónico
-      const response = await fetch('https://unbiax-main-server.onrender.com/email/send', {
+      const response = await fetch('https://vault-server-u5xa.onrender.com/email/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

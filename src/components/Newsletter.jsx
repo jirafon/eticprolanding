@@ -324,11 +324,11 @@ const Contacto = () => {
     setShowQuizResultsModal(true);
   
     try {
-      const response = await fetch('https://unbiax-main-server.onrender.com/email/send', {
+      const response = await fetch('https://vault-server-u5xa.onrender.com/email/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          emails: ['chaquin@gmail.com'],
+          emails: ['ncastillo@unbiax.com'],
           
           emailTemplate,
           subject: 'Respuestas de la Encuesta recibida',
