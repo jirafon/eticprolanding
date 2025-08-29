@@ -63,6 +63,7 @@ const DemoModal = ({ isOpen, onClose }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const modalRef = useRef(null);
+  const [selectedStartup, setSelectedStartup] = useState(null);
 
 
   const handlePrivacyModalOpen = () => {
@@ -106,6 +107,51 @@ const DemoModal = ({ isOpen, onClose }) => {
           subject: 'Solicitud de Demo Recibido de prospecto',
         }),
       });
+   // Guardar en MongoDB
+      const prospectData = {
+        companyName: company,
+        rut: "",
+        industry: "other",
+        size: "medium",
+        website: "",
+        address: "",
+        contacts: [
+          {
+            name: name,
+            role: "Contact",
+            email: email,
+            phone: phone,
+            isPrimary: true
+          }
+        ],
+        stage: "lead",
+        source: "Eticpro website",
+        estimatedValue: null,
+        probability: 10,
+        expectedCloseDate: null,
+        interestedProducts: "Eticpro",
+        score: 25,
+        priority: "medium",
+        nextFollowUp: null,
+        status: "active",
+        notes: comment || "",
+        tags: [],
+        assignedTo: "",
+         createdBy: "landing@eticpro.com"
+      };
+
+  const mongoResponse = await fetch('https://scraperut.onrender.com/crm/prospects', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.REACT_APP_SCRAPER_TOKEN}`
+        },
+        body: JSON.stringify(prospectData),
+      });
+      
+      console.log('MongoDB Response Status:', mongoResponse.status);
+      const mongoResponseText = await mongoResponse.text();
+      console.log('MongoDB Response Body:', mongoResponseText);
 
       if (response.ok) {
         setFormData({
