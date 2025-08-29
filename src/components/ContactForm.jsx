@@ -35,6 +35,9 @@ const ContactForm = ({ isFullPage = false }) => {
   };
 
   const validateForm = () => {
+    if (!formData.company.trim()) {
+      newErrors.company = 'El nombre de la empresa es requerido';
+    }
     const newErrors = {};
     
     if (!formData.name.trim()) {
@@ -88,6 +91,48 @@ const ContactForm = ({ isFullPage = false }) => {
         }),
       });
 
+      // Guardar en MongoDB
+      const prospectData = {
+        companyName: company,
+        rut: '',
+        industry: industry || 'other',
+        size: 'medium',
+        website: '',
+        address: '',
+        contacts: [
+          {
+            name: name,
+            role: 'Contact',
+            email: email,
+            phone: phone,
+            isPrimary: true
+          }
+        ],
+        stage: 'lead',
+        source: 'Eticpro website',
+        estimatedValue: null,
+        probability: 10,
+        expectedCloseDate: null,
+        interestedProducts: 'Eticpro',
+        score: 25,
+        priority: 'medium',
+        nextFollowUp: null,
+        status: 'active',
+        notes: message || '',
+        tags: [],
+        assignedTo: '',
+        createdBy: 'landing@eticpro.com'
+      };
+
+      await fetch('https://scraperut.onrender.com/crm/prospects', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.REACT_APP_SCRAPER_TOKEN}`
+        },
+        body: JSON.stringify(prospectData),
+      });
+
       if (response.ok) {
         setIsSubmitted(true);
         setFormData({
@@ -132,11 +177,11 @@ const ContactForm = ({ isFullPage = false }) => {
       required: true
     },
     {
-      field: 'company',
-      icon: faBuilding,
-      placeholder: 'Nombre de tu empresa (opcional)',
-      type: 'text',
-      required: false
+  field: 'company',
+  icon: faBuilding,
+  placeholder: 'Nombre de tu empresa',
+  type: 'text',
+  required: true
     },
     {
       field: 'industry',
