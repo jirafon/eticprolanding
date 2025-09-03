@@ -64,6 +64,7 @@ const DemoModal = ({ isOpen, onClose }) => {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const modalRef = useRef(null);
   const [selectedStartup, setSelectedStartup] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
 
   const handlePrivacyModalOpen = () => {
@@ -86,7 +87,9 @@ const DemoModal = ({ isOpen, onClose }) => {
   const handleInputChange = (field) => (event) => {
     setFormData({ ...formData, [field]: event.target.value });
   };
-
+ 
+  
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, phone, company, email, comment } = formData;
@@ -98,6 +101,7 @@ const DemoModal = ({ isOpen, onClose }) => {
     emailTemplate += `<p><strong>Mensaje:</strong> ${comment}</p>`;
 
     try {
+      setIsLoading(true);
       const response = await fetch('https://vault-server-u5xa.onrender.com/email/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -108,68 +112,81 @@ const DemoModal = ({ isOpen, onClose }) => {
         }),
       });
    // Guardar en MongoDB
-      const prospectData = {
-        companyName: company,
-        rut: "",
-        industry: "other",
-        size: "medium",
-        website: "",
-        address: "",
-        contacts: [
-          {
-            name: name,
-            role: "Contact",
-            email: email,
-            phone: phone,
-            isPrimary: true
-          }
-        ],
-        stage: "lead",
-        source: "Eticpro website",
-        estimatedValue: null,
-        probability: 10,
-        expectedCloseDate: null,
-        interestedProducts: "Eticpro",
-        score: 25,
-        priority: "medium",
-        nextFollowUp: null,
-        status: "active",
-        notes: comment || "",
-        tags: [],
-        assignedTo: "",
-         createdBy: "landing@eticpro.com"
-      };
-
-  const mongoResponse = await fetch('https://scraperut.onrender.com/crm/prospects', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.REACT_APP_SCRAPER_TOKEN}`
-        },
-        body: JSON.stringify(prospectData),
-      });
-      
-      console.log('MongoDB Response Status:', mongoResponse.status);
-      const mongoResponseText = await mongoResponse.text();
-      console.log('MongoDB Response Body:', mongoResponseText);
-
-      if (response.ok) {
-        setFormData({
-          name: '',
-          phone: '',
-          company: '',
-          email: '',
-          comment: '',
-        });
-        setIsSubmitted(true);
-      } else {
-        alert('Falló el envío de la encuesta.');
-      }
-    } catch (error) {
-      console.error(error);
-      alert('Falló el envío de la encuesta.');
-    }
+   const prospectData = {
+    companyName: company,
+    rut: '',
+    industry: 'other',
+    size: 'medium',
+    website: '',
+    address: '',
+    contacts: [
+      {
+        name: name,
+        role: 'Contact',
+        email: email,
+        phone: phone,
+        isPrimary: true,
+      },
+    ],
+    stage: 'lead',
+    source: 'Eticpro website',
+    estimatedValue: null,
+    probability: 10,
+    expectedCloseDate: null,
+    interestedProducts: selectedStartup ? [selectedStartup.name] : [],
+    score: 25,
+    priority: 'medium',
+    nextFollowUp: null,
+    status: 'active',
+    notes: comment || '',
+    tags: [],
+    assignedTo: '',
+    createdBy: 'landing@unbiax.com',
   };
+
+  const mongoResponse = await fetch(
+    'https://scraperut.onrender.com/crm/prospects',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.REACT_APP_SCRAPER_TOKEN}`,
+      },
+      body: JSON.stringify(prospectData),
+    }
+  );
+
+  /* ---------- 3. Manejar respuestas ---------- */
+  console.log('MongoDB Response Status:', mongoResponse.status);
+  const mongoResponseText = await mongoResponse.text();
+  console.log('MongoDB Response Body:', mongoResponseText);
+
+  if (response.ok && mongoResponse.ok) {
+    // Éxito: limpiar formulario y mostrar mensaje
+    setFormData({
+      name: '',
+      phone: '',
+      company: '',
+      email: '',
+      comment: '',
+      startup: '',
+    });
+    setIsSubmitted(true);
+  } else {
+    console.error('Email response:', response.status);
+    console.error('MongoDB response:', mongoResponse.status);
+    alert('Falló el envío del formulario.');
+  }
+} catch (error) {
+  console.error(error);
+  alert('Falló el envío del formulario.');
+} finally {
+  setIsLoading(false);
+}
+};
+
+
+  
   return (
     <>
       {showPrivacyModal && <PrivacyPolicyModal onClose={handlePrivacyModalClose} />}
