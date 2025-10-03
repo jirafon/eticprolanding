@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Laptop from "../assets/team2.png";
 import GG from "../assets/biogg.png";
-import CH from "../assets/bioch.png";
+import CH from "../assets/bioch2.png";
 
 const About = () => {
   const [showGiovannaFull, setShowGiovannaFull] = useState(false);

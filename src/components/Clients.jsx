@@ -4,7 +4,6 @@ import Bago from '../assets/logo-bago.png';
 import Mapsa from '../assets/logo-larrain.png';
 import SC1 from '../assets/sc1.png';
 import Ese from '../assets/ese.png';
-import DeCapital from '../assets/decapitallogo.png';
 import Clp from '../assets/clplogo.png';
 
 import SC2 from '../assets/sc3.png';
@@ -13,7 +12,6 @@ import SC3 from '../assets/sc2.png';
 import SC4 from '../assets/sc4.png';
 import Life4 from '../assets/life4logo.png';
 
-import ADS from '../assets/logoads2.png';
 import Gruas from '../assets/logo-gruas5.png';
 import Slider from "react-slick";
 import Dimerco from '../assets/dimercologo.png';
@@ -82,11 +80,7 @@ const Clients = () => {
       <img className='w-[200px] mx-2 my-8' src={Clp} alt='Clp' />
     </a>
   </div>
-  <div>
-    <a href={DeCapital} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={DeCapital} alt='DeCapital' />
-    </a>
-  </div>
+
   <div>
     <a href={Life4} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
       <img className='w-[200px] mx-2 my-8' src={Life4} alt='Life4' />
@@ -100,14 +94,14 @@ const Clients = () => {
 
   <div>
     <a href={ComplianceTracker} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={ComplianceTracker} alt='ADS' />
+      <img className='w-[200px] mx-2 my-8' src={ComplianceTracker} alt='ComplianceTracker' />
     </a>
   </div>
 
   
   <div>
     <a href={ComplianceGC} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={ComplianceGC} alt='ADS' />
+      <img className='w-[200px] mx-2 my-8' src={ComplianceGC} alt='ComplianceGC' />
     </a>
   </div>
  <div>
@@ -136,7 +130,7 @@ const Clients = () => {
   </div>
   <div>
     <a href={Unbiax} target="_blank" rel="noopener noreferrer" className="logo-wrapper">
-      <img className='w-[200px] mx-2 my-8' src={Unbiax} alt='ADS' />
+      <img className='w-[200px] mx-2 my-8' src={Unbiax} alt='Unbiax' />
     </a>
   </div>
 </Slider>
