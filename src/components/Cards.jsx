@@ -11,7 +11,7 @@ const Cards = () => {
     <div className='w-full py-[10rem] px-4 bg-white'>
       <h4 className='text-2xl font-bold text-center py-8'>Planes</h4>
     
-      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6'>
+      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6'>
         {/* Small Card */}
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="Single" />
@@ -60,20 +60,6 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 100 UF+ IVA </p>
 
-          </div>
-        </div>
-
-        {/* Plus Card */}
-        <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-          <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Multi} alt="plus" />
-          <h2 className='text-2xl font-bold text-center py-8'>EMPRESA&nbsp;PLUS</h2>
-          <p className='text-center text-4xl font-bold'>320 UF / Mensual</p>
-          <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8'>4000 Usuarios Invitados</p>
-            <p className='py-2 border-b mx-8'>30 Usuarios Admin</p>
-            <p className='py-2 border-b mx-8'>2GB Almacenamiento</p>
-            <p className='py-2 border-b mx-8'>Módulos: Todos los disponibles en CORPORATIVA + Soporte Prioritario</p>
-            <p className='py-2 border-b mx-8 mt-8'>Instalación: 200 UF + IVA</p>
           </div>
         </div>
 
