@@ -71,9 +71,23 @@ const Cards = () => {
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>4000 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>30 Usuarios Admin</p>
-            <p className='py-2 border-b mx-8'>1.5GB Almacenamiento</p>
+            <p className='py-2 border-b mx-8'>2GB Almacenamiento</p>
             <p className='py-2 border-b mx-8'>Módulos: Todos los disponibles en CORPORATIVA + Soporte Prioritario</p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 120 UF + IVA</p>
+          </div>
+        </div>
+
+        {/* Custom Card */}
+        <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+          <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Multi} alt="custom" />
+          <h2 className='text-2xl font-bold text-center py-8'>CUSTOM / A&nbsp;LA&nbsp;MEDIDA</h2>
+          <p className='text-center text-4xl font-bold'>Contáctenos</p>
+          <div className='text-center font-medium'>
+            <p className='py-2 border-b mx-8'>Desarrollo y módulos adicionales</p>
+            <p className='py-2 border-b mx-8'>Integraciones personalizadas</p>
+            <p className='py-2 border-b mx-8'>Soporte dedicado</p>
+            <p className='py-2 border-b mx-8'>Capacitación avanzada</p>
+            <p className='py-2 border-b mx-8 mt-8'>Solicite una cotización acorde a sus necesidades</p>
           </div>
         </div>
 
