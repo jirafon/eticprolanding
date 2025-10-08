@@ -73,7 +73,7 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>30 Usuarios Admin</p>
             <p className='py-2 border-b mx-8'>2GB Almacenamiento</p>
             <p className='py-2 border-b mx-8'>Módulos: Todos los disponibles en CORPORATIVA + Soporte Prioritario</p>
-            <p className='py-2 border-b mx-8 mt-8'>Instalación: 120 UF + IVA</p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 200 UF + IVA</p>
           </div>
         </div>
 
