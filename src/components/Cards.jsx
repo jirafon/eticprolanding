@@ -35,7 +35,7 @@ const Cards = () => {
     <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
       <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Double} alt="double" />
       <h2 className='text-2xl font-bold text-center py-8'>PRO</h2>
-        <p className='text-center text-4xl font-bold'>85 UF / Mensual</p>
+        <p className='text-center text-4xl font-bold'>90 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>1000 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>8 Usuarios Admin</p>
@@ -51,7 +51,7 @@ const Cards = () => {
  <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
       <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="triple" />
       <h2 className='text-2xl font-bold text-center py-8'>CORPORATIVA</h2>
-       <p className='text-center text-4xl font-bold'>145 UF / Mensual</p>
+       <p className='text-center text-4xl font-bold'>170 UF / Mensual</p>
           <div className='text-center font-medium'>
             <p className='py-2 border-b mx-8'>2000 Usuarios Invitados</p>
             <p className='py-2 border-b mx-8'>20 Usuarios Admin</p>
@@ -60,6 +60,20 @@ const Cards = () => {
             <p className='py-2 border-b mx-8'>Módulos: Repositorio, Transferencia de Valor, Diligencia Debida, Reuniones, Conflictos de Interés, Canal de Denuncias.  </p>
             <p className='py-2 border-b mx-8 mt-8'>Instalación: 100 UF+ IVA </p>
 
+          </div>
+        </div>
+
+        {/* Plus Card */}
+        <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+          <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Multi} alt="plus" />
+          <h2 className='text-2xl font-bold text-center py-8'>EMPRESA&nbsp;PLUS</h2>
+          <p className='text-center text-4xl font-bold'>320 UF / Mensual</p>
+          <div className='text-center font-medium'>
+            <p className='py-2 border-b mx-8'>4000 Usuarios Invitados</p>
+            <p className='py-2 border-b mx-8'>30 Usuarios Admin</p>
+            <p className='py-2 border-b mx-8'>1.5GB Almacenamiento</p>
+            <p className='py-2 border-b mx-8'>Módulos: Todos los disponibles en CORPORATIVA + Soporte Prioritario</p>
+            <p className='py-2 border-b mx-8 mt-8'>Instalación: 120 UF + IVA</p>
           </div>
         </div>
 
