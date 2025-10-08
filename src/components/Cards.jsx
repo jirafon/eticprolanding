@@ -11,7 +11,7 @@ const Cards = () => {
     <div className='w-full py-[10rem] px-4 bg-white'>
       <h4 className='text-2xl font-bold text-center py-8'>Planes</h4>
     
-      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 transform translate-x-[10%]'>
+      <div className='max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6'>
         {/* Small Card */}
         <div className='w-full sm:w-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="Single" />
