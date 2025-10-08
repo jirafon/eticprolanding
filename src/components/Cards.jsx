@@ -118,6 +118,7 @@ const Cards = () => {
         */}
       </div>
       <p className='text-center font-bold mt-2'>**Almacenamiento Adicional: UF 2/mensual por 1 giga extra**</p>
+      <p className='text-center font-bold mt-2'>*** Usuario adicional : UF&nbsp;0.12 / usuario</p>
 
       <p className='py-2 border-b mx-8 mt-8'>***Incluye 2 Capacitaciones Online</p>
 
