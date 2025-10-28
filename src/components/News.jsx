@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaThumbsUp, FaComment, FaShare, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -213,21 +213,6 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                           {post.engagement}
                         </div>
                         
-                        {/* LinkedIn Actions */}
-                        <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                          <button className="flex items-center text-gray-500 hover:text-blue-600 transition-colors duration-200">
-                            <FaThumbsUp className="mr-2" />
-                            Me gusta
-                          </button>
-                          <button className="flex items-center text-gray-500 hover:text-blue-600 transition-colors duration-200">
-                            <FaComment className="mr-2" />
-                            Comentar
-                          </button>
-                          <button className="flex items-center text-gray-500 hover:text-blue-600 transition-colors duration-200">
-                            <FaShare className="mr-2" />
-                            Compartir
-                          </button>
-                        </div>
                       </div>
                     </div>
                   </div>

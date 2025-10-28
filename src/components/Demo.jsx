@@ -89,7 +89,7 @@ const DemoModal = ({ isOpen, onClose }) => {
   };
  
   
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, phone, company, email, comment } = formData;
@@ -157,14 +157,14 @@ const DemoModal = ({ isOpen, onClose }) => {
       let emailOk = false;
       try {
         const emailResp = await fetch('https://vault-server-u5xa.onrender.com/email/send', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
             emails: ['ncastillo@unbiax.com'],
-            emailTemplate,
+          emailTemplate,
             subject: 'Solicitud de Demo recibida',
-          }),
-        });
+        }),
+      });
         console.log('Email Response Status:', emailResp.status);
         emailOk = emailResp.ok;
       } catch (emailErr) {
@@ -189,7 +189,7 @@ const DemoModal = ({ isOpen, onClose }) => {
     } finally {
       setIsLoading(false);
     }
-};
+  };
 
 
   

@@ -134,7 +134,7 @@ const ContactForm = ({ isFullPage = false }) => {
       });
 
       if (response.ok) {
-        setIsSubmitted(true);
+      setIsSubmitted(true);
         setFormData({
           name: '',
           email: '',
@@ -177,10 +177,10 @@ const ContactForm = ({ isFullPage = false }) => {
       required: true
     },
     {
-  field: 'company',
-  icon: faBuilding,
+      field: 'company',
+      icon: faBuilding,
   placeholder: 'Nombre de tu empresa',
-  type: 'text',
+      type: 'text',
   required: true
     },
     {
