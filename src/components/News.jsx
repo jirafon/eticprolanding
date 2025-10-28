@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import { FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -156,7 +156,7 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                          <FaLinkedin className="text-white text-xl" />
+                          <FaNewspaper className="text-white text-xl" />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-gray-800">{post.title}</h3>
@@ -171,16 +171,6 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                           </div>
                         </div>
                       </div>
-                      <a
-                        href={post.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
-                        aria-label="Ver post completo en LinkedIn"
-                      >
-                        <FaExternalLinkAlt className="mr-1" />
-                        Ver en LinkedIn
-                      </a>
                     </div>
 
                     {/* Post Description */}
@@ -188,14 +178,8 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                       {post.description}
                     </p>
 
-                    {/* LinkedIn Post Simulation */}
-                    <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                      <div className="text-center text-gray-500 mb-4">
-                        <FaLinkedin className="inline-block mr-2 text-blue-600" />
-                        Post de LinkedIn
-                      </div>
-                      <div className="bg-white rounded-lg p-6 border border-gray-200">
-                        {/* LinkedIn Header */}
+                    {/* Article Content */}
+                    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                         <div className="flex items-center mb-4">
                           <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
                             <span className="text-white font-bold text-sm">E</span>
@@ -221,20 +205,18 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                           {post.engagement}
                         </div>
                         
-                        {/* Read More Button for articles with full content */}
-                        {post.content && (
-                          <div className="pt-4 border-t border-gray-200">
-                            <button
-                              onClick={() => openModal(post)}
-                              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center"
-                            >
-                              <span>Leer artículo completo</span>
-                              <FaExternalLinkAlt className="ml-2 text-xs" />
-                            </button>
-                          </div>
-                        )}
-                        
-                      </div>
+                      {/* Read More Button for articles with full content */}
+                      {post.content && (
+                        <div className="pt-4 border-t border-gray-200">
+                          <button
+                            onClick={() => openModal(post)}
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center"
+                          >
+                            <span>Leer artículo completo</span>
+                            <FaExternalLinkAlt className="ml-2 text-xs" />
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -275,8 +257,8 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
             >
-              <FaLinkedin className="mr-2" />
-              Seguir en LinkedIn
+              <FaNewspaper className="mr-2" />
+              Ver más noticias
             </a>
           </div>
         </div>
