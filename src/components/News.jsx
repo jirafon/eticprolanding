@@ -8,13 +8,15 @@ const News = () => {
   const linkedinPosts = [
     {
       id: 1,
-      title: "Columna de Giovanna Gardella en Diario La Segunda",
-      description: "Los invitamos a leer la columna de nuestra directora Giovanna Gardella sobre compliance en el sector público, que fue publicada hoy miércoles 11 de junio en Diario La Segunda.",
-      date: "11 Junio 2025",
-      url: "https://www.linkedin.com/posts/eticpro_aeztica-compliance-momentodeactuar-activity-7338693567416004608-Sge-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAD8FekBcTgSf2M26uwM-7CgOFRPcIkGCo8",
+      title:
+        "Frente al alza de los delitos económicos: beneficios de los Programas de Cumplimiento – G5noticias",
+      description:
+        "Con más de 20 años de experiencia, Giovanna Gardella destaca que contar con Programas de Cumplimiento es una necesidad estratégica para operar con integridad, sostenibilidad y responsabilidad.",
+      date: "21 Octubre 2025",
+      url: "https://share.google/7Mv32LbYDsjx5PqLV",
       category: "Medios",
-      engagement: "2 reacciones • 1 comentario",
-      hashtags: "#Ética #Compliance #Momentodeactuar"
+      engagement: "Nuevo artículo",
+      hashtags: "#Compliance #Integridad #Gobernanza"
     },
     {
       id: 2,
