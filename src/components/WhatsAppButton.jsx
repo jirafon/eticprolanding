@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const WhatsAppButton = () => {
@@ -21,11 +21,11 @@ const WhatsAppButton = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Mostrar burbuja de chat después de 5 segundos
+  // Mostrar indicador de WhatsApp después de 4 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowChatBubble(true);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,49 +36,19 @@ const WhatsAppButton = () => {
     setShowChatBubble(false); // Ocultar burbuja después del clic
   };
 
-  const handleCloseChatBubble = () => {
-    setShowChatBubble(false);
-  };
 
   if (!isVisible) return null;
 
   return (
     <>
-      {/* Burbuja de chat flotante */}
+      {/* Indicador de comunicación WhatsApp */}
       {showChatBubble && (
-        <div className="fixed bottom-24 right-6 z-40 animate-bounce md:bottom-28 md:right-6">
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-w-xs">
-            <div className="flex items-start justify-between mb-2">
-              <div className="flex items-center">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-2">
-                  <FontAwesomeIcon icon={faComments} className="text-white text-sm" />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800 text-sm">Eticpro</p>
-                  <p className="text-green-500 text-xs">En línea</p>
-                </div>
-              </div>
-              <button
-                onClick={handleCloseChatBubble}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <FontAwesomeIcon icon={faTimes} className="text-sm" />
-              </button>
-            </div>
-            <p className="text-gray-700 text-sm mb-3">
-              ¡Hola! ¿Te gustaría conocer más sobre nuestras soluciones de compliance? 
-              Estamos aquí para ayudarte. 💬
-            </p>
-            <button
-              onClick={handleWhatsAppClick}
-              className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
-              Chatear ahora
-            </button>
+        <div className="fixed bottom-20 right-6 z-40 md:bottom-20 md:right-6">
+          <div className="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center space-x-2 text-sm font-medium animate-pulse">
+            <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
+            <span>¡Chatea con nosotros!</span>
+            <FontAwesomeIcon icon={faWhatsapp} className="text-white text-sm" />
           </div>
-          {/* Flecha de la burbuja */}
-          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
         </div>
       )}
 
@@ -132,18 +102,6 @@ const WhatsAppButton = () => {
         <div className="absolute inset-0 bg-green-400 rounded-full animate-pulse opacity-30 scale-150"></div>
       </div>
 
-      {/* Indicador de "en línea" */}
-      <div 
-        className="fixed bottom-20 right-6 z-40 md:bottom-20 md:right-6"
-        style={{
-          animation: 'fadeIn 0.5s ease-out'
-        }}
-      >
-        <div className="flex items-center bg-white px-3 py-2 rounded-full shadow-lg border border-gray-200 text-sm">
-          <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-          <span className="text-gray-700 font-medium">En línea</span>
-        </div>
-      </div>
 
       {/* Estilos CSS inline */}
       <style dangerouslySetInnerHTML={{

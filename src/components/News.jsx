@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaThumbsUp, FaComment, FaShare } from "react-icons/fa";
+import { FaLinkedin, FaNewspaper, FaCalendarAlt, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaThumbsUp, FaComment, FaShare, FaTimes } from "react-icons/fa";
 
 const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalPost, setModalPost] = useState(null);
 
   // Array con los 3 posts más recientes de LinkedIn de Eticpro (URLs reales)
   const linkedinPosts = [
@@ -16,7 +17,49 @@ const News = () => {
       url: "https://share.google/7Mv32LbYDsjx5PqLV",
       category: "Medios",
       engagement: "Nuevo artículo",
-      hashtags: "#Compliance #Integridad #Gobernanza"
+      hashtags: "#Compliance #Integridad #Gobernanza",
+      content: `En el último tiempo se ha escuchado hablar mucho sobre la lucha contra la corrupción y la falta a la probidad. Para esto durante varios años han existido diversos cuerpos legislativos que han creado mecanismos preventivos para que no ocurran conductas contrarias a la ética o incluso delitos. Esto se ha traducido en un entorno empresarial cada vez más exigente y regulado, razón por la cual las organizaciones deben contar con Programas de Cumplimiento (Compliance Program, en inglés) que garanticen el respeto de la regulación, según sea el caso.
+
+Lo anterior es una necesidad estratégica para las empresas que buscan operar con integridad, sostenibilidad y responsabilidad. Así lo destaca Giovanna Gardella, abogada de la Universidad de Chile y managing director de las firmas Compliance Global Consulting y ETICPRO, quien además posee un LL.M en la Universidad de Miami y diplomado en Columbia University NYC. Giovanna ejerció el cargo de Head de Compliance en distintas multinacionales de la industria bancaria, cobre y salud.
+
+La profesional explica que un Programa de Cumplimiento es un sistema de gestión de riesgos que integra políticas y procedimientos para asegurar que los requerimientos legales y éticos de una empresa o institución se respeten y, de esa forma, protegerla de incumplimientos legales y daños reputacionales. "Su correcta implementación permite prevenir conductas indebidas, delitos, sanciones y daños que pueden afectar gravemente el prestigio y el valor de una organización en el mercado", advierte la experta con más de 20 años de experiencia.
+
+Adicionalmente, menciona que estos programas deben ser gestionados por un Gerente de Cumplimiento (Compliance Manager) u Oficial de Cumplimiento (Compliance Officer), profesional de alta jerarquía y experiencia, encargado de supervisar que una entidad actúe conforme a las normativas y estándares ético empresariales.
+
+Aspectos positivos
+
+Para esta profesional, actuar correctamente no sólo representa la satisfacción moral de hacer lo correcto, sino que también agrega valor económico. De acuerdo con un estudio de CEB RiskClarity, una cultura corporativa basada en la ética y la integridad aumenta el compromiso de los colaboradores en un 12% y mejora los retornos de los inversionistas en un 5%.
+
+Asimismo, las empresas que cuentan con un Programa de Cumplimiento son más atractivas para socios y potenciales inversionistas, ya que ofrecen mayores garantías de transparencia y menor riesgo reputacional o penal. "Esto se traduce en más oportunidades de negocio en procesos de fusiones, adquisiciones o licencias, y mejor posicionamiento en licitaciones públicas o privadas, al recibir una puntuación superior frente a competidores que carecen de estos sistemas", resalta la profesional.
+
+Un reciente estudio del 2024 llamado "Valuing Corporate Compliance" de la Universidad de Iowa, realizado por Todd Haug y Suneal Bedi, destaca que además de los argumentos de beneficios para empresas que se conocen hasta ahora- como el que ahorra multas, sanciones, permite ser un socio confiable y cuida la reputación de la empresa- se agrega otra variable interesante que es más apetecida por las áreas comerciales, en el cual los consumidores están dispuestos a pagar más por compliance.
+
+Así lo demuestra este estudio en una muestra de 1600 personas "Consumers will pay more for compliance". "Hay una vinculación directa en que los productos se venden a mejor valor si se vinculan a programas de cumplimiento. Por ejemplo, en la elección de tarjetas de crédito entre los atributos que se mencionan que debería tener la tarjeta están que posea el cargo por mantención (43,7%) y el interés (20,4%) más bajo. Asimismo, otra característica muy valorada es que la empresa que la emite tenga un programa contra la corrupción y el fraude (17,9%), lo que supera a factores como los puntos que entrega el plástico (14,3%) y su diseño (3,7%)", explica Giovanna Gardella.
+
+Legislación local
+
+En Chile, la Ley N° 20.393 sobre Responsabilidad Penal de las Personas Jurídicas, y su reforma en el año 2023 por la Ley N°21.595 de Delitos Económicos, establece que las empresas pueden ser penalmente responsables por más de 400 delitos entre los cuales están el lavado de activos, financiamiento del terrorismo, cohecho, receptación, corrupción entre privados, administración desleal, apropiación indebida, negociación incompatible, delitos medioambientales e informáticos, entre otros.
+
+En esta norma se establece que una empresa podrá eximirse de responsabilidad penal si cuenta con un Modelo de Prevención de Delitos que esté "efectivamente implementado" por la persona jurídica, el cual debe ser adecuado en razón de su objeto social, tamaño, complejidad, recursos y que considere por lo menos los siguientes aspectos:
+
+1) Identificación de las actividades que impliquen riesgo de las conductas que se quieren prevenir;
+2) Establecimiento de protocolos y procedimientos para prevenir las conductas delictivas;
+3) Implementar un canal de denuncias y la existencia de sanciones;
+4) Comunicación a los trabajadores, empleados, prestadores de servicios incluidos sus máximos ejecutivos como directores;
+5) Incorporación de cláusulas de compliance en los contratos;
+6) Asignación de uno o más sujetos responsables con la adecuada independencia, dotados de facultades efectivas de dirección y supervisión;
+7) Asignación de recursos y medios materiales e inmateriales;
+8) Previsión de evaluaciones periódicas por terceros independientes y mecanismos de perfeccionamiento o actualización a partir de tales evaluaciones.
+
+De esta forma, agrega Giovanna Gardella, un Programa de Cumplimiento no sólo fortalece la ética organizacional y protege a la empresa de sanciones, sino que también impulsa su competitividad, sostenibilidad y confianza ante el mercado. "Una compañía o institución con un sólido Modelo de Prevención de Delitos no sólo cumple la ley, sino que genera negocios sostenibles y rentables en el largo plazo. La ética corporativa es hoy una ventaja competitiva real", asevera la abogada de Compliance Global Consulting y ETICPRO.
+
+Acerca de Compliance Global Consulting
+
+Firma especializada en consultoría en ética corporativa y cumplimiento normativo (Compliance) dedicada a asesorar a empresas, organizaciones, instituciones y a sus colaboradores con el objetivo de que cumplan su misión corporativa con ética e integridad, incluyendo no sólo el respecto de la ley, sino que también las buenas prácticas, mediante la gestión e implementación de Programas de Cumplimiento, los cuales son accesibles a todo tipo de empresas y diseñados de acuerdo a las necesidades y riesgos de cada cliente. Para mayor información visitar www.compliancegc.com
+
+Acerca de ETICPRO
+
+ETICPRO es una herramienta integral de cumplimiento que combina tecnología con conocimientos legales, permitiendo realizar controles preventivos de delitos económicos necesarios para el Modelo de Prevención de Delitos. Las personas jurídicas enfrentan problemas complejos que las exponen a altos riesgos de responsabilidad penal. ETICPRO llena este vacío ofreciendo una solución específica que permite implementar el Modelo de Prevención de Delitos en 24 horas. Para más información visitar www.eticpro.com`
     },
     {
       id: 2,
