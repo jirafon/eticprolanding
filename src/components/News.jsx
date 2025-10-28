@@ -91,6 +91,14 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
     setCurrentSlide((prev) => (prev - 1 + linkedinPosts.length) % linkedinPosts.length);
   };
 
+  const openModal = (post) => {
+    setModalPost(post);
+  };
+
+  const closeModal = () => {
+    setModalPost(null);
+  };
+
     return (
     <section id="news" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -213,6 +221,19 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
                           {post.engagement}
                         </div>
                         
+                        {/* Read More Button for articles with full content */}
+                        {post.content && (
+                          <div className="pt-4 border-t border-gray-200">
+                            <button
+                              onClick={() => openModal(post)}
+                              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center"
+                            >
+                              <span>Leer artículo completo</span>
+                              <FaExternalLinkAlt className="ml-2 text-xs" />
+                            </button>
+                          </div>
+                        )}
+                        
                       </div>
                     </div>
                   </div>
@@ -260,6 +281,73 @@ ETICPRO es una herramienta integral de cumplimiento que combina tecnología con 
           </div>
         </div>
       </div>
+
+      {/* Modal for full article content */}
+      {modalPost && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                  <FaNewspaper className="text-white text-xl" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800">{modalPost.title}</h3>
+                  <div className="flex items-center space-x-4 text-sm text-gray-600">
+                    <span className="flex items-center">
+                      <FaCalendarAlt className="mr-1" />
+                      {modalPost.date}
+                    </span>
+                    <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                      {modalPost.category}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <button
+                onClick={closeModal}
+                className="text-gray-400 hover:text-gray-600 transition-colors p-2"
+              >
+                <FaTimes className="text-xl" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <div className="prose prose-lg max-w-none">
+                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                  {modalPost.content}
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-600">{modalPost.hashtags}</span>
+              </div>
+              <div className="flex space-x-3">
+                <a
+                  href={modalPost.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
+                >
+                  <FaExternalLinkAlt className="mr-2 text-xs" />
+                  Ver fuente original
+                </a>
+                <button
+                  onClick={closeModal}
+                  className="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors duration-200 text-sm font-medium"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
         </section>
     );
 };
