@@ -31,10 +31,10 @@ const HelpChatButton = ({ agentUrl }) => {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white w-full h-full rounded-2xl shadow-2xl overflow-hidden relative">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white w-[95vw] max-w-[450px] h-[85vh] rounded-2xl shadow-2xl overflow-hidden relative">
             {/* Header */}
-            <div className="flex items-center justify-end px-4 py-3">
+            <div className="flex items-center justify-end px-4 py-3 border-b border-gray-200">
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-gray-500 hover:text-gray-700 transition-colors p-2"
@@ -48,7 +48,7 @@ const HelpChatButton = ({ agentUrl }) => {
               src={url}
               title="Asistente de Ayuda"
               className="w-full"
-              style={{ height: 'calc(100% - 50px)' }}
+              style={{ height: 'calc(85vh - 60px)' }}
               frameBorder="0"
               allow="microphone; camera; clipboard-read; clipboard-write;"
             />
