@@ -17,8 +17,8 @@ const HelpChatButton = ({ agentUrl }) => {
 
   return (
     <>
-      {/* Floating Help Button */}
-      <div className="fixed bottom-6 right-20 z-50">
+      {/* Floating Help Button (stacked above WhatsApp) */}
+      <div className="fixed bottom-24 right-6 z-50 md:bottom-24 md:right-6">
         <button
           onClick={() => setIsOpen(true)}
           className="w-12 h-12 md:w-14 md:h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
