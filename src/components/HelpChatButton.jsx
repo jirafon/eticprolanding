@@ -32,7 +32,7 @@ const HelpChatButton = ({ agentUrl }) => {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className="bg-white w-[95vw] max-w-[900px] h-[80vh] rounded-2xl shadow-2xl overflow-hidden relative">
+          <div className="bg-white w-[95vw] max-w-[600px] h-[80vh] rounded-2xl shadow-2xl overflow-hidden relative">
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200">
               <div className="font-semibold text-gray-800">Asistente de Ayuda</div>
