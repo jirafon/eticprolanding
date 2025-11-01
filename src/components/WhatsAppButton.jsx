@@ -54,7 +54,7 @@ const WhatsAppButton = () => {
 
       {/* Botón flotante de WhatsApp */}
       <div
-        className="fixed bottom-6 right-6 z-50 md:bottom-6 md:right-6 overflow-hidden"
+        className="fixed bottom-6 right-6 z-50 md:bottom-6 md:right-6"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
