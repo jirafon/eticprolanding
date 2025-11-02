@@ -126,46 +126,7 @@ const sections = [
               <Typography variant="body1" align="left">19. Todos los candidatos en elecciones presidenciales, parlamentarias y municipales. De igual forma, las personas, naturales o jurídicas, con o sin fines de lucro, vinculadas a algún candidato a cargo de elección popular, desde el momento de inscripción de la respectiva candidatura, conforme a las disposiciones legales aplicables.</Typography>
       </div>
     `,
-  },
- {/* {
-    title: "Ley N°20.393 de Responsabilidad Penal de las Personas Jurídicas, IMPORTANTE Fechas de Implementación",
-    content: `
-      <div>
-              <Typography variant="body1" align="left">
-          La Ley N°20.393 establece que las personas jurídicas serán responsables de los siguientes delitos:
-        </Typography>
-        <ul>
-          <li>Lavado de activos</li>
-          <li>Financiamiento del terrorismo</li>
-          <li>Cohecho a funcionario público nacional y extranjero</li>
-          <li>Corrupción entre privados</li>
-          <li>Fraude al Fisco</li>
-          <li>Delitos previstos en la Ley de Seguridad Interior del Estado</li>
-        </ul>
-              <Typography variant="body1" align="left">
-          A continuación, se presentan algunas fechas clave para la implementación de la Ley N°20.393:
-        </Typography>
-        <ul>
-          <li>
-            <strong>Fecha de publicación:</strong> La Ley N°20.393 fue publicada en el Diario Oficial el 18 de agosto de 2009.
-          </li>
-          <li>
-            <strong>Fecha de entrada en vigor:</strong> La ley entró en vigor el 1 de diciembre de 2009.
-          </li>
-          <li>
-            <strong>Plazos de adaptación:</strong> Las empresas tienen un plazo para adecuar sus sistemas y procedimientos internos, generalmente de 6 a 12 meses a partir de la entrada en vigor de la ley.
-          </li>
-          <li>
-            <strong>Revisión y actualización:</strong> Las empresas deben revisar y actualizar sus políticas y procedimientos de manera periódica para asegurar el cumplimiento continuo.
-          </li>
-        </ul>
-              <Typography variant="body1" align="left">
-          Es fundamental que las empresas implementen un programa de cumplimiento efectivo para prevenir, detectar y responder adecuadamente a los delitos establecidos por la ley.
-        </Typography>
-      </div>
-    `,
-  },
-  */}
+  }
 ];
 
 const FAQSection = () => {
