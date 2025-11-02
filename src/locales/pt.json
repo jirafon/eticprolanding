@@ -73,12 +73,17 @@
     "storage": "Armazenamento",
     "modules": "Módulos: Repositório, Transferência de Valor, Diligência Prévia, Reuniões, Conflitos de Interesse, Canal de Denúncias.",
     "installation": "Instalação",
+    "uf": "UF",
+    "monthly": "Mensal",
+    "iva": "IVA",
     "customDesc1": "Desenvolvimento e módulos adicionais",
     "customDesc2": "Integrações personalizadas",
     "customDesc3": "Suporte dedicado",
     "customDesc4": "Treinamento avançado",
     "customDesc5": "Solicite uma cotação adequada às suas necessidades",
-    "additional": "*** Usuário adicional: UF 0,12 / usuário"
+    "additional": "*** Usuário adicional: UF 0,12 / usuário",
+    "extraStorage": "Armazenamento Adicional: UF 2/mensal por 1 giga extra",
+    "includes": "Inclui 2 Treinamentos Online"
   },
   "contact": {
     "header": "Contato Direto",

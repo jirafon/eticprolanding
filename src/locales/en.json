@@ -73,12 +73,17 @@
     "storage": "Storage",
     "modules": "Modules: Repository, Value Transfer, Due Diligence, Meetings, Conflicts of Interest, Whistleblowing Channel.",
     "installation": "Installation",
+    "uf": "UF",
+    "monthly": "Monthly",
+    "iva": "VAT",
     "customDesc1": "Additional development and modules",
     "customDesc2": "Custom integrations",
     "customDesc3": "Dedicated support",
     "customDesc4": "Advanced training",
     "customDesc5": "Request a quote tailored to your needs",
-    "additional": "*** Additional user: UF 0.12 / user"
+    "additional": "*** Additional user: UF 0.12 / user",
+    "extraStorage": "Additional Storage: UF 2/month per extra GB",
+    "includes": "Includes 2 Online Trainings"
   },
   "contact": {
     "header": "Direct Contact",
