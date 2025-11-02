@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Schwager from '../assets/logo-schwager.png';
 import Bago from '../assets/logo-bago.png';
 import Mapsa from '../assets/logo-larrain.png';
@@ -23,6 +24,7 @@ import Unbiax from '../assets/unbiax.avif';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Clients = () => {
+  const { t } = useTranslation();
  
     const settings = {
         dots: true,
@@ -57,7 +59,7 @@ const Clients = () => {
       <div className='w-full bg-white py-16 px-4'>
         <div className='max-w-[1240px] mx-auto text-center'>
           {/* Title */}
-          <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Empresas que confían en Eticpro</h6>
+          <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>{t('clients.title')}</h6>
 
           <Slider {...settings}>
   <div>
