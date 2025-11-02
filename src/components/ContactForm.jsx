@@ -226,11 +226,8 @@ const ContactForm = ({ isFullPage = false }) => {
             Contacto Directo
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">
-            ¿Listo para <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">transformar</span> tu compliance?
+            Contáctanos para más información
           </h1>
-          <p className="text-sm sm:text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-            Completa el formulario y nuestro equipo de expertos te contactará en breve
-          </p>
         </div>
 
         {/* Form */}

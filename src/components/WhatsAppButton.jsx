@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComments, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [showChatBubble, setShowChatBubble] = useState(false);
 
   const phoneNumber = '56987375517'; // Número de WhatsApp de Eticpro
   const message = 'Hola, me interesa conocer más sobre Eticpro y sus soluciones de compliance. ¿Podrían ayudarme?';
@@ -21,19 +19,10 @@ const WhatsAppButton = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Mostrar indicador de WhatsApp después de 4 segundos
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowChatBubble(true);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    setShowChatBubble(false); // Ocultar burbuja después del clic
   };
 
 
@@ -41,17 +30,6 @@ const WhatsAppButton = () => {
 
   return (
     <>
-      {/* Indicador de comunicación WhatsApp */}
-      {showChatBubble && (
-        <div className="fixed bottom-20 left-4 right-4 md:left-auto md:right-6 z-40 md:bottom-20 flex justify-end">
-          <div className="bg-green-500 text-white px-3 py-2 rounded-full shadow-lg flex items-center space-x-2 text-xs md:text-sm font-medium animate-pulse">
-            <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
-            <FontAwesomeIcon icon={faUser} className="text-white text-sm" />
-            <span>¡Chatea!</span>
-            <FontAwesomeIcon icon={faWhatsapp} className="text-white text-sm" />
-          </div>
-        </div>
-      )}
 
       {/* Botón flotante de WhatsApp */}
       <div
