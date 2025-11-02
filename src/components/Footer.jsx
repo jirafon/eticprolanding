@@ -1,78 +1,76 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import LogoImage from '../assets/eticprov5.png';
 import LinkedInLogo from '../assets/socia-linkedin@2x.png';
 import WS from '../assets/social-whatsapp@2x.png';
-import { faTimes, faEnvelope, faPhone, faMapMarkerAlt, faShieldAlt, faUsers, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faEnvelope, faPhone, faShieldAlt, faUsers, faRocket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const PrivacyPolicyModal = ({ onClose }) => (
+const PrivacyPolicyModal = ({ onClose }) => {
+  const { t } = useTranslation();
+  
+  return (
   <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm'>
     <div className='bg-white p-8 rounded-2xl shadow-2xl max-w-4xl w-full h-[85vh] relative overflow-y-auto mx-4'>
       <div className='sticky top-0 bg-white pb-4 border-b border-gray-200'>
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-        Política de Privacidad
+          {t('footer.privacyModal.title')}
       </h2>
-        <p className='text-gray-600'>Última actualización: Enero 2024</p>
+          <p className='text-gray-600'>{t('footer.privacyModal.lastUpdate')}</p>
       </div>
       <div className='text-gray-700 leading-relaxed space-y-6 mt-6'>
         <div className='bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500'>
-          <h3 className='font-semibold text-blue-800 mb-2'>Información que Recopilamos</h3>
+            <h3 className='font-semibold text-blue-800 mb-2'>{t('footer.privacyModal.informationCollected.title')}</h3>
           <p>
-            El acceso a determinados servicios que se ofrecen en el sitio puede requerir el ingreso de datos personales, 
-            a saber: dirección de e-mail, nombre, apellido, domicilio completo, tipo y número de documento y otros datos 
-            opcionales, o cualquier otra información que permita individualizarlo.
+              {t('footer.privacyModal.informationCollected.content')}
           </p>
         </div>
         
         <div>
-          <h3 className='font-semibold text-gray-800 mb-2'>Uso de la Información</h3>
+            <h3 className='font-semibold text-gray-800 mb-2'>{t('footer.privacyModal.useInformation.title')}</h3>
           <p>
-            Los datos que usted ingrese al Sitio se utilizarán para: envío de información de Productos y servicios, 
-            reporte de Irregularidades, análisis e investigaciones, Compliance, Asesoramiento legal, aplicaciones de 
-            servicios de proceso de negociación y gestión de reclamos previo a la judicialización, sistemas de 
-            comunicación internos y externos, obtener estadísticas.
+              {t('footer.privacyModal.useInformation.content')}
           </p>
         </div>
 
         <div className='bg-green-50 p-4 rounded-lg border-l-4 border-green-500'>
-          <h3 className='font-semibold text-green-800 mb-2'>Seguridad y Protección</h3>
+            <h3 className='font-semibold text-green-800 mb-2'>{t('footer.privacyModal.security.title')}</h3>
           <p>
-            Eticpro garantiza a los usuarios que ingresen sus datos en el Sitio, que los mismos serán encriptados 
-            para preservar la seguridad, integridad y confidencialidad de los datos considerados como personales. 
-            El sistema de encriptado implica que los datos solo podrán ser interpretados por Eticpro.
+              {t('footer.privacyModal.security.content')}
           </p>
         </div>
 
         <div>
-          <h3 className='font-semibold text-gray-800 mb-2'>Sus Derechos</h3>
+            <h3 className='font-semibold text-gray-800 mb-2'>{t('footer.privacyModal.rights.title')}</h3>
           <p>
-            El usuario podrá acceder a sus datos de carácter personal, rectificarlos, cancelarlos u oponerse a su 
-            tratamiento, mediante notificación al responsable de la base de datos{' '}
-            <a href="mailto:hello@eticpro.com" className='text-blue-600 hover:underline'>hello@eticpro.com</a> (LATAM).
+              {t('footer.privacyModal.rights.content1')}{' '}
+              <a href="mailto:hello@eticpro.com" className='text-blue-600 hover:underline'>hello@eticpro.com</a> {t('footer.privacyModal.rights.content2')}
           </p>
         </div>
 
         <div className='bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500'>
-          <h3 className='font-semibold text-yellow-800 mb-2'>Información Importante</h3>
+            <h3 className='font-semibold text-yellow-800 mb-2'>{t('footer.privacyModal.important.title')}</h3>
           <ul className='list-disc list-inside space-y-1'>
-            <li>Eticpro no cederá esta información con terceros</li>
-            <li>El usuario responderá de la veracidad de los datos facilitados</li>
-            <li>Eticpro se reserva el derecho de brindar información a organismos de control cuando sea requerido</li>
+              {t('footer.privacyModal.important.items', { returnObjects: true }).map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
           </ul>
         </div>
       </div>
       <button
         onClick={onClose}
         className='absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200'
-        aria-label="Cerrar política de privacidad"
+          aria-label={t('footer.privacyModal.closeAria')}
       >
         <FontAwesomeIcon icon={faTimes} className='text-2xl' />
       </button>
     </div>
   </div>
 );
+};
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   const handlePrivacyClick = () => setShowPrivacyModal(true);
@@ -96,9 +94,7 @@ const Footer = () => {
               <img src={LogoImage} alt='Eticpro' className='w-48 h-auto' />
             </div>
             <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
-              Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. 
-              Nuestra misión es brindar las herramientas necesarias para mantener el cumplimiento normativo sin 
-              complicaciones y minimizar los riesgos asociados.
+              {t('footer.description')}
             </p>
             <div className='flex space-x-4'>
               <a 
@@ -126,31 +122,31 @@ const Footer = () => {
           <div>
             <h3 className='text-xl font-bold mb-6 flex items-center'>
               <FontAwesomeIcon icon={faRocket} className='mr-2 text-blue-400' />
-              Enlaces Rápidos
+              {t('footer.quickLinks')}
             </h3>
             <ul className='space-y-3'>
               <li>
                 <a href="#inicio" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  Inicio
+                  {t('footer.home')}
                 </a>
               </li>
               <li>
                 <a href="#aboutus" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  Quiénes Somos
+                  {t('footer.about')}
                 </a>
               </li>
               <li>
                 <a href="#planes" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  Planes
+                  {t('footer.plans')}
                 </a>
               </li>
               <li>
                 <a href="#FAQ" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  FAQ
+                  {t('footer.faqTitle')}
                 </a>
               </li>
             </ul>
@@ -160,7 +156,7 @@ const Footer = () => {
           <div>
             <h3 className='text-xl font-bold mb-6 flex items-center'>
               <FontAwesomeIcon icon={faUsers} className='mr-2 text-blue-400' />
-              Contacto
+              {t('footer.contact')}
             </h3>
             <div className='space-y-4'>
               <div className='flex items-center'>
@@ -204,14 +200,14 @@ const Footer = () => {
               <button 
                 onClick={handlePrivacyClick} 
                 className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'
-                aria-label="Ver política de privacidad"
+                aria-label={t('footer.privacyModal.viewPrivacy')}
               >
                 <FontAwesomeIcon icon={faShieldAlt} className='mr-2' />
-                Política de Privacidad
+                {t('footer.privacyPolicy')}
               </button>
             </div>
             <div className='text-gray-400 text-sm'>
-              © 2024 Eticpro. Todos los derechos reservados.
+              {t('footer.rights')}
             </div>
           </div>
         </div>

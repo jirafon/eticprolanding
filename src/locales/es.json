@@ -115,5 +115,47 @@
     "question2": "¿Qué uso le da Eticpro a la información que maneja?",
     "question3": "¿Qué significa Funcionario Público?",
     "question4": "¿Qué es Persona Expuesta Públicamente (PEP)?"
+  },
+  "footer": {
+    "description": "Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. Nuestra misión es brindar las herramientas necesarias para mantener el cumplimiento normativo sin complicaciones y minimizar los riesgos asociados.",
+    "quickLinks": "Enlaces Rápidos",
+    "contact": "Contacto",
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "plans": "Planes",
+    "faqTitle": "FAQ",
+    "privacyPolicy": "Política de Privacidad",
+    "rights": "© 2024 Eticpro. Todos los derechos reservados.",
+    "privacyModal": {
+      "title": "Política de Privacidad",
+      "lastUpdate": "Última actualización: Enero 2024",
+      "informationCollected": {
+        "title": "Información que Recopilamos",
+        "content": "El acceso a determinados servicios que se ofrecen en el sitio puede requerir el ingreso de datos personales, a saber: dirección de e-mail, nombre, apellido, domicilio completo, tipo y número de documento y otros datos opcionales, o cualquier otra información que permita individualizarlo."
+      },
+      "useInformation": {
+        "title": "Uso de la Información",
+        "content": "Los datos que usted ingrese al Sitio se utilizarán para: envío de información de Productos y servicios, reporte de Irregularidades, análisis e investigaciones, Compliance, Asesoramiento legal, aplicaciones de servicios de proceso de negociación y gestión de reclamos previo a la judicialización, sistemas de comunicación internos y externos, obtener estadísticas."
+      },
+      "security": {
+        "title": "Seguridad y Protección",
+        "content": "Eticpro garantiza a los usuarios que ingresen sus datos en el Sitio, que los mismos serán encriptados para preservar la seguridad, integridad y confidencialidad de los datos considerados como personales. El sistema de encriptado implica que los datos solo podrán ser interpretados por Eticpro."
+      },
+      "rights": {
+        "title": "Sus Derechos",
+        "content1": "El usuario podrá acceder a sus datos de carácter personal, rectificarlos, cancelarlos u oponerse a su tratamiento, mediante notificación al responsable de la base de datos",
+        "content2": "(LATAM)."
+      },
+      "important": {
+        "title": "Información Importante",
+        "items": [
+          "Eticpro no cederá esta información con terceros",
+          "El usuario responderá de la veracidad de los datos facilitados",
+          "Eticpro se reserva el derecho de brindar información a organismos de control cuando sea requerido"
+        ]
+      },
+      "closeAria": "Cerrar política de privacidad",
+      "viewPrivacy": "Ver política de privacidad"
+    }
   }
 }

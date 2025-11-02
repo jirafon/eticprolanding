@@ -115,5 +115,47 @@
     "question2": "What use does Eticpro give to the information it handles?",
     "question3": "What does Public Official mean?",
     "question4": "What is a Politically Exposed Person (PEP)?"
+  },
+  "footer": {
+    "description": "We are dedicated to providing cutting-edge compliance solutions for businesses of all sizes. Our mission is to provide the necessary tools to maintain regulatory compliance without complications and minimize associated risks.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About Us",
+    "plans": "Plans",
+    "faqTitle": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "rights": "© 2024 Eticpro. All rights reserved.",
+    "privacyModal": {
+      "title": "Privacy Policy",
+      "lastUpdate": "Last updated: January 2024",
+      "informationCollected": {
+        "title": "Information We Collect",
+        "content": "Access to certain services offered on the site may require entering personal data, namely: email address, name, surname, full address, document type and number and other optional data, or any other information that allows you to be identified."
+      },
+      "useInformation": {
+        "title": "Use of Information",
+        "content": "The data you enter on the Site will be used for: sending information about Products and services, reporting Irregularities, analysis and investigations, Compliance, Legal advice, applications for negotiation and claims management services prior to litigation, internal and external communication systems, obtaining statistics."
+      },
+      "security": {
+        "title": "Security and Protection",
+        "content": "Eticpro guarantees users who enter their data on the Site, that they will be encrypted to preserve the security, integrity and confidentiality of data considered personal. The encryption system means that the data can only be interpreted by Eticpro."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content1": "The user may access their personal data, rectify, cancel or object to their processing, by notifying the database administrator",
+        "content2": "(LATAM)."
+      },
+      "important": {
+        "title": "Important Information",
+        "items": [
+          "Eticpro will not transfer this information to third parties",
+          "The user will be responsible for the veracity of the data provided",
+          "Eticpro reserves the right to provide information to regulatory agencies when required"
+        ]
+      },
+      "closeAria": "Close privacy policy",
+      "viewPrivacy": "View privacy policy"
+    }
   }
 }
