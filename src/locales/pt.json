@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "inicio": "Início",
+    "funcionalidades": "Funcionalidades",
+    "nosotros": "Sobre",
+    "contacto": "Contato",
+    "demo": "Demo",
+    "quiz": "Quiz"
+  },
+  "hero": {
+    "title": "Eticpro: Plataforma de Compliance e Gestão de Ética Corporativa",
+    "subtitle": "Gerencie seus processos de compliance em um só lugar, de forma segura. Eticpro é uma plataforma de software robusta que simplifica o cumprimento ético e a gestão de conflitos em sua organização.",
+    "contactButton": "Entre em Contato"
+  },
+  "contact": {
+    "header": "Contato Direto",
+    "title": "Pronto para transformar seu compliance?",
+    "subtitle": "Preencha o formulário e nossa equipe de especialistas entrará em contato em breve",
+    "alternativeTitle": "Entre em contato para mais informações",
+    "name": "Seu nome completo",
+    "email": "seu@email.com",
+    "phone": "+56 9 848 40 88",
+    "company": "Nome da sua empresa",
+    "industry": "Sua indústria (opcional)",
+    "message": "Conte-nos sobre seu projeto de compliance...",
+    "sendButton": "Enviar Mensagem",
+    "sending": "Enviando mensagem...",
+    "successTitle": "Mensagem Enviada!",
+    "successMessage": "Obrigado por entrar em contato! Sua mensagem foi enviada com sucesso. Um representante de nossa equipe entrará em contato nas próximas 24 horas.",
+    "help": "Precisa de ajuda imediata?",
+    "helpEmail": "Escreva para hello@eticpro.com"
+  }
+}
+

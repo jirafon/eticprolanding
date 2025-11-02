@@ -135,6 +135,7 @@ const Navbar = () => {
             >
               <option value="es">ES</option>
               <option value="en">EN</option>
+              <option value="pt">PT</option>
             </select>
           </li>
           <li role="none">
