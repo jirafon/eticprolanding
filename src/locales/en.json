@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "inicio": "Home",
+    "funcionalidades": "Features",
+    "nosotros": "About",
+    "contacto": "Contact",
+    "demo": "Demo",
+    "quiz": "Quiz"
+  },
+  "hero": {
+    "title": "Eticpro: Compliance and Corporate Ethics Management Platform",
+    "subtitle": "Manage your compliance processes in one place, securely. Eticpro is a robust software platform that simplifies ethical compliance and conflict management in your organization.",
+    "contactButton": "Contact Me"
+  },
+  "contact": {
+    "header": "Direct Contact",
+    "title": "Ready to transform your compliance?",
+    "subtitle": "Complete the form and our team of experts will contact you shortly",
+    "alternativeTitle": "Contact us for more information",
+    "name": "Your full name",
+    "email": "your@email.com",
+    "phone": "+56 9 1234 5678",
+    "company": "Your company name",
+    "industry": "Your industry (optional)",
+    "message": "Tell us about your compliance project...",
+    "sendButton": "Send Message",
+    "sending": "Sending message...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for contacting us! Your message has been sent successfully. A representative from our team will contact you within the next 24 hours.",
+    "help": "Need immediate help?",
+    "helpEmail": "Write to us at hello@eticpro.com"
+  }
+}
+

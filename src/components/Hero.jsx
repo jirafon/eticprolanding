@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import unsplash from '../assets/fondo-hero@2x.png';
 import Description from './Description'; // Import the Description component
 import ContactForm from './ContactForm'; // Import ContactForm for modal
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [nav, setNav] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -46,11 +48,10 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <header className="text-black mb-8">
           <h1 className="font-bold text-4xl lg:text-5xl mb-4 px-4 lg:px-[20%] leading-tight" style={{ fontSize: '300%' }}>
-            Eticpro: Plataforma de Compliance y Gestión Ética Empresarial
+            {t('hero.title')}
           </h1>
           <p className="text-2xl lg:text-3xl px-4 lg:px-[15%] leading-relaxed" style={{ fontSize: '100%', marginTop: '2rem' }}>
-            Maneja tus procesos de compliance en un solo lugar, de manera segura.
-            Eticpro es una plataforma de software robusta que simplifica el cumplimiento ético y la gestión de conflictos en tu organización.
+            {t('hero.subtitle')}
           </p>
         </header>
 
@@ -60,7 +61,7 @@ const Hero = () => {
             onClick={handleOpenModal}
             aria-label="Contactar con Eticpro"
           >
-            Contáctenme
+            {t('hero.contactButton')}
           </button>
         </div>
       </div>

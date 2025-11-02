@@ -1,5 +1,6 @@
 // App.js
 import React, { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Analytics from './components/Analytics';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import HelpChatButton from './components/HelpChatButton';
 
 function App() {
+  const { t } = useTranslation();
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const [showContactForm, setShowContactForm] = useState(false);
@@ -60,13 +62,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
-              Contacto Directo
+              {t('contact.header')}
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              ¿Listo para <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">transformar</span> tu compliance?
+              {t('contact.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Completa el formulario y nuestro equipo de expertos te contactará en breve
+              {t('contact.subtitle')}
             </p>
           </div>
           

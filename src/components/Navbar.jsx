@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 import LogoImage from '../assets/eticprov23.png';
 import unsplash from '../assets/fondo-hero@2x.png';
 import ContactForm from './ContactForm'; // Import the new contact form
@@ -12,9 +13,14 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/700.css';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [nav, setNav] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
   const [isModalOpenQuiz, setIsModalOpenQuiz] = useState(false); // State to manage modal visibility
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
 
   const handleNav = () => {
     setNav(!nav);
@@ -84,7 +90,7 @@ const Navbar = () => {
               role="menuitem"
               aria-label="Ir a la sección de inicio"
             >
-              Inicio
+              {t('navbar.inicio')}
             </a>
           </li>
           <li role="none">
@@ -95,7 +101,7 @@ const Navbar = () => {
               role="menuitem"
               aria-label="Ir a la sección quienes somos"
             >
-              Quienes Somos
+              {t('navbar.nosotros')}
             </a>
           </li>
           <li role="none">
@@ -106,7 +112,7 @@ const Navbar = () => {
               role="menuitem"
               aria-label="Ir a la sección de planes"
             >
-              Planes
+              {t('navbar.funcionalidades')}
             </a>
           </li>
           <li role="none">
@@ -119,6 +125,17 @@ const Navbar = () => {
             >
               FAQ
             </a>
+          </li>
+          <li role="none">
+            <select 
+              value={i18n.language} 
+              onChange={handleLanguageChange}
+              className="px-3 py-1 border border-gray-300 rounded-md bg-white text-sm"
+              aria-label="Select language"
+            >
+              <option value="es">ES</option>
+              <option value="en">EN</option>
+            </select>
           </li>
           <li role="none">
             <button 
@@ -135,7 +152,7 @@ const Navbar = () => {
               onClick={handleOpenModal}
               aria-label="Contactar con Eticpro"
             >
-              Contáctenme
+              {t('navbar.contacto')}
             </button>
           </li>
         </ul>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faBuilding, faIndustry, faComments, faCheck, faSpinner, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ContactForm = ({ isFullPage = false }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -158,35 +160,35 @@ const ContactForm = ({ isFullPage = false }) => {
     {
       field: 'name',
       icon: faUser,
-      placeholder: 'Tu nombre completo',
+      placeholder: t('contact.name'),
       type: 'text',
       required: true
     },
     {
       field: 'email',
       icon: faEnvelope,
-      placeholder: 'tu@email.com',
+      placeholder: t('contact.email'),
       type: 'email',
       required: true
     },
     {
       field: 'phone',
       icon: faPhone,
-      placeholder: '+56 9 1234 5678',
+      placeholder: t('contact.phone'),
       type: 'tel',
       required: true
     },
     {
       field: 'company',
       icon: faBuilding,
-  placeholder: 'Nombre de tu empresa',
+  placeholder: t('contact.company'),
       type: 'text',
   required: true
     },
     {
       field: 'industry',
       icon: faIndustry,
-      placeholder: 'Tu industria (opcional)',
+      placeholder: t('contact.industry'),
       type: 'text',
       required: false
     }
@@ -200,15 +202,15 @@ const ContactForm = ({ isFullPage = false }) => {
             <FontAwesomeIcon icon={faCheck} className="text-2xl sm:text-3xl text-white" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            ¡Mensaje Enviado!
+            {t('contact.successTitle')}
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-            ¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente. Un representante de nuestro equipo se pondrá en contacto contigo en las próximas 24 horas.
+            {t('contact.successMessage')}
           </p>
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-4 sm:p-6 border border-blue-100/50">
             <p className="text-xs sm:text-sm text-blue-700 font-medium">
-              <strong>¿Necesitas ayuda inmediata?</strong><br />
-              Escríbenos a hello@eticpro.com
+              <strong>{t('contact.help')}</strong><br />
+              {t('contact.helpEmail')}
             </p>
           </div>
         </div>
@@ -223,10 +225,10 @@ const ContactForm = ({ isFullPage = false }) => {
         <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 shadow-lg border border-blue-200/50">
             <FontAwesomeIcon icon={faComments} className="mr-2" />
-            Contacto Directo
+            {t('contact.header')}
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">
-            Contáctanos para más información
+            {t('contact.alternativeTitle')}
           </h1>
         </div>
 
@@ -288,7 +290,7 @@ const ContactForm = ({ isFullPage = false }) => {
                 <FontAwesomeIcon icon={faComments} className="text-sm sm:text-lg" />
               </div>
               <textarea
-                placeholder="Cuéntanos sobre tu proyecto de compliance..."
+                placeholder={t('contact.message')}
                 value={formData.message}
                 onChange={handleInputChange('message')}
                 onFocus={handleFocus('message')}
@@ -336,12 +338,12 @@ const ContactForm = ({ isFullPage = false }) => {
               {isSubmitting ? (
                 <div className="flex items-center justify-center relative z-10">
                   <FontAwesomeIcon icon={faSpinner} className="animate-spin mr-2 sm:mr-3" />
-                  <span className="text-xs sm:text-sm">Enviando mensaje...</span>
+                  <span className="text-xs sm:text-sm">{t('contact.sending')}</span>
                 </div>
               ) : (
                 <div className="flex items-center justify-center relative z-10">
                   <FontAwesomeIcon icon={faPaperPlane} className="mr-2 sm:mr-3 group-hover:translate-x-1 transition-transform duration-300" />
-                  <span className="text-xs sm:text-sm">Enviar Mensaje</span>
+                  <span className="text-xs sm:text-sm">{t('contact.sendButton')}</span>
                 </div>
               )}
             </button>
