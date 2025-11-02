@@ -46,8 +46,8 @@ const WhatsAppButton = () => {
         <div className="fixed bottom-20 right-2 md:right-6 z-40 md:bottom-20">
           <div className="bg-green-500 text-white px-3 py-2 rounded-full shadow-lg flex items-center space-x-2 text-xs md:text-sm font-medium animate-pulse">
             <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
-            <span className="hidden sm:inline">¡Chatea con nosotros!</span>
-            <span className="sm:hidden">Chatea</span>
+            <span className="hidden sm:inline">👤 ¡Chatea con nosotros!</span>
+            <span className="sm:hidden">👤 Chatea</span>
             <FontAwesomeIcon icon={faWhatsapp} className="text-white text-sm" />
           </div>
         </div>
