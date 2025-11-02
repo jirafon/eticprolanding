@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Laptop from "../assets/team2.png";
 import GG from "../assets/biogg.png";
 import CH from "../assets/bioch2.png";
 
 const About = () => {
+  const { t } = useTranslation();
   const [showGiovannaFull, setShowGiovannaFull] = useState(false);
 
   return (
@@ -12,9 +14,9 @@ const About = () => {
       <div className="relative w-full py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4"> Plataforma de Compliance </div>
-            <h2 id="about-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"> ¿Qué es <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Eticpro</span>? </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"> Una solución integral que combina tecnología avanzada con expertise legal para transformar la gestión de compliance empresarial </p>
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4"> {t('about.badge')} </div>
+            <h2 id="about-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"> {t('about.title')} </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"> {t('about.subtitle')} </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative">
