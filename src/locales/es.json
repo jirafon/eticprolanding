@@ -59,7 +59,11 @@
     "readMore": "Leer más",
     "readLess": "Leer menos",
     "cristian": "Cristian Haquin",
-    "cristianBio": "Cristian es Ingeniero Civil Industrial de la Universidad de Santiago, con un MBA en Negocios Internacionales de la Universidad Federico Santa María. Trabajó en empresas líderes como Siemens y BHP Billiton. Es Full-Stack Developer y arquitecto de soluciones."
+    "cristianBio": "Cristian es Ingeniero Civil Industrial de la Universidad de Santiago, con un MBA en Negocios Internacionales de la Universidad Federico Santa María. Trabajó en empresas líderes como Siemens y BHP Billiton. Es Full-Stack Developer y arquitecto de soluciones.",
+    "technologyTitle": "Tecnología de Vanguardia",
+    "technologyDesc": "Eticpro es la plataforma que integra controles de MPD, bases de datos más usados del mercado y con plataforma de matrices de riesgo con IA.",
+    "unbiaxTitle": "Powered by Unbiax",
+    "unbiaxDesc": "Eticpro nace del framework tecnológico de Unbiax, plataforma de última generación de IA, escalabilidad sin límites, arquitectura de datos con ciberseguridad, seguridad y privacidad de datos de acuerdo a GDPR."
   },
   "pricing": {
     "title": "Planes",
