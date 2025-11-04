@@ -20,11 +20,7 @@ const WhatsAppButton = () => {
   }, []);
 
 
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   if (!isVisible) return null;
 
@@ -49,9 +45,11 @@ const WhatsAppButton = () => {
           </div>
         )}
 
-        {/* Botón principal */}
-        <button
-          onClick={handleWhatsAppClick}
+        {/* Botón principal como enlace */}
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
           className={`
@@ -62,6 +60,7 @@ const WhatsAppButton = () => {
             focus:outline-none focus:ring-4 focus:ring-green-300
             group
             opacity-100
+            no-underline
           `}
           aria-label="Contactar por WhatsApp"
           style={{
@@ -72,7 +71,7 @@ const WhatsAppButton = () => {
             icon={faWhatsapp} 
             className="text-2xl group-hover:scale-110 transition-transform duration-200" 
           />
-        </button>
+        </a>
 
         {/* Efecto de pulso */}
         <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
