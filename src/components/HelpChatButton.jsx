@@ -6,7 +6,11 @@ const HelpChatButton = ({ agentUrl }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const url = agentUrl || process.env.REACT_APP_HELP_AGENT_URL || 'https://example.com/your-help-agent';
+  const baseUrl = process.env.REACT_APP_HELP_AGENT_URL || '';
+  const defaultUrl = baseUrl 
+    ? `${baseUrl}/enhanced-chat-agent/6908c5934065992a7f3973e6?token=3fcbf36aaa75456cc928c90b69a83a98ff28b674c379b0a5927bbd610d9204d61e36824c4e192a88cf8d2b31fe3b30c25c3df1e5ecf9203394f7ac46d12b4c89`
+    : 'https://example.com/your-help-agent';
+  const url = agentUrl || defaultUrl;
 
   const handleCloseModal = () => {
     setIsOpen(false);
@@ -56,6 +60,7 @@ const HelpChatButton = ({ agentUrl }) => {
               frameBorder="0"
               allow="microphone; camera; clipboard-read; clipboard-write;"
             />
+            
           </div>
         </div>
       )}

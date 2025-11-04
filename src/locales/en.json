@@ -67,6 +67,8 @@
   },
   "pricing": {
     "title": "Plans",
+    "pyme": "SME",
+    "pymeModules": "Choose 3 of these modules: Meetings, Repository, Whistleblowing Channel, Conflicts of Interest, Transfer of Value",
     "starter": "STARTER",
     "pro": "PRO",
     "corporate": "CORPORATE",

@@ -67,6 +67,8 @@
   },
   "pricing": {
     "title": "Planos",
+    "pyme": "PME",
+    "pymeModules": "Escolha 3 destes módulos: Reuniões, Repositório, Canal de Denúncias, Conflitos de Interesse, Transferência de Valor",
     "starter": "STARTER",
     "pro": "PRO",
     "corporate": "CORPORATIVA",
