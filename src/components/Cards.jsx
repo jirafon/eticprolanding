@@ -23,7 +23,13 @@ const Cards = () => {
         { label: '80', suffix: ` ${t('pricing.users')}` },
         { label: '1', suffix: ` ${t('pricing.admins')}` },
         { label: '50Mb', suffix: ` ${t('pricing.storage')}` },
-        { label: t('pricing.pymeModules'), special: true },
+        { type: 'pymeModules', modules: [
+          t('pricing.moduleMeeting'),
+          t('pricing.moduleRepositoryShort'),
+          t('pricing.moduleComplaintChannel'),
+          t('pricing.moduleConflictsShort'),
+          t('pricing.moduleValueTransferShort')
+        ] },
         { label: `${t('pricing.installation')}: 18 ${t('pricing.uf')}+ ${t('pricing.iva')}`, special: true }
       ]
     },
@@ -41,7 +47,14 @@ const Cards = () => {
         { label: '300', suffix: ` ${t('pricing.users')}` },
         { label: '3', suffix: ` ${t('pricing.admins')}` },
         { label: '200Mb', suffix: ` ${t('pricing.storage')}` },
-        { label: t('pricing.modules'), special: true },
+        { type: 'modules', modules: [
+          t('pricing.moduleRepository'),
+          t('pricing.moduleValueTransfer'),
+          t('pricing.moduleDueDiligence'),
+          t('pricing.moduleMeetings'),
+          t('pricing.moduleConflicts'),
+          t('pricing.moduleComplaints')
+        ] },
         { label: `${t('pricing.installation')}: 25 ${t('pricing.uf')}+ ${t('pricing.iva')}`, special: true }
       ]
     },
@@ -59,7 +72,14 @@ const Cards = () => {
         { label: '1000', suffix: ` ${t('pricing.users')}` },
         { label: '8', suffix: ` ${t('pricing.admins')}` },
         { label: '1GB', suffix: ` ${t('pricing.storage')}` },
-        { label: t('pricing.modules'), special: true },
+        { type: 'modules', modules: [
+          t('pricing.moduleRepository'),
+          t('pricing.moduleValueTransfer'),
+          t('pricing.moduleDueDiligence'),
+          t('pricing.moduleMeetings'),
+          t('pricing.moduleConflicts'),
+          t('pricing.moduleComplaints')
+        ] },
         { label: `${t('pricing.installation')}: 60 ${t('pricing.uf')}+ ${t('pricing.iva')}`, special: true }
       ]
     },
@@ -67,17 +87,24 @@ const Cards = () => {
       name: t('pricing.corporate'),
       price: 170,
       icon: Triple,
-      gradient: 'from-slate-800 via-gray-800 to-slate-900',
-      borderColor: 'border-slate-700',
-      textColor: 'text-white',
-      titleColor: 'text-white',
+      gradient: 'from-emerald-100 via-teal-100 to-emerald-200',
+      borderColor: 'border-emerald-500',
+      textColor: 'text-emerald-900',
+      titleColor: 'text-emerald-700',
       badge: null,
-      bulletColor: 'bg-amber-400',
+      bulletColor: 'bg-emerald-500',
       features: [
         { label: '2000', suffix: ` ${t('pricing.users')}` },
         { label: '20', suffix: ` ${t('pricing.admins')}` },
         { label: '2GB', suffix: ` ${t('pricing.storage')}` },
-        { label: t('pricing.modules'), special: true },
+        { type: 'modules', modules: [
+          t('pricing.moduleRepository'),
+          t('pricing.moduleValueTransfer'),
+          t('pricing.moduleDueDiligence'),
+          t('pricing.moduleMeetings'),
+          t('pricing.moduleConflicts'),
+          t('pricing.moduleComplaints')
+        ] },
         { label: `${t('pricing.installation')}: 120 ${t('pricing.uf')} + ${t('pricing.iva')}`, special: true }
       ]
     },
@@ -109,12 +136,12 @@ const Cards = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-slate-600 mx-auto rounded-full"></div>
         </div>
       
-        <div className='max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4'>
+        <div className='max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 justify-items-center'>
           {plans.filter(plan => plan.price !== 18).map((plan, index) => (
             <div
               key={index}
-                              className={`
-                 relative bg-white rounded-2xl shadow-lg 
+              className={`
+                 relative w-full max-w-sm bg-white rounded-2xl shadow-lg 
                  border-2 ${plan.borderColor}
                  transform transition-all duration-300 
                  hover:scale-105 hover:shadow-2xl
@@ -132,44 +159,61 @@ const Cards = () => {
               )}
 
               {/* Header con gradiente */}
-              <div className={`bg-gradient-to-br ${plan.gradient} rounded-t-2xl p-6 pb-8`}>
-                <div className="flex justify-center mb-4">
-                  <div className={`w-16 h-16 ${plan.name === t('pricing.corporate') ? 'bg-white/20 backdrop-blur-sm' : 'bg-white/90 backdrop-blur-sm'} rounded-full p-3 shadow-lg flex items-center justify-center`}>
+              <div className={`bg-gradient-to-br ${plan.gradient} rounded-t-2xl p-8 pb-10`}>
+                <div className="flex justify-center mb-5">
+                  <div className={`w-20 h-20 ${plan.name === t('pricing.corporate') ? 'bg-white/20 backdrop-blur-sm' : 'bg-white/90 backdrop-blur-sm'} rounded-full p-4 shadow-lg flex items-center justify-center`}>
                     <img className='w-full h-full object-contain' src={plan.icon} alt={plan.name} />
                   </div>
                 </div>
-                <h2 className={`text-xl font-bold text-center mb-2 ${plan.titleColor}`}>{plan.name}</h2>
+                <h2 className={`text-2xl font-bold text-center mb-3 ${plan.titleColor}`}>{plan.name}</h2>
                 {plan.price ? (
                   <div className="text-center">
-                    <span className={`text-4xl font-bold ${plan.textColor}`}>{plan.price}</span>
-                    <span className={`text-lg ml-1 ${plan.textColor} opacity-80`}>{t('pricing.uf')}</span>
-                    <p className={`text-sm mt-1 ${plan.textColor} opacity-70`}>/ {t('pricing.monthly')}</p>
+                    <span className={`text-5xl font-bold ${plan.textColor}`}>{plan.price}</span>
+                    <span className={`text-xl ml-2 ${plan.textColor} opacity-80`}>{t('pricing.uf')}</span>
+                    <p className={`text-base mt-1 ${plan.textColor} opacity-70`}>/ {t('pricing.monthly')}</p>
                   </div>
                 ) : (
-                  <p className={`text-center text-xl font-bold ${plan.textColor} mt-2`}>{t('pricing.contact')}</p>
+                  <p className={`text-center text-2xl font-bold ${plan.textColor} mt-2`}>{t('pricing.contact')}</p>
                 )}
               </div>
 
               {/* Features */}
-              <div className='flex-1 px-6 py-6 space-y-3'>
+              <div className={`flex-1 px-8 py-8 space-y-4 bg-white`}>
                 {plan.features.map((feature, idx) => (
                   <div
                     key={idx}
-                                        className={`
-                       ${feature.special ? 'py-3 px-3 bg-gray-50 rounded-lg' : 'py-2 border-b border-gray-100'}
-                       ${feature.highlight ? 'bg-indigo-50 border-indigo-200 border' : ''}
-                       transition-colors duration-200
-                     `}
+                    className={`
+                      ${feature.special ? `py-4 px-4 bg-gray-50 rounded-lg` : feature.type === 'modules' || feature.type === 'pymeModules' ? `py-4 px-4 bg-gray-50 rounded-lg` : `py-3 border-b border-gray-100`}
+                      ${feature.highlight ? 'bg-indigo-50 border-indigo-200 border' : ''}
+                      transition-colors duration-200
+                    `}
                   >
-                    {feature.special ? (
-                      <p className={`text-xs ${feature.highlight ? `font-semibold ${plan.titleColor}` : 'text-gray-600'} leading-relaxed`}>
+                    {feature.type === 'modules' || feature.type === 'pymeModules' ? (
+                      <div>
+                        <p className={`text-sm font-semibold ${plan.titleColor} mb-2`}>
+                          {feature.type === 'pymeModules' ? t('pricing.pymeModules').split(':')[0] + ':' : t('pricing.modules').split(':')[0] + ':'}
+                        </p>
+                        <ul className="space-y-2">
+                          {feature.modules.map((module, modIdx) => (
+                            <li key={modIdx} className="flex items-start">
+                              <span className={`w-2 h-2 ${plan.bulletColor} rounded-full mr-3 mt-2 flex-shrink-0`}></span>
+                              <span className="text-sm text-gray-700">{module}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-xs text-gray-600 mt-3 italic">
+                          {t('pricing.searchIntegration')}
+                        </p>
+                      </div>
+                    ) : feature.special ? (
+                      <p className={`text-sm ${feature.highlight ? `font-semibold ${plan.titleColor}` : 'text-gray-600'} leading-relaxed`}>
                         {feature.label}
                       </p>
                     ) : (
-                      <p className='text-sm font-medium text-gray-700 flex items-center'>
-                        <span className={`w-1.5 h-1.5 ${plan.bulletColor} rounded-full mr-2`}></span>
+                      <p className={`text-base font-medium flex items-center text-gray-700`}>
+                        <span className={`w-2 h-2 ${plan.bulletColor} rounded-full mr-3`}></span>
                         <span className={`font-bold ${plan.textColor}`}>{feature.label}</span>
-                        <span className="text-gray-600">{feature.suffix}</span>
+                        <span className="text-gray-600 ml-1">{feature.suffix}</span>
                       </p>
                     )}
                   </div>
@@ -192,6 +236,9 @@ const Cards = () => {
           <p className='text-center text-sm font-semibold text-gray-600'>
             <span className="text-purple-600">***</span>
             {t('pricing.includes')}
+          </p>
+          <p className='text-center text-base font-medium text-gray-700 mt-6 italic'>
+            Consulte para ver otras opciones a la medida
           </p>
         </div>
       </div>

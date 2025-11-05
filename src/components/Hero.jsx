@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import unsplash from '../assets/fondo-hero@2x.png';
+import UnbiaxLogo from './unbiax17.png';
 import Description from './Description'; // Import the Description component
 import ContactForm from './ContactForm'; // Import ContactForm for modal
 
@@ -63,6 +64,19 @@ const Hero = () => {
           >
             {t('hero.contactButton')}
           </button>
+        </div>
+        
+        {/* Powered by Unbiax */}
+        <div className="flex flex-col md:flex-row items-center justify-center mt-12 space-y-3 md:space-y-0 md:space-x-4">
+          <span className="text-black text-base md:text-lg font-medium opacity-80">{t('footer.poweredBy')}</span>
+          <a 
+            href="https://www.unbiax.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center hover:opacity-80 transition-opacity duration-200"
+          >
+            <img src={UnbiaxLogo} alt="Unbiax" className="h-10 md:h-12 w-auto" />
+          </a>
         </div>
       </div>
 

@@ -45,6 +45,12 @@ const WhatsAppButton = () => {
           </div>
         )}
 
+        {/* Efecto de pulso */}
+        <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20 pointer-events-none"></div>
+        
+        {/* Efecto de ondas */}
+        <div className="absolute inset-0 bg-green-400 rounded-full animate-pulse opacity-30 scale-150 pointer-events-none"></div>
+
         {/* Botón principal como enlace */}
         <a
           href={whatsappUrl}
@@ -53,6 +59,7 @@ const WhatsAppButton = () => {
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
           className={`
+            relative z-10
             w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg
             flex items-center justify-center transition-all duration-300 transform
             ${isHovered ? 'scale-110 shadow-xl' : 'scale-100'}
@@ -72,12 +79,6 @@ const WhatsAppButton = () => {
             className="text-2xl group-hover:scale-110 transition-transform duration-200" 
           />
         </a>
-
-        {/* Efecto de pulso */}
-        <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
-        
-        {/* Efecto de ondas */}
-        <div className="absolute inset-0 bg-green-400 rounded-full animate-pulse opacity-30 scale-150"></div>
       </div>
 
 

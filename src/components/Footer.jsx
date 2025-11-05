@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import LogoImage from '../assets/eticprov5.png';
 import LinkedInLogo from '../assets/socia-linkedin@2x.png';
 import WS from '../assets/social-whatsapp@2x.png';
+import UnbiaxLogo from './unbiax17.png';
 import { faTimes, faEnvelope, faPhone, faShieldAlt, faUsers, faRocket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -209,6 +210,18 @@ const Footer = () => {
             <div className='text-gray-400 text-sm'>
               {t('footer.rights')}
             </div>
+          </div>
+          {/* Powered by Unbiax */}
+          <div className='flex flex-col md:flex-row items-center justify-center mt-6 pt-6 border-t border-gray-700 space-y-3 md:space-y-0 md:space-x-4'>
+            <span className='text-gray-300 text-base md:text-lg font-medium'>{t('footer.poweredBy')}</span>
+            <a 
+              href="https://www.unbiax.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className='flex items-center hover:opacity-80 transition-opacity duration-200'
+            >
+              <img src={UnbiaxLogo} alt="Unbiax" className='h-10 md:h-12 w-auto' />
+            </a>
           </div>
         </div>
       </div>
