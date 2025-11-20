@@ -13,7 +13,7 @@ const Analytics = () => {
               allowfullscreen
               height="100%"
               referrerpolicy="strict-origin"
-              src="https://www.kapwing.com/e/65931ff121b875ab8f832aa1"
+              src="https://www.youtube.com/embed/DURPwY7KBEY?rel=0&modestbranding=1"
               style={{ border: '0', height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}
               title="Video Eticpro"
               width="100%"
