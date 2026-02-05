@@ -1,12 +1,10 @@
 import React from 'react';
 import Laptop from '../assets/compliancegc.png';
 import Partner1 from '../assets/partner1.png';
-import Unbiax from '../assets/unbiax.avif';
 import Ctracker from '../assets/ctracker.png';
 
 const About = () => {
   const laptopLink = "https://compliancegc.com/";
-  const unbiaxLink = "https://unbiax.com/";
   const ctrackerlink = "https://compliance-tracker.com/";
 
   return (
@@ -23,9 +21,6 @@ const About = () => {
             </a>
             <a href={ctrackerlink} target="_blank" rel="noopener noreferrer">
               <img className='w-[250px] mx-2 my-8' src={Ctracker} alt='Ctracker' />
-            </a>
-            <a href={unbiaxLink} target="_blank" rel="noopener noreferrer">
-              <img className='w-[100px] mx-2 my-8' src={Unbiax} alt='Unbiax' />
             </a>
           </div>
         </div>

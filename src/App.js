@@ -49,7 +49,7 @@ function App() {
       <Help />
       <Centre />
       <Features />
-      <About ref={aboutRef} />
+      {/* <About ref={aboutRef} /> */}
       <Cards />
       <Clients />
       <Faq />

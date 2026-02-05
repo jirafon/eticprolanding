@@ -16,7 +16,6 @@ import Gruas from '../assets/logo-gruas5.png';
 
 import ComplianceGC from '../assets/compliancegc.png';
 import ComplianceTracker from '../assets/ctracker.png';
-import Unbiax from '../assets/unbiax.avif';
 const Clients = () => {
   const { t } = useTranslation();
 
@@ -32,8 +31,7 @@ const Clients = () => {
     { src: SC2, alt: 'SC2', href: SC2 },
     { src: SC4, alt: 'SC4', href: SC4 },
     { src: SC1, alt: 'SC1', href: SC1 },
-    { src: Ese, alt: 'Ese', href: Ese },
-    { src: Unbiax, alt: 'Unbiax', href: Unbiax }
+    { src: Ese, alt: 'Ese', href: Ese }
   ];
 
   return (
