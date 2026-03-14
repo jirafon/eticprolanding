@@ -95,17 +95,6 @@ const Navbar = () => {
           </li>
           <li role="none">
             <a 
-              href="#aboutus" 
-              onClick={(e) => handleSmoothScroll(e, 'aboutus')}
-              className="p-4 hover:text-blue-600 transition-colors duration-200"
-              role="menuitem"
-              aria-label="Ir a la sección quienes somos"
-            >
-              {t('navbar.nosotros')}
-            </a>
-          </li>
-          <li role="none">
-            <a 
               href="#planes" 
               onClick={(e) => handleSmoothScroll(e, 'planes')}
               className="p-4 hover:text-blue-600 transition-colors duration-200"

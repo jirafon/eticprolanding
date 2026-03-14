@@ -5,7 +5,6 @@ import Analytics from './components/Analytics';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import About from './components/About';
 import Features from './components/Features';
 import Cards from './components/Cards';
 import Help from './components/Help';
@@ -20,7 +19,6 @@ import HelpChatButton from './components/HelpChatButton';
 
 function App() {
   const { t } = useTranslation();
-  const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const [showContactForm, setShowContactForm] = useState(false);
 
@@ -32,24 +30,19 @@ function App() {
     }
   };
 
-  const handleAboutClick = () => {
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const handleCloseContactForm = () => {
     setShowContactForm(false);
   };
 
   return (
     <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
-      <Navbar handleContactClick={handleContactClick} handleAboutClick={handleAboutClick} />
+      <Navbar handleContactClick={handleContactClick} />
       <Hero />
       <Description />
       <Analytics />
       <Help />
       <Centre />
       <Features />
-      {/* <About ref={aboutRef} /> */}
       <Cards />
       <Clients />
       <Faq />

@@ -133,12 +133,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#aboutus" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
-                  <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  {t('footer.about')}
-                </a>
-              </li>
-              <li>
                 <a href="#planes" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
                   {t('footer.plans')}
