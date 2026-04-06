@@ -95,11 +95,11 @@ const Navbar = () => {
           </li>
           <li role="none">
             <a 
-              href="#planes" 
-              onClick={(e) => handleSmoothScroll(e, 'planes')}
+              href="#ventajas" 
+              onClick={(e) => handleSmoothScroll(e, 'ventajas')}
               className="p-4 hover:text-blue-600 transition-colors duration-200"
               role="menuitem"
-              aria-label="Ir a la sección de planes"
+              aria-label="Ir a la sección de módulos principales"
             >
               {t('navbar.funcionalidades')}
             </a>

@@ -6,7 +6,6 @@ import Faq from './components/Faq';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Features from './components/Features';
-import Cards from './components/Cards';
 import Help from './components/Help';
 import Centre from './components/centre';
 import News from './components/News';
@@ -43,7 +42,6 @@ function App() {
       <Help />
       <Centre />
       <Features />
-      <Cards />
       <Clients />
       <Faq />
       <News />
