@@ -175,14 +175,6 @@ const Footer = () => {
                   >
           +56 9 8737 5517
           </a>
-                  <a 
-                    href="https://wa.me/56977657352" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className='text-slate-300 hover:text-white transition-colors duration-200 block'
-                  >
-                    +56 9 776 57 352
-                  </a>
                 </div>
               </div>
             </div>

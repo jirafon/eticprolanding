@@ -10,7 +10,9 @@
   "hero": {
     "title": "Eticpro: Plataforma de Compliance e Gestão de Ética Corporativa",
     "subtitle": "Da prevenção de crimes ao canal de denúncias: gerencie todo o seu programa de compliance em uma única plataforma, com respaldo jurídico e tecnologia de ponta.",
-    "contactButton": "Entre em Contato"
+    "contactButton": "Entre em Contato",
+    "otherSolutionsButton": "Ver outras soluções",
+    "eyebrow": "Inteligência de compliance para equipes modernas"
   },
   "readinessQuiz": {
     "openButton": "Quão pronto estou?",

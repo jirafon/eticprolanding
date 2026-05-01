@@ -10,7 +10,9 @@
   "hero": {
     "title": "Eticpro: Compliance and Corporate Ethics Management Platform",
     "subtitle": "From crime prevention to whistleblowing channels — manage your entire compliance program in one platform, backed by legal expertise and enterprise-grade technology.",
-    "contactButton": "Contact Me"
+    "contactButton": "Contact Me",
+    "otherSolutionsButton": "See other solutions",
+    "eyebrow": "Compliance intelligence for modern teams"
   },
   "readinessQuiz": {
     "openButton": "How ready am I?",

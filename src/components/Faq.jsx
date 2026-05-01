@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { Typography, IconButton } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useTranslation } from 'react-i18next';
 
 const FAQSection = () => {
@@ -13,78 +10,74 @@ const FAQSection = () => {
   };
 
   const sections = [
-    {
-      title: t('faq.question1'),
-      content: t('faq.question1Content'),
-    },
-    {
-      title: t('faq.question2'),
-      content: t('faq.question2Content'),
-    },
-    {
-      title: t('faq.question3'),
-      content: t('faq.question3Content'),
-    },
-    {
-      title: t('faq.question4'),
-      content: t('faq.question4Content'),
-    },
+    { title: t('faq.question1'), content: t('faq.question1Content') },
+    { title: t('faq.question2'), content: t('faq.question2Content') },
+    { title: t('faq.question3'), content: t('faq.question3Content') },
+    { title: t('faq.question4'), content: t('faq.question4Content') },
   ];
 
   return (
-    <section id="FAQ" className="relative">
-    <div style={{ backgroundColor: 'rgb(236, 253, 255)', padding: '16px' }}>
-        <h6 className=' text-center md:text-4xl sm:text-3xl text-2xl font-bold py-2'>{t('faq.title')}</h6>
+    <section id="FAQ" className="relative py-20 bg-[#06112a] overflow-hidden">
+      {/* Background glow blobs */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
-    <div className='max-w-[1240px] mx-auto text-left'>
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          style={{
-            backgroundColor: 'white',
-            color: 'black',
-            padding: '16px',
-            borderRadius: '12px',
-            marginBottom: '16px',
-            boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.15)',
-            maxWidth: '800px',
-            margin: '0 auto',
-            transition: 'box-shadow 0.3s ease-in-out',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'left' }}>
-            <Typography
-              variant="h6"
-              onClick={() => handleToggle(index)}
-              style={{
-                cursor: 'pointer',
-                margin: 0,
-                fontWeight: 'bold',
-              }}
-            >
-              {section.title}
-            </Typography>
-            <IconButton
-              onClick={() => handleToggle(index)}
-              style={{ marginLeft: 'auto' }}
-            >
-              {expandedIndex === index ? (
-                <ExpandLessIcon />
-              ) : (
-                <ExpandMoreIcon />
-              )}
-            </IconButton>
-          </div>
-          {expandedIndex === index && (
-            <div
-              dangerouslySetInnerHTML={{ __html: section.content }}
-              style={{ marginTop: '16px' }}
-            />
-          )}
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest uppercase rounded-full bg-white/10 text-blue-300 border border-white/10">
+            FAQ
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            {t('faq.title')}
+          </h2>
         </div>
-      ))}
-    </div>
-    </div>
+
+        {/* Accordion items */}
+        <div className="space-y-3">
+          {sections.map((section, index) => {
+            const isOpen = expandedIndex === index;
+            return (
+              <div
+                key={index}
+                className={`rounded-2xl border transition-all duration-300 ${
+                  isOpen
+                    ? 'bg-white/10 border-blue-500/40 shadow-lg shadow-blue-900/20'
+                    : 'bg-white/5 border-white/10 hover:border-white/20'
+                }`}
+              >
+                <button
+                  className="w-full flex items-center justify-between px-6 py-5 text-left"
+                  onClick={() => handleToggle(index)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-white font-semibold text-base pr-4">
+                    {section.title}
+                  </span>
+                  <span
+                    className={`flex-shrink-0 w-7 h-7 rounded-full border border-white/20 flex items-center justify-center transition-transform duration-300 ${
+                      isOpen ? 'rotate-45 bg-blue-500/30 border-blue-400/40' : 'bg-white/10'
+                    }`}
+                  >
+                    <svg className="w-3.5 h-3.5 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="px-6 pb-6">
+                    <div
+                      className="text-slate-300 text-sm leading-relaxed prose prose-invert prose-sm max-w-none"
+                      dangerouslySetInnerHTML={{ __html: section.content }}
+                    />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

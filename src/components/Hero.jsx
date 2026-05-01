@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="section-divider pt-10 md:pt-14">
             <div className="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold eyebrow-chip mb-6">
-              Compliance intelligence for modern teams
+              {t('hero.eyebrow')}
             </div>
             <header className="text-left max-w-3xl">
               <h1 className="text-5xl md:text-6xl xl:text-7xl leading-[0.95] font-bold mb-6 text-balance">
@@ -62,6 +62,14 @@ const Hero = () => {
               >
                 {t('readinessQuiz.openButton')}
               </button>
+              <a
+                href="https://unbiax.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-button bg-slate-900 text-white text-base font-semibold hover:bg-slate-800"
+              >
+                {t('hero.otherSolutionsButton')}
+              </a>
               <button
                 onClick={handleLogin}
                 className="nav-button bg-transparent border border-slate-300 text-slate-700 text-base font-semibold hover:bg-white/60"
