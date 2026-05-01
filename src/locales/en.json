@@ -9,12 +9,100 @@
   },
   "hero": {
     "title": "Eticpro: Compliance and Corporate Ethics Management Platform",
-    "subtitle": "Manage your compliance processes in one place, securely. Eticpro is a robust software platform that simplifies ethical compliance and conflict management in your organization.",
+    "subtitle": "From crime prevention to whistleblowing channels — manage your entire compliance program in one platform, backed by legal expertise and enterprise-grade technology.",
     "contactButton": "Contact Me"
+  },
+  "readinessQuiz": {
+    "openButton": "How ready am I?",
+    "badge": "Compliance Self-Assessment",
+    "title": "How ready am I?",
+    "subtitle": "Discover the maturity level of your Crime Prevention Model",
+    "answers": {
+      "yes": "Yes",
+      "no": "No",
+      "unanswered": "Unanswered"
+    },
+    "scale": {
+      "min": "Not at all",
+      "max": "Completely"
+    },
+    "actions": {
+      "start": "Start assessment →",
+      "previous": "← Previous",
+      "next": "Next →",
+      "viewResults": "View results →",
+      "contactMe": "Contact me to improve my compliance",
+      "sending": "Sending...",
+      "close": "Close"
+    },
+    "progress": {
+      "questionOf": "Question {{current}} of {{total}}",
+      "value": "Value: {{value}} pts"
+    },
+    "form": {
+      "description": "Complete your details to receive a personalized assessment.",
+      "namePlaceholder": "Name",
+      "rolePlaceholder": "Role",
+      "companyPlaceholder": "Company",
+      "emailPlaceholder": "Email address",
+      "phonePlaceholder": "Phone",
+      "nameLabel": "Name",
+      "roleLabel": "Role",
+      "companyLabel": "Company",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone"
+    },
+    "results": {
+      "totalScoring": "Total score",
+      "pointsSuffix": "pts",
+      "compliancePercent": "{{percent}}% compliance",
+      "sentTitle": "Message sent!",
+      "sentDescription": "We will contact you soon to help strengthen your compliance program."
+    },
+    "scoreStates": {
+      "excellent": {
+        "label": "Excellent!",
+        "description": "Your company has a very advanced level of compliance maturity."
+      },
+      "progress": {
+        "label": "In progress",
+        "description": "There are important improvement opportunities in your compliance program."
+      },
+      "improve": {
+        "label": "Needs improvement",
+        "description": "Your company needs to strengthen its Crime Prevention Model."
+      }
+    },
+    "email": {
+      "requestTitle": "Contact request - Compliance Self-Assessment",
+      "resultsTitle": "Quiz results",
+      "scoreLabel": "Score",
+      "subject": "Compliance Self-Assessment"
+    },
+    "questions": {
+      "q1": {
+        "question": "The company has a Crime Prevention Model (CPM)"
+      },
+      "q2": {
+        "question": "Our CPM currently includes the latest amendments to the Economic Crimes Law"
+      },
+      "q3": {
+        "question": "The CPM is effectively known by the employees of my organization",
+        "subtitle": "How strongly do you identify with the following statement? (1 = not at all, 5 = completely)"
+      },
+      "q4": {
+        "question": "The CPM is effectively known by our strategic or relevant suppliers",
+        "subtitle": "How strongly do you identify with the following statement? (1 = not at all, 5 = completely)"
+      },
+      "q5": {
+        "question": "The process owners in my company are clear about the risks and controls they must manage",
+        "subtitle": "How strongly do you identify with the following statement? (1 = not at all, 5 = completely)"
+      }
+    }
   },
   "features": {
     "title": "Main Compliance Modules in Eticpro",
-    "description": "Eticpro contains the legal and operational content that would take many lawyer hours and years of experience in forms, along with key functionality to improve regulatory compliance efficiency.",
+    "description": "Each module integrates the legal and operational content that would normally require hours of specialized legal advice, with features designed to digitize and automate your compliance program.",
     "profiles": "Included profiles: Compliance Manager, Director, Auditor, Approver, Declarant, Whistleblower, Investigator and Ethics Committee.",
     "campaigns": "Compliance Culture Campaigns",
     "repository": "Repository of Policies and Procedures",
@@ -28,10 +116,10 @@
   "about": {
     "badge": "Compliance Platform",
     "title": "What is Eticpro?",
-    "subtitle": "An integral solution that combines advanced technology with legal expertise to transform enterprise compliance management",
+    "subtitle": "Legal expertise and technology in one platform, so your organization operates with integrity and without unnecessary bureaucracy.",
     "mainTitle": "Integral Compliance Solution",
     "description1": "Eticpro is an integral compliance tool that combines technology with legal knowledge, allowing preventive controls of economic crimes necessary for the Crime Prevention Model.",
-    "description2": "Legal entities face complex problems that expose them to high risks of criminal liability. Eticpro fills this gap by offering a specific solution that allows implementing the Crime Prevention Model in",
+    "description2": "Legal entities face complex risks of criminal liability that cannot be ignored. Eticpro fills that gap with a specific solution that allows implementing the Crime Prevention Model in an agile and documented way.",
     "hours": "24 hours",
     "fast": "Fast Implementation",
     "fastDesc": "Operational model in 24 hours",
@@ -105,7 +193,7 @@
   },
   "contact": {
     "header": "Direct Contact",
-    "title": "Ready to transform your compliance?",
+    "title": "Ready to build a compliance program you can rely on?",
     "subtitle": "Complete the form and our team of experts will contact you shortly",
     "alternativeTitle": "Contact us for more information",
     "name": "Your full name",
@@ -139,6 +227,8 @@
   },
   "footer": {
     "description": "We are dedicated to providing cutting-edge compliance solutions for businesses of all sizes. Our mission is to provide the necessary tools to maintain regulatory compliance without complications and minimize associated risks.",
+    "highlightTitle": "A compliance platform designed to operate with clarity and confidence.",
+    "highlightDescription": "We help organizations manage their compliance processes with traceability, expert support, and a simple experience for the entire team.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "home": "Home",
@@ -179,5 +269,23 @@
       "closeAria": "Close privacy policy",
       "viewPrivacy": "View privacy policy"
     }
+  },
+  "centre": {
+    "title": "Replace all these tools with a single platform dedicated to compliance"
+  },
+  "help": {
+    "badge": "Benefits",
+    "title": "Improve your organization in:",
+    "card1Title": "Time and cost savings",
+    "card1Desc": "Save time with automated processes, easy implementation, and digital support.",
+    "card2Title": "Reputational care",
+    "card2Desc": "Improve transparency, integrate ESG criteria, and comply with new regulations to protect your reputation.",
+    "card3Title": "Greater security",
+    "card3Desc": "Protect your information with constant monitoring and mitigation of criminal risks."
+  },
+  "testimonial": {
+    "quote": "I want to highlight the Eticpro platform: it is very useful, well designed, intuitive, and easy to use. Every time I have needed help, the support team has responded quickly and effectively. I truly value the experience during the implementation and pilot phase we have been running.",
+    "name": "Ximena Friz",
+    "role": "Compliance Leader, Laboratorio Bagó"
   }
 }

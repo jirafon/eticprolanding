@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from 'react-i18next';
 import Laptop from "../assets/team2.png";
 import CH from "../assets/bioch2.png";

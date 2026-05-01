@@ -3,30 +3,71 @@
 @tailwind utilities;
 
 /* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --page-bg: #f3f5fb;
+  --ink: #11203b;
+  --muted: #5f6f8d;
+  --brand: #1f4ed8;
+  --brand-deep: #15307a;
+  --brand-soft: rgba(31, 78, 216, 0.12);
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --border-soft: rgba(120, 146, 194, 0.22);
+  --shadow-luxury: 0 24px 80px rgba(15, 32, 74, 0.16);
+}
 
 /* Estilos base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(58, 113, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 85% 15%, rgba(13, 29, 84, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8faff 0%, #eef2fb 42%, #f6f7fb 100%);
+  font-family: 'Manrope', sans-serif;
   line-height: 1.6;
-  color: #1f2937;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fraunces', serif;
+  letter-spacing: -0.03em;
+  color: #102247;
+}
+
+::selection {
+  background: rgba(31, 78, 216, 0.18);
+  color: #11203b;
 }
 
 /* Componentes personalizados */
 @layer components {
   .nav-button {
-    @apply font-inter font-medium px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply font-medium px-6 py-3 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .nav-button-demo {
-    @apply bg-eticpro-blue-500 text-white shadow-soft hover:bg-eticpro-blue-600 hover:shadow-medium focus:ring-eticpro-blue-500;
+    background: linear-gradient(135deg, #1849d6 0%, #102d7c 100%);
+    color: #ffffff;
+    box-shadow: 0 18px 40px rgba(27, 67, 176, 0.24);
   }
 
   .nav-button-entrar {
-    @apply bg-white text-eticpro-blue-500 border-2 border-eticpro-blue-500 shadow-soft hover:bg-eticpro-blue-50 hover:shadow-medium focus:ring-eticpro-blue-500;
+    background: rgba(255, 255, 255, 0.72);
+    color: #15307a;
+    border: 1px solid rgba(21, 48, 122, 0.18);
+    box-shadow: 0 10px 30px rgba(15, 32, 74, 0.08);
   }
 
   .nav-center {
@@ -41,9 +82,8 @@ body {
     @apply font-inter flex items-center h-48;
   }
 
-  /* Efectos de hover mejorados */
   .nav-button:hover {
-    @apply font-inter bg-eticpro-gray-600 text-white shadow-medium;
+    transform: translateY(-1px);
   }
 
   /* Contenedor de newsletter con animaciones */
@@ -116,15 +156,55 @@ body {
   }
 }
 
+.glass-nav {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(130, 154, 206, 0.18);
+  box-shadow: 0 12px 40px rgba(15, 32, 74, 0.08);
+}
+
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-luxury);
+}
+
+.eyebrow-chip {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(95, 124, 188, 0.18);
+  color: #1a3f99;
+  box-shadow: 0 10px 30px rgba(19, 49, 125, 0.08);
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.52) 26%, transparent 46%),
+    radial-gradient(circle at 80% 0%, rgba(77, 131, 255, 0.18) 0%, transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86) 0%, rgba(239, 243, 255, 0.72) 42%, rgba(222, 231, 255, 0.64) 100%);
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(21, 48, 122, 0.46), transparent);
+}
+
 /* Media queries para responsividad */
 @media screen and (max-width: 767px) {
   body {
-    @apply font-inter bg-white text-black;
-    zoom: 90%;
+    zoom: 96%;
   }
 
   .nav-button {
-    @apply font-inter bg-eticpro-gray-600 text-white;
+    width: 100%;
   }
 
   .input-orange-border {

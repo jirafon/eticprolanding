@@ -78,23 +78,30 @@ const Footer = () => {
   const handleCloseModal = () => setShowPrivacyModal(false);
 
   return (
-    <footer className='bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white relative overflow-hidden'>
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
-      </div>
-
-      <div className='relative max-w-7xl mx-auto py-16 px-4'>
+    <footer className='relative overflow-hidden bg-[#081327] text-white mt-24'>
+      <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_top_left,rgba(49,104,255,0.28),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_24%)]"></div>
+      <div className='relative max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='mb-12 rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6'>
+          <div className='max-w-2xl'>
+            <div className='text-xs uppercase tracking-[0.25em] text-blue-200 mb-3'>Eticpro</div>
+            <h3 className='text-3xl md:text-4xl font-semibold text-white mb-3'>{t('footer.highlightTitle')}</h3>
+            <p className='text-slate-300 leading-relaxed'>{t('footer.highlightDescription')}</p>
+          </div>
+          <a
+            href="mailto:hello@eticpro.com"
+            className='inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-[0_16px_40px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:bg-blue-50'
+          >
+            hello@eticpro.com
+          </a>
+        </div>
         {/* Main Footer Content */}
         <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12'>
           {/* Company Info */}
-          <div className='lg:col-span-2'>
+          <div className='lg:col-span-2 rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-8'>
             <div className='flex items-center mb-6'>
               <img src={LogoImage} alt='Eticpro' className='w-48 h-auto' />
             </div>
-            <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
+            <p className='text-slate-300 leading-relaxed mb-6 max-w-md'>
               {t('footer.description')}
             </p>
             <div className='flex space-x-4'>
@@ -102,7 +109,7 @@ const Footer = () => {
                 href="https://cl.linkedin.com/company/eticpro" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className='bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-all duration-300 transform hover:scale-110'
+                className='bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 transform hover:scale-110 border border-white/10'
                 aria-label="Síguenos en LinkedIn"
               >
                 <img src={LinkedInLogo} alt="LinkedIn" className='w-5 h-5' />
@@ -111,7 +118,7 @@ const Footer = () => {
                 href="https://wa.me/56987375517" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className='bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-all duration-300 transform hover:scale-110'
+                className='bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 transform hover:scale-110 border border-white/10'
                 aria-label="Contáctenme por WhatsApp"
               >
                 <img src={WS} alt="WhatsApp" className='w-5 h-5' />
@@ -120,26 +127,20 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className='text-xl font-bold mb-6 flex items-center'>
+          <div className='rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-8'>
+            <h3 className='text-xl font-bold mb-6 flex items-center text-white'>
               <FontAwesomeIcon icon={faRocket} className='mr-2 text-blue-400' />
               {t('footer.quickLinks')}
             </h3>
             <ul className='space-y-3'>
               <li>
-                <a href="#inicio" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
+                <a href="#inicio" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
                   {t('footer.home')}
                 </a>
               </li>
               <li>
-                <a href="#planes" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
-                  <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
-                  {t('footer.plans')}
-                </a>
-              </li>
-              <li>
-                <a href="#FAQ" className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'>
+                <a href="#FAQ" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
                   {t('footer.faqTitle')}
                 </a>
@@ -148,8 +149,8 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className='text-xl font-bold mb-6 flex items-center'>
+          <div className='rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-8'>
+            <h3 className='text-xl font-bold mb-6 flex items-center text-white'>
               <FontAwesomeIcon icon={faUsers} className='mr-2 text-blue-400' />
               {t('footer.contact')}
             </h3>
@@ -158,7 +159,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faEnvelope} className='text-blue-400 mr-3 w-4' />
                 <a 
                   href="mailto:hello@eticpro.com" 
-                  className='text-gray-300 hover:text-white transition-colors duration-200'
+                  className='text-slate-300 hover:text-white transition-colors duration-200'
                 >
                   hello@eticpro.com
                 </a>
@@ -170,7 +171,7 @@ const Footer = () => {
                     href="https://wa.me/5698484088" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className='text-gray-300 hover:text-white transition-colors duration-200 block'
+                    className='text-slate-300 hover:text-white transition-colors duration-200 block'
                   >
           +56 9 8737 5517
           </a>
@@ -178,7 +179,7 @@ const Footer = () => {
                     href="https://wa.me/56977657352" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className='text-gray-300 hover:text-white transition-colors duration-200 block'
+                    className='text-slate-300 hover:text-white transition-colors duration-200 block'
                   >
                     +56 9 776 57 352
                   </a>
@@ -189,25 +190,25 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className='border-t border-gray-700 pt-8'>
+        <div className='border-t border-white/10 pt-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='flex items-center space-x-6'>
               <button 
                 onClick={handlePrivacyClick} 
-                className='text-gray-300 hover:text-white transition-colors duration-200 flex items-center'
+                className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'
                 aria-label={t('footer.privacyModal.viewPrivacy')}
               >
                 <FontAwesomeIcon icon={faShieldAlt} className='mr-2' />
                 {t('footer.privacyPolicy')}
               </button>
             </div>
-            <div className='text-gray-400 text-sm'>
+            <div className='text-slate-400 text-sm'>
               {t('footer.rights')}
             </div>
           </div>
           {/* Powered by Unbiax */}
-          <div className='flex flex-col md:flex-row items-center justify-center mt-6 pt-6 border-t border-gray-700 space-y-3 md:space-y-0 md:space-x-4'>
-            <span className='text-gray-300 text-base md:text-lg font-medium'>{t('footer.poweredBy')}</span>
+          <div className='flex flex-col md:flex-row items-center justify-center mt-6 pt-6 border-t border-white/10 space-y-3 md:space-y-0 md:space-x-4'>
+            <span className='text-slate-300 text-base md:text-lg font-medium'>{t('footer.poweredBy')}</span>
             <a 
               href="https://www.unbiax.com" 
               target="_blank" 

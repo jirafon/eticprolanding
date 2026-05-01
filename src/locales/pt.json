@@ -9,12 +9,100 @@
   },
   "hero": {
     "title": "Eticpro: Plataforma de Compliance e Gestão de Ética Corporativa",
-    "subtitle": "Gerencie seus processos de compliance em um só lugar, de forma segura. Eticpro é uma plataforma de software robusta que simplifica o cumprimento ético e a gestão de conflitos em sua organização.",
+    "subtitle": "Da prevenção de crimes ao canal de denúncias: gerencie todo o seu programa de compliance em uma única plataforma, com respaldo jurídico e tecnologia de ponta.",
     "contactButton": "Entre em Contato"
+  },
+  "readinessQuiz": {
+    "openButton": "Quão pronto estou?",
+    "badge": "Autoavaliação de Compliance",
+    "title": "Quão pronto estou?",
+    "subtitle": "Descubra o nível de maturidade do seu Modelo de Prevenção de Delitos",
+    "answers": {
+      "yes": "Sim",
+      "no": "Não",
+      "unanswered": "Sem resposta"
+    },
+    "scale": {
+      "min": "Nada",
+      "max": "Totalmente"
+    },
+    "actions": {
+      "start": "Começar avaliação →",
+      "previous": "← Anterior",
+      "next": "Próximo →",
+      "viewResults": "Ver resultados →",
+      "contactMe": "Entre em contato para melhorar meu compliance",
+      "sending": "Enviando...",
+      "close": "Fechar"
+    },
+    "progress": {
+      "questionOf": "Pergunta {{current}} de {{total}}",
+      "value": "Valor: {{value}} pts"
+    },
+    "form": {
+      "description": "Preencha seus dados para receber um diagnóstico personalizado.",
+      "namePlaceholder": "Nome",
+      "rolePlaceholder": "Cargo",
+      "companyPlaceholder": "Empresa",
+      "emailPlaceholder": "E-mail",
+      "phonePlaceholder": "Telefone",
+      "nameLabel": "Nome",
+      "roleLabel": "Cargo",
+      "companyLabel": "Empresa",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Telefone"
+    },
+    "results": {
+      "totalScoring": "Pontuação total",
+      "pointsSuffix": "pts",
+      "compliancePercent": "{{percent}}% de compliance",
+      "sentTitle": "Mensagem enviada!",
+      "sentDescription": "Entraremos em contato em breve para ajudar a fortalecer seu programa de compliance."
+    },
+    "scoreStates": {
+      "excellent": {
+        "label": "Excelente!",
+        "description": "Sua empresa tem um nível muito avançado de maturidade em compliance."
+      },
+      "progress": {
+        "label": "Em progresso",
+        "description": "Há oportunidades importantes de melhoria no seu programa de compliance."
+      },
+      "improve": {
+        "label": "Precisa melhorar",
+        "description": "Sua empresa precisa fortalecer seu Modelo de Prevenção de Delitos."
+      }
+    },
+    "email": {
+      "requestTitle": "Solicitação de contato - Autoavaliação de Compliance",
+      "resultsTitle": "Resultados do quiz",
+      "scoreLabel": "Pontuação",
+      "subject": "Autoavaliação de Compliance"
+    },
+    "questions": {
+      "q1": {
+        "question": "A empresa possui um Modelo de Prevenção de Delitos (MPD)"
+      },
+      "q2": {
+        "question": "Nosso MPD considera atualmente as últimas alterações da Lei de Crimes Econômicos"
+      },
+      "q3": {
+        "question": "O MPD é efetivamente conhecido pelos colaboradores da minha organização",
+        "subtitle": "Quanto você se identifica com a seguinte afirmação? (1 = nada, 5 = totalmente)"
+      },
+      "q4": {
+        "question": "O MPD é efetivamente conhecido pelos nossos fornecedores estratégicos ou relevantes",
+        "subtitle": "Quanto você se identifica com a seguinte afirmação? (1 = nada, 5 = totalmente)"
+      },
+      "q5": {
+        "question": "Os responsáveis pelos processos da minha empresa têm clareza sobre os riscos e controles que devem gerenciar",
+        "subtitle": "Quanto você se identifica com a seguinte afirmação? (1 = nada, 5 = totalmente)"
+      }
+    }
   },
   "features": {
     "title": "Principais Módulos de Compliance no Eticpro",
-    "description": "Eticpro contém o conteúdo legal e operacional que levaria muitas horas de advogado e anos de experiência em formulários, junto com funcionalidade chave para melhorar a eficiência do cumprimento normativo.",
+    "description": "Cada módulo integra o conteúdo jurídico e operacional que normalmente exige horas de assessoria especializada, com funcionalidades projetadas para digitalizar e automatizar seu programa de conformidade.",
     "profiles": "Perfis incluídos: Gerente de Compliance, Diretor, Auditor, Aprovador, Declarante, Denunciante, Investigador e Comitê de Ética.",
     "campaigns": "Campanhas de Cultura de Compliance",
     "repository": "Repositório de Políticas e Procedimentos",
@@ -28,10 +116,10 @@
   "about": {
     "badge": "Plataforma de Compliance",
     "title": "O que é Eticpro?",
-    "subtitle": "Uma solução integral que combina tecnologia avançada com expertise jurídica para transformar a gestão de compliance empresarial",
+    "subtitle": "Tecnologia e direito em uma única plataforma, para que sua organização opere com integridade e sem burocracia desnecessária.",
     "mainTitle": "Solução Integral de Compliance",
     "description1": "Eticpro é uma ferramenta integral de cumprimento que combina tecnologia com conhecimento jurídico, permitindo realizar controles preventivos de crimes econômicos necessários para o Modelo de Prevenção de Crimes.",
-    "description2": "As pessoas jurídicas enfrentam problemas complexos que as expõem a altos riscos de responsabilidade penal. Eticpro preenche essa lacuna oferecendo uma solução específica que permite implementar o Modelo de Prevenção de Crimes em",
+    "description2": "As pessoas jurídicas enfrentam riscos complexos de responsabilidade penal que não podem ser ignorados. O Eticpro preenche essa lacuna com uma solução específica que permite implementar o Modelo de Prevenção de Crimes de forma ágil e documentada.",
     "hours": "24 horas",
     "fast": "Implementação Rápida",
     "fastDesc": "Modelo operacional em 24 horas",
@@ -105,7 +193,7 @@
   },
   "contact": {
     "header": "Contato Direto",
-    "title": "Pronto para transformar seu compliance?",
+    "title": "Pronto para operar com um programa de compliance sólido?",
     "subtitle": "Preencha o formulário e nossa equipe de especialistas entrará em contato em breve",
     "alternativeTitle": "Entre em contato para mais informações",
     "name": "Seu nome completo",
@@ -139,6 +227,8 @@
   },
   "footer": {
     "description": "Estamos dedicados a fornecer soluções de compliance de ponta para empresas de todos os tamanhos. Nossa missão é fornecer as ferramentas necessárias para manter o cumprimento normativo sem complicações e minimizar os riscos associados.",
+    "highlightTitle": "Uma plataforma de compliance pensada para operar com clareza e confiança.",
+    "highlightDescription": "Ajudamos as organizações a gerenciar seus processos de compliance com rastreabilidade, suporte especializado e uma experiência simples para toda a equipe.",
     "quickLinks": "Links Rápidos",
     "contact": "Contato",
     "home": "Início",
@@ -179,5 +269,23 @@
       "closeAria": "Fechar política de privacidade",
       "viewPrivacy": "Ver política de privacidade"
     }
+  },
+  "centre": {
+    "title": "Substitua todas essas ferramentas por uma única plataforma dedicada à conformidade"
+  },
+  "help": {
+    "badge": "Benefícios",
+    "title": "Melhore sua organização em:",
+    "card1Title": "Economia de tempo e custos",
+    "card1Desc": "Economize tempo com processos automatizados, fácil implementação e suporte digital.",
+    "card2Title": "Cuidado reputacional",
+    "card2Desc": "Melhore a transparência, integre critérios ESG e cumpra novas regulamentações para proteger sua reputação.",
+    "card3Title": "Maior segurança",
+    "card3Desc": "Proteja suas informações com monitoramento constante e mitigação de riscos penais."
+  },
+  "testimonial": {
+    "quote": "Gostaria de destacar a plataforma Eticpro: é muito útil, bem projetada, intuitiva e fácil de usar. Sempre que precisei de ajuda, a equipe de suporte respondeu de forma rápida e eficaz. Realmente valorizo a experiência durante o período de implementação e fase piloto que estamos conduzindo.",
+    "name": "Ximena Friz",
+    "role": "Líder de Compliance, Laboratório Bagó"
   }
 }

@@ -8,10 +8,8 @@ import Navbar from './components/Navbar';
 import Features from './components/Features';
 import Help from './components/Help';
 import Centre from './components/centre';
-import News from './components/News';
 import Clients from './components/Clients';
 import ContactForm from './components/ContactForm';
-import Description from './components/Description';
 import Hero from './components/Hero';
 import WhatsAppButton from './components/WhatsAppButton';
 import HelpChatButton from './components/HelpChatButton';
@@ -37,14 +35,12 @@ function App() {
     <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
       <Navbar handleContactClick={handleContactClick} />
       <Hero />
-      <Description />
       <Analytics />
       <Help />
       <Centre />
       <Features />
       <Clients />
       <Faq />
-      <News />
       <WhatsAppButton />
       <HelpChatButton />
       

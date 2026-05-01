@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import LogoImage from '../assets/eticprov23.png';
-import unsplash from '../assets/fondo-hero@2x.png';
 import ContactForm from './ContactForm'; // Import the new contact form
 import Quiz from './Quiz'; // Import the modal component
-import celeste from '../assets/celeste.png';
-import inter from '../assets/inter.webloc'; // Ajusta la ruta según sea necesario
 // Importa la fuente en tu archivo JavaScript (por ejemplo, index.js o App.js)
 import '@fontsource/inter/400.css'; // Importa el peso de la fuente que necesitas
 import '@fontsource/inter/500.css';
@@ -47,10 +44,6 @@ const Navbar = () => {
     setIsModalOpen(false); // Close the modal
   };
 
-  const handleOpenModalQuiz = () => {
-    setIsModalOpenQuiz(true); // Open the modal
-  };
-
   const handleCloseModalQuiz = () => {
     setIsModalOpenQuiz(false); // Close the modal
   };
@@ -59,34 +52,25 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav
-        className="fixed top-0 left-0 w-full flex justify-between items-center px-4 text-black z-30"
-        style={{
-          backgroundImage: `url(${celeste})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: window.innerWidth < 750 ? '60px' : '96px', // Ajusta la altura para móviles
-        }}
+        className="glass-nav fixed top-0 left-0 w-full z-30"
         role="navigation"
         aria-label="Navegación principal"
       >
-        <a href="#inicio" className="flex items-center" aria-label="Ir al inicio">
-          <img
-            src={LogoImage}
-            alt="Logo de Eticpro"
-            className="transition-transform duration-300 hover:scale-105"
-            style={{
-              width: window.innerWidth < 750 ? '90px' : '230px',
-              height: window.innerWidth < 750 ? '20px' : '50px',
-            }}
-          />
-        </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] md:h-[88px] flex justify-between items-center text-slate-900">
+          <a href="#inicio" className="flex items-center" aria-label="Ir al inicio">
+            <img
+              src={LogoImage}
+              alt="Logo de Eticpro"
+              className="w-[120px] md:w-[220px] h-auto transition-transform duration-300 hover:scale-[1.02]"
+            />
+          </a>
 
-        <ul className="hidden md:flex items-center space-x-4" role="menubar">
+          <ul className="hidden md:flex items-center gap-1 lg:gap-2" role="menubar">
           <li role="none">
             <a 
               href="#inicio" 
               onClick={(e) => handleSmoothScroll(e, 'inicio')}
-              className="p-4 hover:text-blue-600 transition-colors duration-200"
+              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors duration-200"
               role="menuitem"
               aria-label="Ir a la sección de inicio"
             >
@@ -97,7 +81,7 @@ const Navbar = () => {
             <a 
               href="#ventajas" 
               onClick={(e) => handleSmoothScroll(e, 'ventajas')}
-              className="p-4 hover:text-blue-600 transition-colors duration-200"
+              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors duration-200"
               role="menuitem"
               aria-label="Ir a la sección de módulos principales"
             >
@@ -108,7 +92,7 @@ const Navbar = () => {
             <a 
               href="#FAQ" 
               onClick={(e) => handleSmoothScroll(e, 'FAQ')}
-              className="p-4 hover:text-blue-600 transition-colors duration-200"
+              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors duration-200"
               role="menuitem"
               aria-label="Ir a la sección de preguntas frecuentes"
             >
@@ -119,7 +103,7 @@ const Navbar = () => {
             <select 
               value={i18n.language} 
               onChange={handleLanguageChange}
-              className="px-3 py-1 border border-gray-300 rounded-md bg-white text-sm"
+              className="rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm outline-none transition focus:border-blue-300"
               aria-label="Select language"
             >
               <option value="es">ES</option>
@@ -129,7 +113,7 @@ const Navbar = () => {
           </li>
           <li role="none">
             <button 
-              className="nav-button nav-button-entrar" 
+              className="nav-button nav-button-entrar text-sm font-semibold" 
               onClick={handleLogin}
               aria-label="Acceder a la plataforma Eticpro"
             >
@@ -138,41 +122,31 @@ const Navbar = () => {
           </li>
           <li role="none">
             <button 
-              className="nav-button nav-button-demo" 
+              className="nav-button nav-button-demo text-sm font-semibold" 
               onClick={handleOpenModal}
               aria-label="Contactar con Eticpro"
             >
               {t('navbar.contacto')}
             </button>
           </li>
-        </ul>
+          </ul>
 
-        <button 
-          onClick={handleNav} 
-          className="block md:hidden p-2 hover:bg-white hover:bg-opacity-20 rounded transition-colors duration-200"
-          aria-label={nav ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
-          aria-expanded={nav}
-          aria-controls="mobile-menu"
-        >
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-        </button>
+          <button 
+            onClick={handleNav} 
+            className="block md:hidden rounded-full border border-slate-200 bg-white/80 p-2.5 text-slate-700 shadow-sm transition-colors duration-200 hover:bg-white"
+            aria-label={nav ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+            aria-expanded={nav}
+            aria-controls="mobile-menu"
+          >
+            {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         <ul
           id="mobile-menu"
-          style={{
-            backgroundImage: `url(${unsplash})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            left: nav ? '0' : '-100%',
-            width: '60%',
-            textAlign: 'center',
-            position: 'fixed',
-            top: '0',
-            height: '100%',
-            transition: 'left 0.5s ease-in-out',
-          }}
-          className="z-20"
+          style={{ left: nav ? '0' : '-100%' }}
+          className="glass-nav z-20 fixed top-0 h-full w-[78%] max-w-sm px-6 pt-24 text-left transition-[left] duration-500 ease-in-out"
           role="menu"
           aria-label="Menú de navegación móvil"
         >
@@ -180,37 +154,27 @@ const Navbar = () => {
             <a 
               href="#inicio" 
               onClick={(e) => handleSmoothScroll(e, 'inicio')}
-              className="block p-4 hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+              className="block rounded-2xl px-4 py-3 text-base font-semibold text-slate-800 transition-colors duration-200 hover:bg-white/70"
               role="menuitem"
             >
-              Inicio
+              {t('navbar.inicio')}
             </a>
           </li>
           <li role="none">
             <a 
               href="#ventajas" 
               onClick={(e) => handleSmoothScroll(e, 'ventajas')}
-              className="block p-4 hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+              className="block rounded-2xl px-4 py-3 text-base font-semibold text-slate-800 transition-colors duration-200 hover:bg-white/70"
               role="menuitem"
             >
-              Ventajas
-            </a>
-          </li>
-          <li role="none">
-            <a 
-              href="#planes" 
-              onClick={(e) => handleSmoothScroll(e, 'planes')}
-              className="block p-4 hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
-              role="menuitem"
-            >
-              Planes
+              {t('navbar.funcionalidades')}
             </a>
           </li>
           <li role="none">
             <a 
               href="#FAQ" 
               onClick={(e) => handleSmoothScroll(e, 'FAQ')}
-              className="block p-4 hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+              className="block rounded-2xl px-4 py-3 text-base font-semibold text-slate-800 transition-colors duration-200 hover:bg-white/70"
               role="menuitem"
             >
               FAQ
@@ -218,7 +182,7 @@ const Navbar = () => {
           </li>
           <li role="none">
             <button 
-              className="block w-full p-4 text-left hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+              className="mt-4 block w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-left font-semibold text-slate-800 transition-colors duration-200 hover:bg-white"
               onClick={handleLogin}
               aria-label="Acceder a la plataforma Eticpro"
             >
@@ -227,11 +191,11 @@ const Navbar = () => {
           </li>
           <li role="none">
             <button 
-              className="block w-full p-4 text-left hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+              className="mt-3 block w-full rounded-2xl bg-gradient-to-r from-blue-700 to-blue-900 px-4 py-3 text-left font-semibold text-white shadow-lg transition duration-200 hover:from-blue-800 hover:to-blue-950"
               onClick={handleOpenModal}
               aria-label="Contactar con Eticpro"
             >
-              Contáctenme
+              {t('hero.contactButton')}
             </button>
           </li>
         </ul>
