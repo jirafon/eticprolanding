@@ -13,6 +13,7 @@ import ContactForm from './components/ContactForm';
 import Hero from './components/Hero';
 import WhatsAppButton from './components/WhatsAppButton';
 import HelpChatButton from './components/HelpChatButton';
+import SeoHead from './components/SeoHead';
 
 function App() {
   const { t } = useTranslation();
@@ -32,15 +33,24 @@ function App() {
   };
 
   return (
-    <div id="inicio" className="inicio" style={{ marginTop: '5%' }}>
+    <div className="inicio" style={{ marginTop: '5%' }}>
+      <SeoHead />
+      <a
+        href="#inicio"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900 focus:shadow-lg"
+      >
+        {t('a11y.skipToContent', 'Saltar al contenido')}
+      </a>
       <Navbar handleContactClick={handleContactClick} />
-      <Hero />
-      <Analytics />
-      <Help />
-      <Centre />
-      <Features />
-      <Clients />
-      <Faq />
+      <main>
+        <Hero />
+        <Analytics />
+        <Help />
+        <Centre />
+        <Features />
+        <Clients />
+        <Faq />
+      </main>
       <WhatsAppButton />
       <HelpChatButton />
       

@@ -32,7 +32,7 @@ const Help = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#f0f7ff] via-white to-[#e8f4fd] py-20 px-4">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f0f7ff] via-white to-[#e8f4fd] py-20 px-4" aria-labelledby="help-heading">
       {/* Decorative blobs */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-100 rounded-full opacity-40 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-cyan-100 rounded-full opacity-40 blur-3xl pointer-events-none" />
@@ -43,7 +43,7 @@ const Help = () => {
           <div className="inline-flex items-center px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold tracking-wide mb-4 uppercase">
             {t('help.badge')}
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          <h2 id="help-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
             {t('help.title')}
           </h2>
         </div>
@@ -60,7 +60,7 @@ const Help = () => {
 
               {/* Icon */}
               <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${b.accent} flex items-center justify-center mb-6 shadow-md`}>
-                <img src={b.logo} alt={b.alt} className="w-8 h-8 object-contain brightness-0 invert" />
+                <img src={b.logo} alt="" aria-hidden="true" className="w-8 h-8 object-contain brightness-0 invert" />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900 mb-3">{b.title}</h3>

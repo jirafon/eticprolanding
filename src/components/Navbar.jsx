@@ -60,7 +60,7 @@ const Navbar = () => {
           <a href="#inicio" className="flex items-center" aria-label="Ir al inicio">
             <img
               src={LogoImage}
-              alt="Logo de Eticpro"
+              alt="Eticpro, software de compliance y canal de denuncias"
               className="w-[120px] md:w-[220px] h-auto transition-transform duration-300 hover:scale-[1.02]"
             />
           </a>

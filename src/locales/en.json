@@ -220,9 +220,13 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "question1": "Are complaints really anonymous?",
+    "question1Content": "Yes. Whistleblowers can choose not to provide their name. Even if an email is stored, personal data is not shown to other users and is not shared with third parties.",
     "question2": "What use does Eticpro give to the information it handles?",
+    "question2Content": "Information is used only to operate the platform: declarations, campaigns, the whistleblowing channel, and other compliance modules. We do not sell or share data with third parties. We apply confidentiality and security measures, and users can access, edit, or delete their information at any time.",
     "question3": "What does Public Official mean?",
-    "question4": "What is a Politically Exposed Person (PEP)?"
+    "question3Content": "It includes government officers or employees, officials of international public organizations, people acting in an official capacity, political party leaders or candidates for public office, and authorized representatives of a government official.",
+    "question4": "What is a Politically Exposed Person (PEP)?",
+    "question4Content": "According to UAF Circular No. 49, PEPs are Chilean or foreign persons who hold or have held prominent public functions, for at least one year after leaving office. This includes, among others, the President, members of Congress, ministers, and other senior public officials."
   },
   "clients": {
     "title": "Companies that have trusted Eticpro:"
@@ -238,7 +242,7 @@
     "plans": "Plans",
     "faqTitle": "FAQ",
     "privacyPolicy": "Privacy Policy",
-    "rights": "© 2024 Eticpro. All rights reserved.",
+    "rights": "© 2026 Eticpro. All rights reserved.",
     "poweredBy": "Powered by",
     "privacyModal": {
       "title": "Privacy Policy",

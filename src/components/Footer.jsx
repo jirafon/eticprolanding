@@ -99,7 +99,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className='lg:col-span-2 rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-8'>
             <div className='flex items-center mb-6'>
-              <img src={LogoImage} alt='Eticpro' className='w-48 h-auto' />
+              <img src={LogoImage} alt='Eticpro, plataforma de compliance' className='w-48 h-auto' width="192" height="48" />
             </div>
             <p className='text-slate-300 leading-relaxed mb-6 max-w-md'>
               {t('footer.description')}

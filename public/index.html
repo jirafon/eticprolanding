@@ -1,6 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eticpro | Software de Compliance y Canal de Denuncias</title>
+    <meta name="description" content="Plataforma de compliance para empresas en Chile. Gestiona el Modelo de Prevención de Delitos (Ley 20.393 y 21.595), canal de denuncias y conflictos de interés." />
+    <meta name="keywords" content="software compliance Chile, canal de denuncias, modelo de prevención de delitos, ley 20.393, ley 21.595, gestión ética empresarial, conflictos de interés, cumplimiento normativo, Eticpro" />
+    <meta name="author" content="Eticpro" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#2B4792" />
+    <meta name="application-name" content="Eticpro" />
+    <meta name="apple-mobile-web-app-title" content="Eticpro" />
+    <meta name="geo.region" content="CL" />
+    <meta name="geo.placename" content="Chile" />
+    <link rel="canonical" href="https://eticpro.com/" />
+
+    <link rel="icon" href="%PUBLIC_URL%/eticpro.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/eticpro.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eticpro" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:url" content="https://eticpro.com/" />
+    <meta property="og:title" content="Eticpro | Software de Compliance y Canal de Denuncias" />
+    <meta property="og:description" content="Plataforma de compliance para empresas en Chile. Gestiona el Modelo de Prevención de Delitos, canal de denuncias y conflictos de interés." />
+    <meta property="og:image" content="https://eticpro.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eticpro, software de compliance y canal de denuncias" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eticpro | Software de Compliance y Canal de Denuncias" />
+    <meta name="twitter:description" content="Plataforma de compliance para empresas en Chile. Canal de denuncias, conflictos de interés y Modelo de Prevención de Delitos." />
+    <meta name="twitter:image" content="https://eticpro.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Eticpro, software de compliance y canal de denuncias" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://i.ytimg.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" />
+
+    <script type="application/ld+json" id="structured-data">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://eticpro.com/#organization",
+          "name": "Eticpro",
+          "url": "https://eticpro.com",
+          "logo": "https://eticpro.com/eticprov23.png",
+          "email": "hello@eticpro.com",
+          "telephone": "+56-9-8737-5517",
+          "areaServed": ["CL", "LATAM"],
+          "sameAs": ["https://cl.linkedin.com/company/eticpro"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "hello@eticpro.com",
+            "telephone": "+56-9-8737-5517",
+            "availableLanguage": ["Spanish", "English", "Portuguese"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://eticpro.com/#website",
+          "url": "https://eticpro.com",
+          "name": "Eticpro",
+          "inLanguage": "es",
+          "publisher": { "@id": "https://eticpro.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://eticpro.com/#app",
+          "name": "Eticpro",
+          "description": "Plataforma de compliance para empresas en Chile. Gestiona el Modelo de Prevención de Delitos (Ley 20.393 y 21.595), canal de denuncias y conflictos de interés.",
+          "url": "https://eticpro.com",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "inLanguage": ["es", "en", "pt"],
+          "offers": {
+            "@type": "Offer",
+            "url": "https://eticpro.com",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/OnlineOnly"
+          },
+          "provider": { "@id": "https://eticpro.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://eticpro.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Las denuncias son realmente anónimas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Quien denuncia puede optar por no dar su nombre. Aunque se registre un correo, los datos personales no se muestran a otros usuarios ni se comparten con terceros."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué uso le da Eticpro a la información que maneja?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La información se usa exclusivamente para operar los servicios de la plataforma: declaraciones, campañas, canal de denuncias y demás módulos de compliance. No vendemos ni compartimos datos con terceros y el usuario puede acceder, editar o eliminar su información."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué significa Funcionario Público?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye oficiales o empleados de gobierno u organizaciones públicas internacionales, personas que actúan en función oficial, dirigentes de partidos políticos o candidatos a cargo público, y representantes autorizados de un funcionario de gobierno."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es Persona Expuesta Públicamente (PEP)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Según la Circular N°49 de la UAF, son personas chilenas o extranjeras que desempeñan o hayan desempeñado funciones públicas destacadas, hasta al menos un año después de finalizado el cargo. Incluye, entre otros, Presidente, parlamentarios, ministros y altos mandos del Estado."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11324125753"></script>
     <script>
@@ -9,89 +144,15 @@
       gtag('js', new Date());
       gtag('config', 'AW-11324125753');
     </script>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/eticpro.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2B4792" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Eticpro - Plataforma de Compliance y Gestión Ética Empresarial | Software de Cumplimiento Normativo</title>
-    <meta name="description" content="Eticpro es la plataforma líder en compliance y gestión ética empresarial. Software integral para cumplimiento normativo, canal de denuncias, gestión de conflictos y prevención de delitos. Implementa tu Modelo de Prevención de Delitos en 24 horas." />
-    <meta name="keywords" content="compliance, gestión ética, cumplimiento normativo, canal de denuncias, prevención de delitos, software compliance, modelo de prevención, gestión de conflictos, ética empresarial" />
-    <meta name="author" content="Eticpro" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eticpro.com/" />
-    <meta property="og:title" content="Eticpro - Plataforma de Compliance y Gestión Ética Empresarial" />
-    <meta property="og:description" content="Software integral para cumplimiento normativo, canal de denuncias y gestión de conflictos. Implementa tu Modelo de Prevención de Delitos en 24 horas." />
-    <meta property="og:image" content="%PUBLIC_URL%/eticprov23.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://eticpro.com/" />
-    <meta property="twitter:title" content="Eticpro - Plataforma de Compliance y Gestión Ética Empresarial" />
-    <meta property="twitter:description" content="Software integral para cumplimiento normativo, canal de denuncias y gestión de conflictos." />
-    <meta property="twitter:image" content="%PUBLIC_URL%/eticprov23.png" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://eticpro.com/" />
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.kapwing.com" />
-    
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/eticpro.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Eticpro",
-      "description": "Plataforma de Compliance y Gestión Ética Empresarial",
-      "url": "https://eticpro.com",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Eticpro",
-        "url": "https://eticpro.com"
-      }
-    }
-    </script>
   </head>
   <body>
+    <noscript>
+      <main>
+        <h1>Eticpro: Plataforma de Compliance y Gestión Ética Empresarial</h1>
+        <p>Software de cumplimiento normativo para empresas en Chile. Gestiona el Modelo de Prevención de Delitos (Ley 20.393 y Ley 21.595), canal de denuncias, conflictos de interés y diligencia debida en una sola plataforma.</p>
+        <p>Contacto: <a href="mailto:hello@eticpro.com">hello@eticpro.com</a> · <a href="https://wa.me/56987375517">+56 9 8737 5517</a></p>
+      </main>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

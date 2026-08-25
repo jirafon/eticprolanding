@@ -63,7 +63,7 @@ const KeyFeatures = () => {
   const [active, setActive] = useState(modules[0]);
 
   return (
-    <section id="ventajas" className="relative overflow-hidden bg-[#06112a] py-24 px-4">
+    <section id="ventajas" className="relative overflow-hidden bg-[#06112a] py-24 px-4" aria-labelledby="features-heading">
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -83,7 +83,7 @@ const KeyFeatures = () => {
           <div className="inline-flex items-center px-4 py-1.5 bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full text-xs font-semibold tracking-widest uppercase mb-5">
             Plataforma
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
+          <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
             {t('features.title')}
           </h2>
           <p className="text-blue-200/70 max-w-2xl mx-auto text-base leading-relaxed">
@@ -116,10 +116,10 @@ const KeyFeatures = () => {
                     </svg>
                   </div>
 
-                  <span className={`text-base font-semibold transition-colors duration-200
+                  <h3 className={`text-base font-semibold transition-colors duration-200
                     ${isActive ? 'text-white' : 'text-white/50 group-hover:text-white/80'}`}>
                     {t(`features.${mod.key}`)}
-                  </span>
+                  </h3>
 
                   {/* Active indicator arrow */}
                   {isActive && (
@@ -152,8 +152,10 @@ const KeyFeatures = () => {
               <img
                 key={active.gif}
                 src={active.gif}
-                alt={t(`features.${active.key}`)}
+                alt={`Captura del módulo ${t(`features.${active.key}`)} en Eticpro`}
                 className="w-full h-auto rounded-b-2xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

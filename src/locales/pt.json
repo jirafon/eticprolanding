@@ -220,9 +220,13 @@
   "faq": {
     "title": "Perguntas Frequentes",
     "question1": "As denúncias são realmente anônimas?",
+    "question1Content": "Sim. Quem denuncia pode optar por não informar o nome. Mesmo que um e-mail seja registrado, os dados pessoais não são exibidos a outros usuários nem compartilhados com terceiros.",
     "question2": "Qual o uso que o Eticpro dá às informações que manipula?",
+    "question2Content": "As informações são usadas exclusivamente para operar os serviços da plataforma: declarações, campanhas, canal de denúncias e demais módulos de compliance. Não vendemos nem compartilhamos dados com terceiros. Aplicamos medidas de confidencialidade e segurança, e o usuário pode acessar, editar ou excluir suas informações.",
     "question3": "O que significa Funcionário Público?",
-    "question4": "O que é Pessoa Exposta Publicamente (PEP)?"
+    "question3Content": "Inclui oficiais ou empregados de governo ou de organizações públicas internacionais, pessoas que atuam em função oficial, dirigentes de partidos políticos ou candidatos a cargo público, e representantes autorizados de um funcionário de governo.",
+    "question4": "O que é Pessoa Exposta Publicamente (PEP)?",
+    "question4Content": "Segundo a Circular nº 49 da UAF, são pessoas chilenas ou estrangeiras que desempenham ou tenham desempenhado funções públicas de destaque, até pelo menos um ano após o fim do cargo. Inclui, entre outros, Presidente, parlamentares, ministros e altos cargos do Estado."
   },
   "clients": {
     "title": "Empresas que confiaram na Eticpro:"
@@ -238,7 +242,7 @@
     "plans": "Planos",
     "faqTitle": "Perguntas Frequentes",
     "privacyPolicy": "Política de Privacidade",
-    "rights": "© 2024 Eticpro. Todos os direitos reservados.",
+    "rights": "© 2026 Eticpro. Todos os direitos reservados.",
     "poweredBy": "Powered by",
     "privacyModal": {
       "title": "Política de Privacidade",

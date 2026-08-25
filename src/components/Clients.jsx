@@ -20,50 +20,44 @@ const Clients = () => {
   const { t } = useTranslation();
 
   const logos = [
-    { src: Schwager, alt: 'Schwager', href: Schwager },
-    { src: Bago, alt: 'Bago', href: Bago },
-    { src: Mapsa, alt: 'Mapsa', href: Mapsa },
-    { src: Life4, alt: 'Life4', href: Life4 },
-    { src: Gruas, alt: 'Gruas', href: Gruas },
-    { src: ComplianceTracker, alt: 'ComplianceTracker', href: ComplianceTracker },
-    { src: ComplianceGC, alt: 'ComplianceGC', href: ComplianceGC },
-    { src: SC3, alt: 'SC3', href: SC3 },
-    { src: SC2, alt: 'SC2', href: SC2 },
-    { src: SC4, alt: 'SC4', href: SC4 },
-    { src: SC1, alt: 'SC1', href: SC1 },
-    { src: Ese, alt: 'Ese', href: Ese }
+    { src: Schwager, alt: 'Logo de Schwager, cliente de Eticpro' },
+    { src: Bago, alt: 'Logo de Laboratorio Bagó, cliente de Eticpro' },
+    { src: Mapsa, alt: 'Logo de Larrain, cliente de Eticpro' },
+    { src: Life4, alt: 'Logo de Life4, cliente de Eticpro' },
+    { src: Gruas, alt: 'Logo de Grúas, cliente de Eticpro' },
+    { src: ComplianceTracker, alt: 'Logo de Compliance Tracker' },
+    { src: ComplianceGC, alt: 'Logo de Compliance GC' },
+    { src: SC3, alt: 'Logo de empresa cliente de Eticpro' },
+    { src: SC2, alt: 'Logo de empresa cliente de Eticpro' },
+    { src: SC4, alt: 'Logo de empresa cliente de Eticpro' },
+    { src: SC1, alt: 'Logo de empresa cliente de Eticpro' },
+    { src: Ese, alt: 'Logo de ESE Business School' }
   ];
 
   return (
-    <div id="Clients" className="Clients">
-      <div className='w-full bg-white py-16 px-4'>
-        <div className='max-w-[1240px] mx-auto text-center'>
-          {/* Title */}
-          <h6 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 mb-8'>{t('clients.title')}</h6>
+    <section id="clients" className="w-full bg-white py-16 px-4" aria-labelledby="clients-heading">
+      <div className='max-w-[1240px] mx-auto text-center'>
+          <h2 id="clients-heading" className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 mb-8'>{t('clients.title')}</h2>
 
-          {/* Logos in a single line */}
           <div className='flex flex-wrap justify-center items-center gap-4 md:gap-6 lg:gap-8'>
             {logos.map((logo, index) => (
-              <a 
+              <div
                 key={index}
-                href={logo.href} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center justify-center hover:opacity-70 transition-opacity duration-200"
+                className="flex items-center justify-center"
               >
                 <img 
                   className='h-12 md:h-16 lg:h-20 w-auto object-contain' 
                   src={logo.src} 
                   alt={logo.alt}
+                  loading="lazy"
+                  decoding="async"
                   style={{ maxWidth: '150px' }}
                 />
-              </a>
+              </div>
             ))}
           </div>
-
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

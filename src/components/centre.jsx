@@ -6,18 +6,20 @@ const Centre = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 px-4">
+    <section className="relative overflow-hidden bg-white py-16 px-4" aria-labelledby="centre-heading">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col justify-center">
-          <p className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
+          <h2 id="centre-heading" className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
             {t('centre.title')}
-          </p>
+          </h2>
         </div>
         <div className="flex justify-center items-center">
           <img
             className="w-full max-w-[500px] h-auto drop-shadow-xl"
             src={image1}
-            alt="Suite de herramientas reemplazadas por Eticpro"
+            alt="Herramientas de compliance reemplazadas por la plataforma Eticpro"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

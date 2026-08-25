@@ -29,7 +29,9 @@ const Analytics = () => {
           <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
             <img
               src={XimenaPhoto}
-              alt={t('testimonial.name')}
+              alt={`${t('testimonial.name')}, ${t('testimonial.role')}`}
+              loading="lazy"
+              decoding="async"
               className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-100"
             />
             <div>

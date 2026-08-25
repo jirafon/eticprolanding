@@ -28,9 +28,11 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-[0.12] mix-blend-multiply">
         <img
           src={unsplash}
-          alt="Fondo de la página principal de Eticpro"
+          alt=""
           className="w-full h-full object-cover"
           loading="eager"
+          decoding="async"
+          aria-hidden="true"
         />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
@@ -124,7 +126,7 @@ const Hero = () => {
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="rounded-2xl bg-white px-4 py-4 border border-slate-100">
                   <div className="text-xs uppercase tracking-[0.18em] text-slate-400 mb-1">Powered by</div>
-                  <img src={UnbiaxLogo} alt="Unbiax" className="h-9 w-auto" />
+                  <img src={UnbiaxLogo} alt="Unbiax, tecnología de Eticpro" className="h-9 w-auto" />
                 </div>
                 <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-slate-50 px-4 py-4 border border-slate-100">
                   <div className="text-xs uppercase tracking-[0.18em] text-slate-400 mb-1">Stack</div>

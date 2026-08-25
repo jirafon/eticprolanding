@@ -1,12 +1,14 @@
 {
   "short_name": "Eticpro",
-  "name": "Eticpro - Plataforma de Compliance",
+  "name": "Eticpro - Software de Compliance",
+  "description": "Plataforma de compliance, canal de denuncias y Modelo de Prevención de Delitos",
+  "lang": "es",
   "icons": [
     {"src": "favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon"},
     {"src": "eticpro.png", "type": "image/png", "sizes": "192x192"},
     {"src": "eticpro.png", "type": "image/png", "sizes": "512x512"}
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#2B4792",
   "background_color": "#06112a"
