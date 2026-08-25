@@ -14,6 +14,7 @@ import Hero from './components/Hero';
 import WhatsAppButton from './components/WhatsAppButton';
 import HelpChatButton from './components/HelpChatButton';
 import SeoHead from './components/SeoHead';
+import LanguageSync from './components/LanguageSync';
 
 function App() {
   const { t } = useTranslation();
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="inicio" style={{ marginTop: '5%' }}>
+      <LanguageSync />
       <SeoHead />
       <a
         href="#inicio"

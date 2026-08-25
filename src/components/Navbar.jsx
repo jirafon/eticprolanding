@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import LogoImage from '../assets/eticprov23.png';
 import ContactForm from './ContactForm'; // Import the new contact form
 import Quiz from './Quiz'; // Import the modal component
+import { normalizeLang, pathForLang } from '../seo';
 // Importa la fuente en tu archivo JavaScript (por ejemplo, index.js o App.js)
 import '@fontsource/inter/400.css'; // Importa el peso de la fuente que necesitas
 import '@fontsource/inter/500.css';
@@ -11,12 +13,17 @@ import '@fontsource/inter/700.css';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [nav, setNav] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
   const [isModalOpenQuiz, setIsModalOpenQuiz] = useState(false); // State to manage modal visibility
+  const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
 
   const handleLanguageChange = (e) => {
-    i18n.changeLanguage(e.target.value);
+    const lang = e.target.value;
+    i18n.changeLanguage(lang);
+    navigate(pathForLang(lang));
+    setNav(false);
   };
 
   const handleNav = () => {
@@ -101,7 +108,7 @@ const Navbar = () => {
           </li>
           <li role="none">
             <select 
-              value={i18n.language} 
+              value={currentLang} 
               onChange={handleLanguageChange}
               className="rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm outline-none transition focus:border-blue-300"
               aria-label="Select language"
@@ -179,6 +186,18 @@ const Navbar = () => {
             >
               FAQ
             </a>
+          </li>
+          <li role="none">
+            <select
+              value={currentLang}
+              onChange={handleLanguageChange}
+              className="mt-4 block w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-left font-semibold text-slate-800 outline-none"
+              aria-label="Select language"
+            >
+              <option value="es">ES</option>
+              <option value="en">EN</option>
+              <option value="pt">PT</option>
+            </select>
           </li>
           <li role="none">
             <button 

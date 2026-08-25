@@ -1,6 +1,31 @@
 export const DEFAULT_LANG = 'es';
+export const SUPPORTED_LANGS = ['es', 'en', 'pt'];
 export const SITE_URL = 'https://eticpro.com';
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+export function pathForLang(lang) {
+  const normalized = normalizeLang(lang);
+  return normalized === DEFAULT_LANG ? '/' : `/${normalized}`;
+}
+
+export function urlForLang(lang) {
+  const path = pathForLang(lang);
+  return path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+}
+
+export function langFromPath(pathname = '/') {
+  const segment = pathname.split('/').filter(Boolean)[0];
+  return SUPPORTED_LANGS.includes(segment) ? segment : DEFAULT_LANG;
+}
+
+export function hreflangLinks() {
+  return [
+    { hreflang: 'es', href: urlForLang('es') },
+    { hreflang: 'en', href: urlForLang('en') },
+    { hreflang: 'pt', href: urlForLang('pt') },
+    { hreflang: 'x-default', href: urlForLang('es') },
+  ];
+}
 
 const localeMap = {
   es: 'es_CL',
@@ -123,8 +148,9 @@ export function getSeo(language) {
   };
 }
 
-export function buildStructuredData(language) {
+export function buildStructuredData(language, pageUrl = SITE_URL) {
   const seo = getSeo(language);
+  const canonicalUrl = pageUrl || urlForLang(seo.lang);
 
   return {
     '@context': 'https://schema.org',
@@ -160,13 +186,13 @@ export function buildStructuredData(language) {
         '@id': `${SITE_URL}/#app`,
         name: 'Eticpro',
         description: seo.description,
-        url: SITE_URL,
+        url: canonicalUrl,
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         inLanguage: ['es', 'en', 'pt'],
         offers: {
           '@type': 'Offer',
-          url: SITE_URL,
+          url: canonicalUrl,
           priceCurrency: 'CLP',
           availability: 'https://schema.org/OnlineOnly',
         },
@@ -174,7 +200,8 @@ export function buildStructuredData(language) {
       },
       {
         '@type': 'FAQPage',
-        '@id': `${SITE_URL}/#faq`,
+        '@id': `${canonicalUrl.replace(/\/$/, '')}/#faq`,
+        inLanguage: seo.htmlLang,
         mainEntity: seo.faq.map((item) => ({
           '@type': 'Question',
           name: item.question,
