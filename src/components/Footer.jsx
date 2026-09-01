@@ -78,7 +78,7 @@ const Footer = () => {
   const handleCloseModal = () => setShowPrivacyModal(false);
 
   return (
-    <footer className='relative overflow-hidden bg-[#081327] text-white mt-24'>
+    <footer className='relative overflow-hidden bg-[#081327] text-white'>
       <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_top_left,rgba(49,104,255,0.28),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_24%)]"></div>
       <div className='relative max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8'>
         <div className='mb-12 rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6'>
@@ -140,9 +140,27 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="#ventajas" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
+                  <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
+                  {t('navbar.funcionalidades')}
+                </a>
+              </li>
+              <li>
                 <a href="#FAQ" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
                   <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
                   {t('footer.faqTitle')}
+                </a>
+              </li>
+              <li>
+                <a href="#contacto" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
+                  <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
+                  {t('navbar.contacto')}
+                </a>
+              </li>
+              <li>
+                <a href="https://unbiax.com" target="_blank" rel="noopener noreferrer" className='text-slate-300 hover:text-white transition-colors duration-200 flex items-center'>
+                  <span className='w-2 h-2 bg-blue-400 rounded-full mr-3'></span>
+                  {t('hero.otherSolutionsButton')}
                 </a>
               </li>
             </ul>

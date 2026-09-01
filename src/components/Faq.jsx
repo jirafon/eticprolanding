@@ -12,7 +12,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="FAQ" className="relative py-20 bg-[#06112a] overflow-hidden" aria-labelledby="faq-heading">
+    <section id="FAQ" className="relative py-20 bg-[#06112a] overflow-hidden scroll-mt-24" aria-labelledby="faq-heading">
       {/* Background glow blobs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />

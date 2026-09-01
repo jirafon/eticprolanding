@@ -3,8 +3,6 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import LogoImage from '../assets/eticprov23.png';
-import ContactForm from './ContactForm'; // Import the new contact form
-import Quiz from './Quiz'; // Import the modal component
 import { normalizeLang, pathForLang } from '../seo';
 // Importa la fuente en tu archivo JavaScript (por ejemplo, index.js o App.js)
 import '@fontsource/inter/400.css'; // Importa el peso de la fuente que necesitas
@@ -15,8 +13,6 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [nav, setNav] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-  const [isModalOpenQuiz, setIsModalOpenQuiz] = useState(false); // State to manage modal visibility
   const currentLang = normalizeLang(i18n.resolvedLanguage || i18n.language);
 
   const handleLanguageChange = (e) => {
@@ -41,18 +37,6 @@ const Navbar = () => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
     setNav(false); // Close the mobile menu after clicking the link
-  };
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true); // Open the modal
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false); // Close the modal
-  };
-
-  const handleCloseModalQuiz = () => {
-    setIsModalOpenQuiz(false); // Close the modal
   };
 
   return (
@@ -122,19 +106,21 @@ const Navbar = () => {
             <button 
               className="nav-button nav-button-entrar text-sm font-semibold" 
               onClick={handleLogin}
-              aria-label="Acceder a la plataforma Eticpro"
+              aria-label={t('navbar.login')}
             >
-              Iniciar Sesión
+              {t('navbar.login')}
             </button>
           </li>
           <li role="none">
-            <button 
-              className="nav-button nav-button-demo text-sm font-semibold" 
-              onClick={handleOpenModal}
-              aria-label="Contactar con Eticpro"
+            <a
+              href="#contacto"
+              onClick={(e) => handleSmoothScroll(e, 'contacto')}
+              className="nav-button nav-button-demo text-sm font-semibold inline-flex items-center"
+              role="menuitem"
+              aria-label={t('navbar.contacto')}
             >
               {t('navbar.contacto')}
-            </button>
+            </a>
           </li>
           </ul>
 
@@ -203,66 +189,23 @@ const Navbar = () => {
             <button 
               className="mt-4 block w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-left font-semibold text-slate-800 transition-colors duration-200 hover:bg-white"
               onClick={handleLogin}
-              aria-label="Acceder a la plataforma Eticpro"
+              aria-label={t('navbar.login')}
             >
-              Iniciar Sesión
+              {t('navbar.login')}
             </button>
           </li>
           <li role="none">
-            <button 
+            <a
+              href="#contacto"
+              onClick={(e) => handleSmoothScroll(e, 'contacto')}
               className="mt-3 block w-full rounded-2xl bg-gradient-to-r from-blue-700 to-blue-900 px-4 py-3 text-left font-semibold text-white shadow-lg transition duration-200 hover:from-blue-800 hover:to-blue-950"
-              onClick={handleOpenModal}
-              aria-label="Contactar con Eticpro"
+              role="menuitem"
             >
-              {t('hero.contactButton')}
-            </button>
+              {t('navbar.contacto')}
+            </a>
           </li>
         </ul>
       </nav>
-
-      {/* Contact Form Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto">
-          <div className="flex items-center justify-center min-h-screen px-2 sm:px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={handleCloseModal}></div>
-            <div className="inline-block w-full max-w-6xl p-2 sm:p-4 my-4 sm:my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-              <div className="flex justify-end">
-                <button
-                  onClick={handleCloseModal}
-                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-2"
-                >
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Quiz Modal */}
-      {isModalOpenQuiz && (
-        <div className="fixed inset-0 z-50 overflow-y-auto">
-          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={handleCloseModalQuiz}></div>
-            <div className="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-              <div className="flex justify-end">
-                <button
-                  onClick={handleCloseModalQuiz}
-                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <Quiz onClose={handleCloseModalQuiz} />
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };

@@ -13,7 +13,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4"> {t('about.badge')} </div>
-            <h2 id="about-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"> {t('about.title')} </h2>
+            <h1 id="about-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"> {t('about.title')} </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"> {t('about.subtitle')} </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">

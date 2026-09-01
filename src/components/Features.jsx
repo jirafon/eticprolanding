@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import campvid from '../assets/campvid.gif';
-import repovid from '../assets/repo.gif';
-import declaracionesvid from '../assets/declaracionesvid.gif';
-import transferenciavid from '../assets/transferenciasvid.gif';
-import reunionesvid from '../assets/reuniones.gif';
-import diligenciavid from '../assets/diligenciavid.gif';
-import denunciasvid from '../assets/denuncias.gif';
-import actividadvid from '../assets/actividadvid.gif';
-import pendientes from '../assets/pendientes.gif';
 
 // Icon paths (inline SVGs keep bundle light)
 const icons = {
@@ -50,20 +41,20 @@ const KeyFeatures = () => {
   const { t } = useTranslation();
 
   const modules = [
-    { key: 'campaigns',    gif: campvid,          icon: icons.campaigns   },
-    { key: 'repository',   gif: repovid,           icon: icons.repository  },
-    { key: 'conflicts',    gif: declaracionesvid,  icon: icons.conflicts   },
-    { key: 'transfers',    gif: transferenciavid,  icon: icons.transfers   },
-    { key: 'meetings',     gif: reunionesvid,      icon: icons.meetings    },
-    { key: 'dueDiligence', gif: diligenciavid,     icon: icons.dueDiligence},
-    { key: 'complaints',   gif: denunciasvid,      icon: icons.complaints  },
-    { key: 'activity',     gif: actividadvid,      icon: icons.activity    },
+    { key: 'campaigns',    preview: '/modules/campvid.jpg',          icon: icons.campaigns   },
+    { key: 'repository',   preview: '/modules/repo.jpg',             icon: icons.repository  },
+    { key: 'conflicts',    preview: '/modules/declaracionesvid.jpg', icon: icons.conflicts   },
+    { key: 'transfers',    preview: '/modules/transferenciavid.jpg', icon: icons.transfers   },
+    { key: 'meetings',     preview: '/modules/reuniones.jpg',        icon: icons.meetings    },
+    { key: 'dueDiligence', preview: '/modules/diligenciavid.jpg',    icon: icons.dueDiligence},
+    { key: 'complaints',   preview: '/modules/denuncias.jpg',        icon: icons.complaints  },
+    { key: 'activity',     preview: '/modules/actividadvid.jpg',     icon: icons.activity    },
   ];
 
   const [active, setActive] = useState(modules[0]);
 
   return (
-    <section id="ventajas" className="relative overflow-hidden bg-[#06112a] py-24 px-4" aria-labelledby="features-heading">
+    <section id="ventajas" className="relative overflow-hidden bg-[#06112a] py-24 px-4 scroll-mt-24" aria-labelledby="features-heading">
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -81,7 +72,7 @@ const KeyFeatures = () => {
         {/* ── Header ── */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-1.5 bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full text-xs font-semibold tracking-widest uppercase mb-5">
-            Plataforma
+            {t('features.platform')}
           </div>
           <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
             {t('features.title')}
@@ -150,14 +141,17 @@ const KeyFeatures = () => {
                 </div>
               </div>
               <img
-                key={active.gif}
-                src={active.gif}
-                alt={`Captura del módulo ${t(`features.${active.key}`)} en Eticpro`}
+                key={active.preview}
+                src={active.preview}
+                alt={`${t('features.previewHint')}: ${t(`features.${active.key}`)}`}
                 className="w-full h-auto rounded-b-2xl"
                 loading="lazy"
                 decoding="async"
               />
             </div>
+            <p className="mt-4 text-sm text-white/50 px-1">
+              {t('features.previewHint')}: {t(`features.${active.key}`)}
+            </p>
           </div>
         </div>
       </div>

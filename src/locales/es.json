@@ -5,14 +5,30 @@
     "nosotros": "Nosotros",
     "contacto": "Contacto",
     "demo": "Demo",
-    "quiz": "Quiz"
+    "quiz": "Quiz",
+    "login": "Iniciar sesión"
   },
   "hero": {
-    "title": "Eticpro: Plataforma de Compliance y Gestión Ética Empresarial",
-    "subtitle": "Desde la prevención de delitos hasta el canal de denuncias: gestiona todo tu programa de compliance en una sola plataforma, con respaldo legal y tecnología de punta.",
-    "contactButton": "Contáctenme",
+    "title": "El Modelo de Prevención de Delitos, operando en 24 horas",
+    "subtitle": "Canal de denuncias, diligencia debida y conflictos de interés en una sola plataforma. Respaldo legal para las leyes 20.393 y 21.595.",
+    "contactButton": "Agendar una demo",
+    "modulesButton": "Ver módulos",
     "otherSolutionsButton": "Ver otras soluciones",
-    "eyebrow": "Inteligencia de compliance para equipos modernos"
+    "eyebrow": "Software de compliance para oficiales de cumplimiento",
+    "watchVideo": "Ver la plataforma en 2 minutos",
+    "stat1Value": "24 h",
+    "stat1Label": "Go-live del Modelo de Prevención de Delitos",
+    "stat2Value": "20.393",
+    "stat2Label": "Y Ley 21.595 de delitos económicos, cubiertas en la operación",
+    "stat3Value": "Bagó",
+    "stat3Label": "Equipos de compliance que ya operan con Eticpro"
+  },
+  "finalCta": {
+    "badge": "Agenda 20 minutos",
+    "title": "Pongamos tu programa de compliance a operar",
+    "subtitle": "Planes desde PYME. Cuéntanos tu caso y te proponemos el módulo con el que partir.",
+    "whatsapp": "Escribir por WhatsApp",
+    "pymeNote": "Plan PYME: elige 3 módulos y escala cuando lo necesites."
   },
   "readinessQuiz": {
     "openButton": "¿Qué tan listo estoy?",
@@ -105,6 +121,8 @@
   "features": {
     "title": "Módulos Principales de Cumplimiento en Eticpro",
     "description": "Cada módulo integra el contenido legal y operativo que normalmente requiere horas de asesoría jurídica especializada, con funcionalidades diseñadas para digitalizar y automatizar tu programa de cumplimiento.",
+    "platform": "Plataforma",
+    "previewHint": "Vista del módulo",
     "profiles": "Perfiles incluidos: Gerente de Cumplimiento, Director, Auditor, Aprobador, Declarante, Denunciante, Investigador y Comité de Ética.",
     "campaigns": "Campañas de Cultura de Cumplimiento",
     "repository": "Repositorio de Políticas y Procedimientos",
@@ -229,7 +247,8 @@
     "question4Content": "<div><Typography variant=\"body1\" align=\"left\">\n          La Unidad de Análisis Financieros (UAF), según Circular N°49, indica que la Persona Expuesta Políticamente (PEP) son los chilenos o extranjeros que desempeñan o hayan desempeñado funciones públicas destacadas en un país, hasta a lo menos un año de finalizado el ejercicio de las mismas.\n        </Typography><Typography variant=\"body1\" align=\"left\">\n          A lo menos deberán estar calificadas como PEP las siguientes personas (esta lista es a modo de ejemplo, no exhaustiva):\n        </Typography><br /><Typography variant=\"body1\" align=\"left\">1. Presidente de la República.</Typography><br /><Typography variant=\"body1\" align=\"left\">2. Senadores, Diputados y Alcaldes.</Typography><br /><Typography variant=\"body1\" align=\"left\">3. Ministros de la Corte Suprema y de las Cortes de Apelaciones.</Typography><br /><Typography variant=\"body1\" align=\"left\">4. Ministros de Estado, Subsecretarios, Intendentes, Gobernadores, Secretarios Regionales Ministeriales, Embajadores, Jefes Superiores de Servicios tanto centralizados como descentralizados y el directivo superior inmediato que deba subrogar a cada uno de ellos.</Typography><br /><Typography variant=\"body1\" align=\"left\">5. Comandantes en Jefe de las Fuerzas Armadas, General Director de Carabineros, Director General de Investigaciones y el superior inmediato que deba subrogar a cada uno de ellos.</Typography><br /><Typography variant=\"body1\" align=\"left\">6. Directores y ejecutivos principales de empresas públicas.</Typography><br /><Typography variant=\"body1\" align=\"left\">7. Directores de sociedades anónimas nombrados por el Estado o sus organismos.</Typography><br /><Typography variant=\"body1\" align=\"left\">8. Miembros de las directivas de los partidos políticos.</Typography><br /><Typography variant=\"body1\" align=\"left\">9. Fiscal Nacional del Ministerio Público y Fiscales Regionales.</Typography><br /><Typography variant=\"body1\" align=\"left\">10. Contralor General de la República.</Typography><br /><Typography variant=\"body1\" align=\"left\">11. Consejeros del Banco Central de Chile.</Typography><br /><Typography variant=\"body1\" align=\"left\">12. Presidente y Consejeros del Consejo de Defensa del Estado.</Typography><br /><Typography variant=\"body1\" align=\"left\">13. Ministros del Tribunal Constitucional.</Typography><br /><Typography variant=\"body1\" align=\"left\">14. Ministros del Tribunal de la Libre Competencia.</Typography><br /><Typography variant=\"body1\" align=\"left\">15. Integrantes titulares y suplentes del Tribunal de Contratación Pública.</Typography><br /><Typography variant=\"body1\" align=\"left\">16. Miembros del Consejo de Alta Dirección Pública.</Typography><br /><Typography variant=\"body1\" align=\"left\">17. Consejeros Regionales (CORE).</Typography><br /><Typography variant=\"body1\" align=\"left\">18. Concejales.</Typography><br /><Typography variant=\"body1\" align=\"left\">19. Todos los candidatos en elecciones presidenciales, parlamentarias y municipales. De igual forma, las personas, naturales o jurídicas, con o sin fines de lucro, vinculadas a algún candidato a cargo de elección popular, desde el momento de inscripción de la respectiva candidatura, conforme a las disposiciones legales aplicables.</Typography></div>"
   },
   "clients": {
-    "title": "Empresas que han confiado en Eticpro"
+    "title": "Equipos de compliance que ya operan con Eticpro",
+    "subtitle": "Oficiales de cumplimiento en Chile y Latam."
   },
   "footer": {
     "description": "Nos dedicamos a proporcionar soluciones de cumplimiento de vanguardia para empresas de todos los tamaños. Nuestra misión es brindar las herramientas necesarias para mantener el cumplimiento normativo sin complicaciones y minimizar los riesgos asociados.",

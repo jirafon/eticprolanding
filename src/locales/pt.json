@@ -5,14 +5,30 @@
     "nosotros": "Sobre",
     "contacto": "Contato",
     "demo": "Demo",
-    "quiz": "Quiz"
+    "quiz": "Quiz",
+    "login": "Entrar"
   },
   "hero": {
-    "title": "Eticpro: Plataforma de Compliance e Gestão de Ética Corporativa",
-    "subtitle": "Da prevenção de crimes ao canal de denúncias: gerencie todo o seu programa de compliance em uma única plataforma, com respaldo jurídico e tecnologia de ponta.",
-    "contactButton": "Entre em Contato",
+    "title": "O Modelo de Prevenção de Delitos, no ar em 24 horas",
+    "subtitle": "Canal de denúncias, due diligence e conflitos de interesse em uma só plataforma. Base legal para as leis 20.393 e 21.595.",
+    "contactButton": "Agendar uma demo",
+    "modulesButton": "Ver módulos",
     "otherSolutionsButton": "Ver outras soluções",
-    "eyebrow": "Inteligência de compliance para equipes modernas"
+    "eyebrow": "Software de compliance para oficiais de conformidade",
+    "watchVideo": "Ver a plataforma em 2 minutos",
+    "stat1Value": "24 h",
+    "stat1Label": "Go-live do Modelo de Prevenção de Delitos",
+    "stat2Value": "20.393",
+    "stat2Label": "E a Lei 21.595 de crimes econômicos, cobertas na operação",
+    "stat3Value": "Bagó",
+    "stat3Label": "Equipes de compliance que já operam com a Eticpro"
+  },
+  "finalCta": {
+    "badge": "Agenda de 20 minutos",
+    "title": "Vamos colocar seu programa de compliance para operar",
+    "subtitle": "Planos a partir de PME. Conte seu caso e indicamos o módulo para começar.",
+    "whatsapp": "Falar no WhatsApp",
+    "pymeNote": "Plano PME: escolha 3 módulos e escale quando precisar."
   },
   "readinessQuiz": {
     "openButton": "Quão pronto estou?",
@@ -105,6 +121,8 @@
   "features": {
     "title": "Principais Módulos de Compliance no Eticpro",
     "description": "Cada módulo integra o conteúdo jurídico e operacional que normalmente exige horas de assessoria especializada, com funcionalidades projetadas para digitalizar e automatizar seu programa de conformidade.",
+    "platform": "Plataforma",
+    "previewHint": "Vista do módulo",
     "profiles": "Perfis incluídos: Gerente de Compliance, Diretor, Auditor, Aprovador, Declarante, Denunciante, Investigador e Comitê de Ética.",
     "campaigns": "Campanhas de Cultura de Compliance",
     "repository": "Repositório de Políticas e Procedimentos",
@@ -229,7 +247,8 @@
     "question4Content": "Segundo a Circular nº 49 da UAF, são pessoas chilenas ou estrangeiras que desempenham ou tenham desempenhado funções públicas de destaque, até pelo menos um ano após o fim do cargo. Inclui, entre outros, Presidente, parlamentares, ministros e altos cargos do Estado."
   },
   "clients": {
-    "title": "Empresas que confiaram na Eticpro:"
+    "title": "Equipes de compliance que já operam com a Eticpro",
+    "subtitle": "Oficiais de compliance no Chile e na América Latina."
   },
   "footer": {
     "description": "Estamos dedicados a fornecer soluções de compliance de ponta para empresas de todos os tamanhos. Nossa missão é fornecer as ferramentas necessárias para manter o cumprimento normativo sem complicações e minimizar os riscos associados.",

@@ -5,14 +5,30 @@
     "nosotros": "About",
     "contacto": "Contact",
     "demo": "Demo",
-    "quiz": "Quiz"
+    "quiz": "Quiz",
+    "login": "Sign in"
   },
   "hero": {
-    "title": "Eticpro: Compliance and Corporate Ethics Management Platform",
-    "subtitle": "From crime prevention to whistleblowing channels — manage your entire compliance program in one platform, backed by legal expertise and enterprise-grade technology.",
-    "contactButton": "Contact Me",
+    "title": "Your Crime Prevention Model, live in 24 hours",
+    "subtitle": "Whistleblowing, due diligence, and conflicts of interest in one platform — built for Chile’s Law 20.393 and 21.595.",
+    "contactButton": "Book a demo",
+    "modulesButton": "See modules",
     "otherSolutionsButton": "See other solutions",
-    "eyebrow": "Compliance intelligence for modern teams"
+    "eyebrow": "Compliance software for compliance officers",
+    "watchVideo": "See the platform in 2 minutes",
+    "stat1Value": "24 h",
+    "stat1Label": "Go-live for your Crime Prevention Model",
+    "stat2Value": "20.393",
+    "stat2Label": "And Law 21.595 on economic crimes, covered in day-to-day ops",
+    "stat3Value": "Bagó",
+    "stat3Label": "Compliance teams already running on Eticpro"
+  },
+  "finalCta": {
+    "badge": "20-minute call",
+    "title": "Let’s get your compliance program running",
+    "subtitle": "Plans start at SME. Tell us your case and we’ll suggest the module to start with.",
+    "whatsapp": "Message us on WhatsApp",
+    "pymeNote": "SME plan: pick 3 modules and scale when you need to."
   },
   "readinessQuiz": {
     "openButton": "How ready am I?",
@@ -105,6 +121,8 @@
   "features": {
     "title": "Main Compliance Modules in Eticpro",
     "description": "Each module integrates the legal and operational content that would normally require hours of specialized legal advice, with features designed to digitize and automate your compliance program.",
+    "platform": "Platform",
+    "previewHint": "Module preview",
     "profiles": "Included profiles: Compliance Manager, Director, Auditor, Approver, Declarant, Whistleblower, Investigator and Ethics Committee.",
     "campaigns": "Compliance Culture Campaigns",
     "repository": "Repository of Policies and Procedures",
@@ -229,7 +247,8 @@
     "question4Content": "According to UAF Circular No. 49, PEPs are Chilean or foreign persons who hold or have held prominent public functions, for at least one year after leaving office. This includes, among others, the President, members of Congress, ministers, and other senior public officials."
   },
   "clients": {
-    "title": "Companies that have trusted Eticpro:"
+    "title": "Compliance teams already running Eticpro",
+    "subtitle": "Compliance officers in Chile and Latin America."
   },
   "footer": {
     "description": "We are dedicated to providing cutting-edge compliance solutions for businesses of all sizes. Our mission is to provide the necessary tools to maintain regulatory compliance without complications and minimize associated risks.",

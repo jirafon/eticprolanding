@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faBuilding, faIndustry, faComments, faCheck, faSpinner, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { track } from '../analytics';
 
-const ContactForm = ({ isFullPage = false }) => {
+const ContactForm = ({ isFullPage = false, hideHeader = false }) => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
@@ -37,10 +38,11 @@ const ContactForm = ({ isFullPage = false }) => {
   };
 
   const validateForm = () => {
+    const newErrors = {};
+
     if (!formData.company.trim()) {
       newErrors.company = 'El nombre de la empresa es requerido';
     }
-    const newErrors = {};
     
     if (!formData.name.trim()) {
       newErrors.name = 'El nombre es requerido';
@@ -136,7 +138,8 @@ const ContactForm = ({ isFullPage = false }) => {
       });
 
       if (response.ok) {
-      setIsSubmitted(true);
+        setIsSubmitted(true);
+        track('demo_submit', { source: 'contact-form' });
         setFormData({
           name: '',
           email: '',
@@ -221,7 +224,7 @@ const ContactForm = ({ isFullPage = false }) => {
   return (
     <div className={`${isFullPage ? 'min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center px-4 py-8' : 'w-full'}`}>
       <div className={`${isFullPage ? 'max-w-2xl w-full' : 'w-full'}`}>
-        {/* Header - Siempre mostrar el título */}
+        {!hideHeader && (
         <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 shadow-lg border border-blue-200/50">
             <FontAwesomeIcon icon={faComments} className="mr-2" />
@@ -231,6 +234,7 @@ const ContactForm = ({ isFullPage = false }) => {
             {t('contact.alternativeTitle')}
           </h1>
         </div>
+        )}
 
         {/* Form */}
         <div className="bg-white/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-white/20 w-full">
@@ -356,22 +360,22 @@ const ContactForm = ({ isFullPage = false }) => {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <FontAwesomeIcon icon={faPhone} className="text-white text-lg sm:text-xl" />
                 </div>
-                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">Respuesta Rápida</h3>
-                <p className="text-xs sm:text-sm text-gray-600">En menos de 24 horas</p>
+                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">{t('contact.response')}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{t('contact.responseDesc')}</p>
               </div>
               <div className="flex flex-col items-center group">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <FontAwesomeIcon icon={faCheck} className="text-white text-lg sm:text-xl" />
                 </div>
-                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">Consulta Gratuita</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Primera evaluación sin costo</p>
+                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">{t('contact.consultation')}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{t('contact.consultationDesc')}</p>
               </div>
               <div className="flex flex-col items-center group">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <FontAwesomeIcon icon={faUser} className="text-white text-lg sm:text-xl" />
                 </div>
-                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">Expertos Certificados</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Equipo especializado en compliance</p>
+                <h3 className="font-bold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-lg">{t('contact.experts')}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{t('contact.expertsDesc')}</p>
               </div>
             </div>
           </div>
